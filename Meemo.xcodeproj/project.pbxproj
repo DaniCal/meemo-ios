@@ -14,6 +14,7 @@
 		82C6E8FE1D92C45500FA765C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C6E8FC1D92C45500FA765C /* LaunchScreen.storyboard */; };
 		82C6E9091D92C45500FA765C /* MeemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E9081D92C45500FA765C /* MeemoTests.swift */; };
 		82C6E9141D92C45500FA765C /* MeemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E9131D92C45500FA765C /* MeemoUITests.swift */; };
+		82C6E9221D92C87700FA765C /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 82C6E9211D92C87700FA765C /* sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		82C6E90F1D92C45500FA765C /* MeemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C6E9131D92C45500FA765C /* MeemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeemoUITests.swift; sourceTree = "<group>"; };
 		82C6E9151D92C45500FA765C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82C6E9211D92C87700FA765C /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sound.mp3; path = ../../Files/sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		82C6E8F21D92C45500FA765C /* Meemo */ = {
 			isa = PBXGroup;
 			children = (
+				82C6E9211D92C87700FA765C /* sound.mp3 */,
 				82C6E8F31D92C45500FA765C /* AppDelegate.swift */,
 				82C6E8F51D92C45500FA765C /* ViewController.swift */,
 				82C6E8F71D92C45500FA765C /* Main.storyboard */,
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C6E9221D92C87700FA765C /* sound.mp3 in Resources */,
 				82C6E8FE1D92C45500FA765C /* LaunchScreen.storyboard in Resources */,
 				82C6E8FB1D92C45500FA765C /* Assets.xcassets in Resources */,
 				82C6E8F91D92C45500FA765C /* Main.storyboard in Resources */,
