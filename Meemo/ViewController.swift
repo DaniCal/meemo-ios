@@ -8,18 +8,17 @@
 
 import UIKit
 import AVFoundation
-
+import Alamofire
 
 class ViewController: UIViewController {
     
     var sound: AVAudioPlayer!
 
+    var urlString = "https://storage.googleapis.com/meemo/sound.mp3"
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-     
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,21 +26,30 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func completion(){
+        print("here")
+    }
+    
+    @IBAction func loadFileClick(_ sender: AnyObject) {
+        Alamofire.request(urlString).response { response in
+            
+            debugPrint(response)
+            if let data = response.data {
+                do{
+                    self.sound = try AVAudioPlayer(data: data, fileTypeHint: "mp3")
+                }
+                catch{
+                    //TODO error hanlding creating AVAudioPlayer object with raw data
+                }
+            }else{
+                //TODO error handling hhtp request
+            }
+        }
+
+    }
     @IBAction func playButtonClick(_ sender: AnyObject) {
-//        var bombSoundEffect: AVAudioPlayer!
-
-        
-        
-        do {
-            let path = Bundle.main.path(forResource: "sound", ofType: "mp3")!
-            let url = URL(fileURLWithPath: path)
-            sound = try AVAudioPlayer(contentsOf: url)
-
-            sound.play()
-        } catch {
-            // couldn't load file :(
+        if(self.sound != nil){
+            self.sound.play()
         }
     }
-
 }
-

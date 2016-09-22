@@ -1,0 +1,6 @@
+framework module Pods_MeemoUITests {
+  umbrella header "Pods-MeemoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
