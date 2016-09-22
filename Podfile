@@ -3,8 +3,10 @@
 
 target 'Meemo' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-  pod 'Alamofire', '~> 4.0'
+use_frameworks!
+pod 'Alamofire', '~> 4.0'
+pod 'Firebase/Core'
+pod 'FirebaseMessaging'
 
   # Pods for Meemo
 
