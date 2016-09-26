@@ -33,13 +33,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loadFileClick(_ sender: AnyObject) {
-        playButton.setImage(#imageLiteral(resourceName: "pause_button"), for: .normal)
+        playButton.setImage(#imageLiteral(resourceName: "transparent_button"), for: .normal)
         fileLoadingIndicator.startAnimating()
         Alamofire.request(urlString).response { response in
             
             debugPrint(response)
             if let data = response.data {
                 do{
+                    self.playButton.setImage(#imageLiteral(resourceName: "pause_button"), for: .normal)
                     self.fileLoadingIndicator.stopAnimating()
                     self.sound = try AVAudioPlayer(data: data, fileTypeHint: "mp3")
                     self.sound.play()
