@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     var sound: AVAudioPlayer!
 
+    @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var fileLoadingIndicator: UIActivityIndicatorView!
     var urlString = "https://storage.googleapis.com/meemo/awakening.mp3"
     override func viewDidLoad() {
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loadFileClick(_ sender: AnyObject) {
+        playButton.setImage(#imageLiteral(resourceName: "pause_button"), for: .normal)
         fileLoadingIndicator.startAnimating()
         Alamofire.request(urlString).response { response in
             
