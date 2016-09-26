@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     
     var sound: AVAudioPlayer!
 
-    var urlString = "https://storage.googleapis.com/meemo/sound.mp3"
+    @IBOutlet weak var fileLoadingIndicator: UIActivityIndicatorView!
+    var urlString = "https://storage.googleapis.com/meemo/awakening.mp3"
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,12 +32,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loadFileClick(_ sender: AnyObject) {
+        fileLoadingIndicator.startAnimating()
         Alamofire.request(urlString).response { response in
             
             debugPrint(response)
             if let data = response.data {
                 do{
+                    self.fileLoadingIndicator.stopAnimating()
                     self.sound = try AVAudioPlayer(data: data, fileTypeHint: "mp3")
+                    self.sound.play()
                 }
                 catch{
                     //TODO error hanlding creating AVAudioPlayer object with raw data
@@ -47,9 +51,5 @@ class ViewController: UIViewController {
         }
 
     }
-    @IBAction func playButtonClick(_ sender: AnyObject) {
-        if(self.sound != nil){
-            self.sound.play()
-        }
-    }
+   
 }
