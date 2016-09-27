@@ -9,27 +9,37 @@
 import UIKit
 import AVFoundation
 import Alamofire
+import Firebase
 
 class ViewController: UIViewController {
+    
+    
+    let rootRef = FIRDatabase.database().reference()
     
     var sound: AVAudioPlayer!
 
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var fileLoadingIndicator: UIActivityIndicatorView!
-    var urlString = "https://storage.googleapis.com/meemo/awakening.mp3"
+    var urlString = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let conditionRef = rootRef.child("url")
+        conditionRef.observe(.value, with: { (snapshot: FIRDataSnapshot) in
+            let url = snapshot.value as? String
+            if(url != nil){
+                self.urlString = url!
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    func completion(){
-        print("here")
     }
     
     @IBAction func loadFileClick(_ sender: AnyObject) {

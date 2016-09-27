@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,17 +19,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_button" translatesAutoresizingMaskIntoConstraints="NO" id="tz3-7Z-9EA">
-                                <frame key="frameInset" minX="115" minY="239" width="90" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YSU-xR-8Pk">
-                                <frame key="frameInset" minX="150" minY="274" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZJ-yi-9GZ">
-                                <frame key="frameInset" minX="144" minY="265" width="32" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_button" translatesAutoresizingMaskIntoConstraints="NO" id="tz3-7Z-9EA"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YSU-xR-8Pk"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZJ-yi-9GZ">
                                 <state key="normal" image="play_button"/>
                                 <connections>
                                     <action selector="loadFileClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ST-d1-CAM"/>
@@ -36,6 +29,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.8901960784313725" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="tz3-7Z-9EA" firstAttribute="centerY" secondItem="YSU-xR-8Pk" secondAttribute="centerY" id="12J-up-3c0"/>
+                            <constraint firstItem="cZJ-yi-9GZ" firstAttribute="centerY" secondItem="YSU-xR-8Pk" secondAttribute="centerY" id="HUR-LO-PiF"/>
+                            <constraint firstItem="tz3-7Z-9EA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Is9-dd-TNn"/>
+                            <constraint firstItem="tz3-7Z-9EA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="99" id="KW1-2V-NF3"/>
+                            <constraint firstItem="tz3-7Z-9EA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z2n-9Y-hJc"/>
+                            <constraint firstItem="tz3-7Z-9EA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="219" id="k88-F4-Uqd"/>
+                            <constraint firstItem="tz3-7Z-9EA" firstAttribute="centerX" secondItem="cZJ-yi-9GZ" secondAttribute="centerX" id="opT-pj-N3B"/>
+                            <constraint firstItem="cZJ-yi-9GZ" firstAttribute="centerX" secondItem="YSU-xR-8Pk" secondAttribute="centerX" id="tdl-gM-EYU"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="fileLoadingIndicator" destination="YSU-xR-8Pk" id="dH1-Ej-tal"/>

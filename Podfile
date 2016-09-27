@@ -6,7 +6,8 @@ target 'Meemo' do
 use_frameworks!
 pod 'Alamofire', '~> 4.0'
 pod 'Firebase/Core'
-pod 'FirebaseMessaging'
+pod 'Firebase/Messaging'
+pod 'Firebase/Database'
 
   # Pods for Meemo
 
