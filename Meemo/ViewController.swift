@@ -42,18 +42,27 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func loadFileClick(_ sender: AnyObject) {
+    
+    func play(){
+        self.playButton.setImage(#imageLiteral(resourceName: "pause_button"), for: .normal)
+        self.fileLoadingIndicator.stopAnimating()
+        self.sound.play()
+    }
+    
+    func pause(){
+        self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
+        self.sound.pause()
+    }
+    
+    func load(){
         playButton.setImage(#imageLiteral(resourceName: "transparent_button"), for: .normal)
         fileLoadingIndicator.startAnimating()
         Alamofire.request(urlString).response { response in
-            
             debugPrint(response)
             if let data = response.data {
                 do{
-                    self.playButton.setImage(#imageLiteral(resourceName: "pause_button"), for: .normal)
-                    self.fileLoadingIndicator.stopAnimating()
                     self.sound = try AVAudioPlayer(data: data, fileTypeHint: "mp3")
-                    self.sound.play()
+                    self.play()
                 }
                 catch{
                     //TODO error hanlding creating AVAudioPlayer object with raw data
@@ -62,7 +71,20 @@ class ViewController: UIViewController {
                 //TODO error handling hhtp request
             }
         }
-
+    }
+    
+    
+    
+    @IBAction func loadFileClick(_ sender: AnyObject) {
+        if(sound == nil){
+            load()
+        }else if(sound.isPlaying){
+            pause()
+        }else if(!sound.isPlaying){
+            play()
+        }else{
+            load()
+        }
     }
    
 }
