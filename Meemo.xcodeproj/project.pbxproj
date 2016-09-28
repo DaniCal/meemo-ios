@@ -17,6 +17,16 @@
 		82C6E9091D92C45500FA765C /* MeemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E9081D92C45500FA765C /* MeemoTests.swift */; };
 		82C6E9141D92C45500FA765C /* MeemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E9131D92C45500FA765C /* MeemoUITests.swift */; };
 		82FC88841D9AD31B0090D448 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88831D9AD31B0090D448 /* GoogleService-Info.plist */; };
+		82FC88901D9BB3080090D448 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88861D9BB3080090D448 /* OpenSans-Bold.ttf */; };
+		82FC88911D9BB3080090D448 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88871D9BB3080090D448 /* OpenSans-BoldItalic.ttf */; };
+		82FC88921D9BB3080090D448 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88881D9BB3080090D448 /* OpenSans-ExtraBold.ttf */; };
+		82FC88931D9BB3080090D448 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88891D9BB3080090D448 /* OpenSans-ExtraBoldItalic.ttf */; };
+		82FC88941D9BB3080090D448 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC888A1D9BB3080090D448 /* OpenSans-Italic.ttf */; };
+		82FC88951D9BB3080090D448 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC888B1D9BB3080090D448 /* OpenSans-Light.ttf */; };
+		82FC88961D9BB3080090D448 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC888C1D9BB3080090D448 /* OpenSans-LightItalic.ttf */; };
+		82FC88971D9BB3080090D448 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC888D1D9BB3080090D448 /* OpenSans-Regular.ttf */; };
+		82FC88981D9BB3080090D448 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC888E1D9BB3080090D448 /* OpenSans-Semibold.ttf */; };
+		82FC88991D9BB3080090D448 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC888F1D9BB3080090D448 /* OpenSans-SemiboldItalic.ttf */; };
 		91DFE295E384DFEFFB165E68 /* Pods_MeemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6CB69EE1A0A7531993D0ECD /* Pods_MeemoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +68,16 @@
 		82C6E9131D92C45500FA765C /* MeemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeemoUITests.swift; sourceTree = "<group>"; };
 		82C6E9151D92C45500FA765C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82FC88831D9AD31B0090D448 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		82FC88861D9BB3080090D448 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		82FC88871D9BB3080090D448 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		82FC88881D9BB3080090D448 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		82FC88891D9BB3080090D448 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		82FC888A1D9BB3080090D448 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		82FC888B1D9BB3080090D448 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		82FC888C1D9BB3080090D448 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		82FC888D1D9BB3080090D448 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		82FC888E1D9BB3080090D448 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		82FC888F1D9BB3080090D448 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		9A02CF860BF0696418EF6D46 /* Pods_MeemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CB69EE1A0A7531993D0ECD /* Pods_MeemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01FEF1B298DD9364AE7B14A /* Pods-Meemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meemo/Pods-Meemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +114,7 @@
 		82C6E8E71D92C45500FA765C = {
 			isa = PBXGroup;
 			children = (
+				82FC88851D9BB2E10090D448 /* Ressources */,
 				82C6E8F21D92C45500FA765C /* Meemo */,
 				82C6E9071D92C45500FA765C /* MeemoTests */,
 				82C6E9121D92C45500FA765C /* MeemoUITests */,
@@ -143,6 +164,23 @@
 				82C6E9151D92C45500FA765C /* Info.plist */,
 			);
 			path = MeemoUITests;
+			sourceTree = "<group>";
+		};
+		82FC88851D9BB2E10090D448 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				82FC88861D9BB3080090D448 /* OpenSans-Bold.ttf */,
+				82FC88871D9BB3080090D448 /* OpenSans-BoldItalic.ttf */,
+				82FC88881D9BB3080090D448 /* OpenSans-ExtraBold.ttf */,
+				82FC88891D9BB3080090D448 /* OpenSans-ExtraBoldItalic.ttf */,
+				82FC888A1D9BB3080090D448 /* OpenSans-Italic.ttf */,
+				82FC888B1D9BB3080090D448 /* OpenSans-Light.ttf */,
+				82FC888C1D9BB3080090D448 /* OpenSans-LightItalic.ttf */,
+				82FC888D1D9BB3080090D448 /* OpenSans-Regular.ttf */,
+				82FC888E1D9BB3080090D448 /* OpenSans-Semibold.ttf */,
+				82FC888F1D9BB3080090D448 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			name = Ressources;
 			sourceTree = "<group>";
 		};
 		990E3E6F49ECA4F27EF4CF84 /* Pods */ = {
@@ -289,10 +327,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82FC88941D9BB3080090D448 /* OpenSans-Italic.ttf in Resources */,
+				82FC88911D9BB3080090D448 /* OpenSans-BoldItalic.ttf in Resources */,
 				82C6E8FE1D92C45500FA765C /* LaunchScreen.storyboard in Resources */,
+				82FC88981D9BB3080090D448 /* OpenSans-Semibold.ttf in Resources */,
+				82FC88921D9BB3080090D448 /* OpenSans-ExtraBold.ttf in Resources */,
 				82FC88841D9AD31B0090D448 /* GoogleService-Info.plist in Resources */,
+				82FC88961D9BB3080090D448 /* OpenSans-LightItalic.ttf in Resources */,
 				82C6E8FB1D92C45500FA765C /* Assets.xcassets in Resources */,
+				82FC88901D9BB3080090D448 /* OpenSans-Bold.ttf in Resources */,
 				82C6E8F91D92C45500FA765C /* Main.storyboard in Resources */,
+				82FC88991D9BB3080090D448 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				82FC88951D9BB3080090D448 /* OpenSans-Light.ttf in Resources */,
+				82FC88971D9BB3080090D448 /* OpenSans-Regular.ttf in Resources */,
+				82FC88931D9BB3080090D448 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
