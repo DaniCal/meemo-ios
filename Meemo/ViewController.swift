@@ -20,8 +20,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var fileLoadingIndicator: UIActivityIndicatorView!
-    var urlString = ""
-  
+    var urlString: String!
+    var quote: String!
+    var author: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,16 @@ class ViewController: UIViewController {
     
     
     override func viewDidAppear(_ animated: Bool) {
+        subscribeURL()
+        subscribeQuote()
+        subscribeAuthor()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func subscribeURL(){
         let conditionRef = rootRef.child("url")
         conditionRef.observe(.value, with: { (snapshot: FIRDataSnapshot) in
             let url = snapshot.value as? String
@@ -37,10 +48,25 @@ class ViewController: UIViewController {
             }
         })
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func subscribeQuote(){
+        let conditionRef = rootRef.child("quote")
+        conditionRef.observe(.value, with: { (snapshot: FIRDataSnapshot) in
+            let quote = snapshot.value as? String
+            if(quote != nil){
+                self.quote = quote!
+            }
+        })
+    }
+    
+    func subscribeAuthor(){
+        let conditionRef = rootRef.child("author")
+        conditionRef.observe(.value, with: { (snapshot: FIRDataSnapshot) in
+            let author = snapshot.value as? String
+            if(author != nil){
+                self.author = author!
+            }
+        })
     }
     
     
