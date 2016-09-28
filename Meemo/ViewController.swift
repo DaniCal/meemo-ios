@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     var urlString: String!
     var quote: String!
     var author: String!
+    var job: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,7 @@ class ViewController: UIViewController {
         subscribeURL()
         subscribeQuote()
         subscribeAuthor()
+        subscribeJob()
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,6 +79,18 @@ class ViewController: UIViewController {
             }
         })
     }
+    
+    func subscribeJob(){
+        let conditionRef = rootRef.child("job")
+        conditionRef.observe(.value, with: { (snapshot: FIRDataSnapshot) in
+            let job = snapshot.value as? String
+            if(job != nil){
+                self.job = job!
+                self.jobTextView.text = job
+            }
+        })
+    }
+
     
     
     func play(){
