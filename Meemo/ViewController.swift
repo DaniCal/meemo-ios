@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var jobTextView: UITextView!
     @IBOutlet weak var authorTextView: UITextView!
+    @IBOutlet weak var clockTextView: UITextView!
     @IBOutlet weak var quoteTextView: UITextView!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var fileLoadingIndicator: UIActivityIndicatorView!
@@ -97,6 +98,7 @@ class ViewController: UIViewController {
         self.playButton.setImage(#imageLiteral(resourceName: "pause_button"), for: .normal)
         self.fileLoadingIndicator.stopAnimating()
         self.sound.play()
+        FIRAnalytics.logEvent(withName: "press_play", parameters: nil)
     }
     
     func pause(){

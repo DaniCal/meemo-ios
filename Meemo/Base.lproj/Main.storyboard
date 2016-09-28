@@ -35,25 +35,32 @@
                                     <action selector="playDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1HH-5g-3os"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="&quot;How to make today the best day of your life&quot;" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PRg-E3-Yu3" userLabel="quote">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PRg-E3-Yu3" userLabel="quote">
                                 <frame key="frameInset" minX="40" minY="62" width="240" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Daniel Lohse" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1nU-al-NDA" userLabel="author">
-                                <frame key="frameInset" minX="40" minY="364" width="240" height="29"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1nU-al-NDA" userLabel="author">
+                                <frame key="frameInset" minX="40" minY="364" width="240" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="(Entrepreneur &amp; Motivator)" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uI5-ZT-uXy" userLabel="job">
-                                <frame key="frameInset" minX="40" minY="380" width="240" height="27"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uI5-ZT-uXy" userLabel="job">
+                                <frame key="frameInset" minX="40" minY="380" width="240" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="obD-V8-kIq" userLabel="clock">
+                                <frame key="frameInset" minX="129" minY="328" width="62" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -71,6 +78,7 @@
                     </view>
                     <connections>
                         <outlet property="authorTextView" destination="1nU-al-NDA" id="yzW-Qt-Ltp"/>
+                        <outlet property="clockTextView" destination="obD-V8-kIq" id="heb-dz-j4Y"/>
                         <outlet property="fileLoadingIndicator" destination="YSU-xR-8Pk" id="dH1-Ej-tal"/>
                         <outlet property="jobTextView" destination="uI5-ZT-uXy" id="YFC-An-wO3"/>
                         <outlet property="playButton" destination="cZJ-yi-9GZ" id="f1b-7E-MvC"/>
