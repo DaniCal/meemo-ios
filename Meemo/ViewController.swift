@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var fileLoadingIndicator: UIActivityIndicatorView!
     var urlString = ""
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,9 +74,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
-    @IBAction func loadFileClick(_ sender: AnyObject) {
+    @IBAction func playDidTouch(_ sender: AnyObject) {
         if(sound == nil){
             load()
         }else if(sound.isPlaying){
@@ -86,5 +85,4 @@ class ViewController: UIViewController {
             load()
         }
     }
-   
 }

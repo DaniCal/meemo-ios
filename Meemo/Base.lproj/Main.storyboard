@@ -24,7 +24,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZJ-yi-9GZ">
                                 <state key="normal" image="play_button"/>
                                 <connections>
-                                    <action selector="loadFileClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ST-d1-CAM"/>
+                                    <action selector="playDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1HH-5g-3os"/>
                                 </connections>
                             </button>
                         </subviews>
