@@ -53,7 +53,12 @@ class ViewController: UIViewController {
             let url = snapshot.value as? String
             if(url != nil){
                 self.urlString = url!
-                self.sound = nil
+                
+                if(self.sound != nil){
+                    self.sound.pause()
+                    self.sound = nil
+                    self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
+                }
             }
         })
     }
