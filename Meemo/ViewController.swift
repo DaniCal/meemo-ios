@@ -14,12 +14,17 @@ import Firebase
 class ViewController: UIViewController {
     
     
+    
+    @IBOutlet weak var jobTextView: UITextView!
+    @IBOutlet weak var authorTextView: UITextView!
+    @IBOutlet weak var quoteTextView: UITextView!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var fileLoadingIndicator: UIActivityIndicatorView!
+    
     let rootRef = FIRDatabase.database().reference()
     
     var sound: AVAudioPlayer!
 
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var fileLoadingIndicator: UIActivityIndicatorView!
     var urlString: String!
     var quote: String!
     var author: String!
@@ -45,6 +50,7 @@ class ViewController: UIViewController {
             let url = snapshot.value as? String
             if(url != nil){
                 self.urlString = url!
+                self.sound = nil
             }
         })
     }
@@ -55,6 +61,7 @@ class ViewController: UIViewController {
             let quote = snapshot.value as? String
             if(quote != nil){
                 self.quote = quote!
+                self.quoteTextView.text = quote
             }
         })
     }
@@ -65,6 +72,8 @@ class ViewController: UIViewController {
             let author = snapshot.value as? String
             if(author != nil){
                 self.author = author!
+                self.authorTextView.text = author
+
             }
         })
     }

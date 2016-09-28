@@ -81,8 +81,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="authorTextView" destination="1nU-al-NDA" id="yzW-Qt-Ltp"/>
                         <outlet property="fileLoadingIndicator" destination="YSU-xR-8Pk" id="dH1-Ej-tal"/>
+                        <outlet property="jobTextView" destination="uI5-ZT-uXy" id="YFC-An-wO3"/>
                         <outlet property="playButton" destination="cZJ-yi-9GZ" id="f1b-7E-MvC"/>
+                        <outlet property="quoteTextView" destination="PRg-E3-Yu3" id="Snu-XZ-jKg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
