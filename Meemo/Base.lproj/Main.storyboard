@@ -6,6 +6,14 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -27,24 +35,49 @@
                                     <action selector="playDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1HH-5g-3os"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Hello World!&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0O-Bh-UQN" userLabel="quote">
-                                <frame key="frameInset" minX="46" minY="76" width="218" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Daniel Lohse" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1nU-al-NDA" userLabel="author">
+                                <frame key="frameInset" minX="40" minY="129" width="240" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="yXc-He-Tlw"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="&quot;How to make today the best day of your life&quot;" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PRg-E3-Yu3" userLabel="quote">
+                                <frame key="frameInset" minX="40" minY="62" width="240" height="67"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="(Entrepreneur &amp; Motivator)" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uI5-ZT-uXy" userLabel="job">
+                                <frame key="frameInset" minX="40" minY="145" width="240" height="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.8901960784313725" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="tz3-7Z-9EA" firstAttribute="centerY" secondItem="YSU-xR-8Pk" secondAttribute="centerY" id="12J-up-3c0"/>
+                            <constraint firstItem="1nU-al-NDA" firstAttribute="top" secondItem="PRg-E3-Yu3" secondAttribute="bottom" id="2v3-p9-lMI"/>
+                            <constraint firstItem="uI5-ZT-uXy" firstAttribute="centerX" secondItem="YSU-xR-8Pk" secondAttribute="centerX" id="5Oa-8i-Ckh"/>
+                            <constraint firstItem="PRg-E3-Yu3" firstAttribute="leading" secondItem="1nU-al-NDA" secondAttribute="leading" id="8G0-9w-Dby"/>
+                            <constraint firstItem="PRg-E3-Yu3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="FWP-vv-vHw"/>
                             <constraint firstItem="cZJ-yi-9GZ" firstAttribute="centerY" secondItem="YSU-xR-8Pk" secondAttribute="centerY" id="HUR-LO-PiF"/>
                             <constraint firstItem="tz3-7Z-9EA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Is9-dd-TNn"/>
                             <constraint firstItem="tz3-7Z-9EA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="99" id="KW1-2V-NF3"/>
+                            <constraint firstItem="1nU-al-NDA" firstAttribute="leading" secondItem="uI5-ZT-uXy" secondAttribute="leading" id="L4L-hO-eh7"/>
+                            <constraint firstItem="1nU-al-NDA" firstAttribute="trailing" secondItem="uI5-ZT-uXy" secondAttribute="trailing" id="RQD-Xv-v97"/>
+                            <constraint firstItem="PRg-E3-Yu3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="Xfa-8a-BBz"/>
                             <constraint firstItem="tz3-7Z-9EA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z2n-9Y-hJc"/>
+                            <constraint firstItem="uI5-ZT-uXy" firstAttribute="top" secondItem="1nU-al-NDA" secondAttribute="bottom" id="jIN-7J-K2Z"/>
                             <constraint firstItem="tz3-7Z-9EA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="219" id="k88-F4-Uqd"/>
+                            <constraint firstItem="PRg-E3-Yu3" firstAttribute="trailing" secondItem="1nU-al-NDA" secondAttribute="trailing" id="lR8-ba-LHr"/>
+                            <constraint firstItem="tz3-7Z-9EA" firstAttribute="top" secondItem="1nU-al-NDA" secondAttribute="bottom" constant="80" id="mOd-ff-sXp"/>
                             <constraint firstItem="tz3-7Z-9EA" firstAttribute="centerX" secondItem="cZJ-yi-9GZ" secondAttribute="centerX" id="opT-pj-N3B"/>
                             <constraint firstItem="cZJ-yi-9GZ" firstAttribute="centerX" secondItem="YSU-xR-8Pk" secondAttribute="centerX" id="tdl-gM-EYU"/>
+                            <constraint firstItem="tz3-7Z-9EA" firstAttribute="top" secondItem="uI5-ZT-uXy" secondAttribute="bottom" constant="54" id="vof-rv-XFS"/>
                         </constraints>
                     </view>
                     <connections>
