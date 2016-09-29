@@ -28,7 +28,10 @@
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tfl-WV-zsT">
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PRg-E3-Yu3" userLabel="quote">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRg-E3-Yu3" userLabel="quote">
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="160" id="FFE-fE-6fd"/>
                                         </constraints>
@@ -72,7 +75,7 @@
                                     <constraint firstItem="PRg-E3-Yu3" firstAttribute="leading" secondItem="Tfl-WV-zsT" secondAttribute="leading" id="yW6-m3-8bF"/>
                                 </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1nU-al-NDA" userLabel="author">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nU-al-NDA" userLabel="author">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="CnY-4x-JJ0"/>
                                 </constraints>
@@ -80,7 +83,7 @@
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uI5-ZT-uXy" userLabel="job">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uI5-ZT-uXy" userLabel="job">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="PQu-tM-a3A"/>
                                 </constraints>
