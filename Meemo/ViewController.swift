@@ -11,7 +11,7 @@ import AVFoundation
 import Alamofire
 import Firebase
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     
     
@@ -24,12 +24,23 @@ class ViewController: UIViewController {
     
     let rootRef = FIRDatabase.database().reference()
     
-    var sound: AVAudioPlayer!
+    var player: AVAudioPlayer!
 
     var urlString: String!
     var quote: String!
     var author: String!
     var job: String!
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool){
+        
+        self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
+        self.player = nil
+    }
+    
+    func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?){
+        
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,9 +72,9 @@ class ViewController: UIViewController {
             if(url != nil){
                 self.urlString = url!
                 
-                if(self.sound != nil){
-                    self.sound.pause()
-                    self.sound = nil
+                if(self.player != nil){
+                    self.player.pause()
+                    self.player = nil
                     self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
                 }
             }
@@ -109,13 +120,13 @@ class ViewController: UIViewController {
     func play(){
         self.playButton.setImage(#imageLiteral(resourceName: "pause_button"), for: .normal)
         self.fileLoadingIndicator.stopAnimating()
-        self.sound.play()
+        self.player.play()
         FIRAnalytics.logEvent(withName: "press_play", parameters: nil)
     }
     
     func pause(){
         self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
-        self.sound.pause()
+        self.player.pause()
     }
     
     func load(){
@@ -125,7 +136,8 @@ class ViewController: UIViewController {
             debugPrint(response)
             if let data = response.data {
                 do{
-                    self.sound = try AVAudioPlayer(data: data, fileTypeHint: "mp3")
+                    self.player = try AVAudioPlayer(data: data, fileTypeHint: "mp3")
+                    self.player.delegate = self
                     self.play()
                 }
                 catch{
@@ -138,14 +150,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playDidTouch(_ sender: AnyObject) {
-        if(sound == nil){
+        if(player == nil){
             load()
-        }else if(sound.isPlaying){
+        }else if(player.isPlaying){
             pause()
-        }else if(!sound.isPlaying){
+        }else if(!player.isPlaying){
             play()
         }else{
             load()
         }
     }
+    
+
+    
 }
