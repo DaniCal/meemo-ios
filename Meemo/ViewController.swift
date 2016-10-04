@@ -32,6 +32,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var author: String!
     var job: String!
     var timer = Timer.init()
+    var duration: Int!
 
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool){
@@ -64,6 +65,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         subscribeQuote()
         subscribeAuthor()
         subscribeJob()
+        subscribeDuration()
     }
 
     override func didReceiveMemoryWarning() {
@@ -108,6 +110,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         })
     }
     
+    
+    
     func subscribeJob(){
         let conditionRef = rootRef.child("job")
         conditionRef.observe(.value, with: { (snapshot: FIRDataSnapshot) in
@@ -118,6 +122,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             }
         })
     }
+    
+    func subscribeDuration(){
+        let conditionRef = rootRef.child("duration")
+        conditionRef.observe(.value, with: { (snapshot: FIRDataSnapshot) in
+            let duration = snapshot.value as? String
+            if(duration != nil){
+                self.duration = Int(duration!)
+            }
+        })
+    }
 
     
     
@@ -125,15 +139,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         self.playButton.setImage(#imageLiteral(resourceName: "pause_button"), for: .normal)
         self.fileLoadingIndicator.stopAnimating()
         self.player.play()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTime), userInfo: nil,repeats: true)
         let hourOfTheDay = Calendar.current.component(.hour, from: Date())
         FIRAnalytics.logEvent(withName: "press_play", parameters: ["time": hourOfTheDay as NSObject])
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.updateTime), userInfo: nil,repeats: true)
+        
     }
     
     func updateTime(){
-    
-        let currentTime: Int =  Int(player.currentTime)
-        let duration: Int = Int(player.duration)
+        let duration: Int = self.duration
+        let currentTime: Int =  Int(self.player.currentTime)
         let timeLeft: Int = duration - currentTime
         let timeLeftInMinutes = Int(timeLeft/60)
         let timeLeftInSeconds:Int = Int(timeLeft - (timeLeftInMinutes * 60))
