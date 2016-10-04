@@ -15,6 +15,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     
     
+    @IBOutlet weak var timerTextView: UITextView!
     @IBOutlet weak var jobTextView: UITextView!
     @IBOutlet weak var authorTextView: UITextView!
     @IBOutlet weak var clockTextView: UITextView!
@@ -30,11 +31,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var quote: String!
     var author: String!
     var job: String!
+    var timer = Timer.init()
+
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool){
         
         self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
         self.player = nil
+        FIRAnalytics.logEvent(withName: "finished_play", parameters: nil)
+        timer.invalidate()
     }
     
     func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?){
@@ -99,7 +104,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             if(author != nil){
                 self.author = author!
                 self.authorTextView.text = author
-
             }
         })
     }
@@ -121,12 +125,34 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         self.playButton.setImage(#imageLiteral(resourceName: "pause_button"), for: .normal)
         self.fileLoadingIndicator.stopAnimating()
         self.player.play()
-        FIRAnalytics.logEvent(withName: "press_play", parameters: nil)
+        let hourOfTheDay = Calendar.current.component(.hour, from: Date())
+        FIRAnalytics.logEvent(withName: "press_play", parameters: ["time": hourOfTheDay as NSObject])
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.updateTime), userInfo: nil,repeats: true)
+    }
+    
+    func updateTime(){
+    
+        let currentTime: Int =  Int(player.currentTime)
+        let duration: Int = Int(player.duration)
+        let timeLeft: Int = duration - currentTime
+        let timeLeftInMinutes = Int(timeLeft/60)
+        let timeLeftInSeconds:Int = Int(timeLeft - (timeLeftInMinutes * 60))
+        
+        timerTextView.text = "\(transformTo2Digits(number: timeLeftInMinutes)):\(transformTo2Digits(number: timeLeftInSeconds))"
+    }
+    
+    func transformTo2Digits(number: Int) -> String{
+        if(number < 10){
+            return String("0\(number)")
+        }else{
+            return String("\(number)")
+        }
     }
     
     func pause(){
         self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
         self.player.pause()
+        timer.invalidate()
     }
     
     func load(){

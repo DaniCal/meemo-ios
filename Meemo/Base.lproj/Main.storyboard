@@ -6,6 +6,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="OpenSans-ExtraBold.ttf">
+            <string>OpenSans-Extrabold</string>
+        </array>
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans</string>
         </array>
@@ -23,7 +26,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tfl-WV-zsT">
@@ -71,20 +74,29 @@
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7C-pR-bjp" userLabel="timer">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.20784313725490194" green="0.83921568627450982" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1nU-al-NDA" firstAttribute="top" secondItem="Tfl-WV-zsT" secondAttribute="bottom" id="00H-I4-UeG"/>
                             <constraint firstAttribute="trailing" secondItem="Tfl-WV-zsT" secondAttribute="trailing" id="2kT-cP-pPp"/>
+                            <constraint firstItem="w7C-pR-bjp" firstAttribute="leading" secondItem="uI5-ZT-uXy" secondAttribute="leading" id="5ro-T7-Cz7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uI5-ZT-uXy" secondAttribute="bottom" constant="177" id="C6W-P5-Kzs"/>
                             <constraint firstItem="uI5-ZT-uXy" firstAttribute="top" secondItem="1nU-al-NDA" secondAttribute="bottom" id="FUt-8u-WHq"/>
                             <constraint firstItem="Tfl-WV-zsT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="IKI-rG-egR"/>
                             <constraint firstItem="1nU-al-NDA" firstAttribute="leading" secondItem="Tfl-WV-zsT" secondAttribute="leading" id="Ia4-q6-8u5"/>
+                            <constraint firstItem="w7C-pR-bjp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ODc-95-SWu"/>
+                            <constraint firstItem="w7C-pR-bjp" firstAttribute="top" secondItem="uI5-ZT-uXy" secondAttribute="bottom" constant="10" id="VXM-rs-jI8"/>
                             <constraint firstAttribute="bottom" secondItem="1nU-al-NDA" secondAttribute="bottom" constant="210" id="fDK-gJ-Tpe"/>
                             <constraint firstItem="uI5-ZT-uXy" firstAttribute="leading" secondItem="1nU-al-NDA" secondAttribute="leading" id="h1i-Ts-VVc"/>
                             <constraint firstItem="1nU-al-NDA" firstAttribute="trailing" secondItem="Tfl-WV-zsT" secondAttribute="trailing" id="jTo-NT-cqS"/>
                             <constraint firstItem="uI5-ZT-uXy" firstAttribute="trailing" secondItem="1nU-al-NDA" secondAttribute="trailing" id="mdi-JB-y7a"/>
                             <constraint firstItem="Tfl-WV-zsT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="txQ-bq-dKo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="w7C-pR-bjp" secondAttribute="bottom" constant="107" id="vc0-JW-tGL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -93,6 +105,7 @@
                         <outlet property="jobTextView" destination="uI5-ZT-uXy" id="YFC-An-wO3"/>
                         <outlet property="playButton" destination="cZJ-yi-9GZ" id="f1b-7E-MvC"/>
                         <outlet property="quoteTextView" destination="PRg-E3-Yu3" id="Snu-XZ-jKg"/>
+                        <outlet property="timerTextView" destination="w7C-pR-bjp" id="Cd1-E0-6Jo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
