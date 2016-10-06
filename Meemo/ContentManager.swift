@@ -8,6 +8,14 @@
 
 import Foundation
 
+@objc protocol ContentManagerDelegate{
+    @objc optional func contentDidUpdate()
+    @objc optional func fileDidUpdate()
+    @objc optional func fileIsLoading()
+    @objc optional func fileDidLoad()
+}
+
+
 class ContentManager: NSObject, FirebaseSynchornizeDelegate{
     
     let content:Content = Content()
