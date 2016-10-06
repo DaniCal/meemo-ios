@@ -26,6 +26,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     let rootRef = FIRDatabase.database().reference()
     
     var player: AVAudioPlayer!
+    var meemoPlayer:Player = Player()
 
     var urlString: String!
     var quote: String!
