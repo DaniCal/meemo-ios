@@ -22,6 +22,11 @@ class ContentManager: NSObject, FirebaseSynchornizeDelegate{
     let content:Content = Content()
     var delegate:ContentManagerDelegate?
     
+    override init(){
+        super.init()
+        FirebaseSynchronizer.delegate = self
+    }
+    
     //FirebaseSynchornizeDelegate func (protocol definition in FirebaseSynchronizer.swift)
     func firebaseDataDidUpdate(key: String, value: String){
         content.updateAttribute(key: key, value: value)

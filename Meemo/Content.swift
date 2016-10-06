@@ -21,7 +21,7 @@ class Content:NSObject{
     var job:String!
     var url:String!
     var file:Data!
-    var duration:Int!
+    var duration:Int = 0
     
     var dataFields: Set<String>!
 
@@ -67,7 +67,7 @@ class Content:NSObject{
         self.job = value
     }
     func updateDuration(value: String){
-        self.duration = Int(value)
+        self.duration = Int(value)!
     }
     
     
