@@ -11,6 +11,8 @@
 		749BB53C093D6FD1E7741417 /* Pods_MeemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A02CF860BF0696418EF6D46 /* Pods_MeemoTests.framework */; };
 		820352271DA633C00049C4BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 820352261DA633C00049C4BE /* GoogleService-Info.plist */; };
 		820352291DA652500049C4BE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820352281DA652500049C4BE /* Player.swift */; };
+		8203522B1DA670A40049C4BE /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8203522A1DA670A40049C4BE /* ContentManager.swift */; };
+		8203522E1DA674AB0049C4BE /* FirebaseSynchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8203522D1DA674AB0049C4BE /* FirebaseSynchronizer.swift */; };
 		82C6E8F41D92C45500FA765C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E8F31D92C45500FA765C /* AppDelegate.swift */; };
 		82C6E8F61D92C45500FA765C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E8F51D92C45500FA765C /* ViewController.swift */; };
 		82C6E8F91D92C45500FA765C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C6E8F71D92C45500FA765C /* Main.storyboard */; };
@@ -57,6 +59,8 @@
 		7AE2D4E0A837157A8CAEAD04 /* Pods-Meemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meemo/Pods-Meemo.release.xcconfig"; sourceTree = "<group>"; };
 		820352261DA633C00049C4BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		820352281DA652500049C4BE /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		8203522A1DA670A40049C4BE /* ContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
+		8203522D1DA674AB0049C4BE /* FirebaseSynchronizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseSynchronizer.swift; sourceTree = "<group>"; };
 		82C6E8F01D92C45500FA765C /* Meemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C6E8F31D92C45500FA765C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C6E8F51D92C45500FA765C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +117,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8203522C1DA670AB0049C4BE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8203522A1DA670A40049C4BE /* ContentManager.swift */,
+				820352281DA652500049C4BE /* Player.swift */,
+				8203522D1DA674AB0049C4BE /* FirebaseSynchronizer.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		82C6E8E71D92C45500FA765C = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +153,7 @@
 		82C6E8F21D92C45500FA765C /* Meemo */ = {
 			isa = PBXGroup;
 			children = (
+				8203522C1DA670AB0049C4BE /* API */,
 				820352261DA633C00049C4BE /* GoogleService-Info.plist */,
 				82C6E8F31D92C45500FA765C /* AppDelegate.swift */,
 				82C6E8F51D92C45500FA765C /* ViewController.swift */,
@@ -146,7 +161,6 @@
 				82C6E8FA1D92C45500FA765C /* Assets.xcassets */,
 				82C6E8FC1D92C45500FA765C /* LaunchScreen.storyboard */,
 				82C6E8FF1D92C45500FA765C /* Info.plist */,
-				820352281DA652500049C4BE /* Player.swift */,
 			);
 			path = Meemo;
 			sourceTree = "<group>";
@@ -492,8 +506,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				82C6E8F61D92C45500FA765C /* ViewController.swift in Sources */,
+				8203522B1DA670A40049C4BE /* ContentManager.swift in Sources */,
 				820352291DA652500049C4BE /* Player.swift in Sources */,
 				82C6E8F41D92C45500FA765C /* AppDelegate.swift in Sources */,
+				8203522E1DA674AB0049C4BE /* FirebaseSynchronizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
