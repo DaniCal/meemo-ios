@@ -24,13 +24,10 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     @IBOutlet weak var fileLoadingIndicator: UIActivityIndicatorView!
     
     let rootRef = FIRDatabase.database().reference()
-    
     var player:Player = Player()
-
     var contentManager: ContentManager = ContentManager()
     
     //ContentManagerDelegate func (protocol definition in ContentManager.swift)
-    
     func contentDidUpdate(){
         self.quoteTextView.text = contentManager.content.quote
         self.authorTextView.text = contentManager.content.author
@@ -49,7 +46,6 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     }
     
     //PlayerDelegate func (protocol definition in Player.swift)
-    
     func playerDidFinishPlaying(){
         self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
         FIRAnalytics.logEvent(withName: "finished_play", parameters: nil)

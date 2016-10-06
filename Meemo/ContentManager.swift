@@ -4,7 +4,9 @@
 //
 //  Created by Daniel Lohse on 10/6/16.
 //  Copyright © 2016 Superstudio. All rights reserved.
-//
+//  
+//  The ContentManager synchronizes continiously the data with the Firebase
+//  backend database and holds the content in an instance of Content
 
 import Foundation
 import Alamofire
@@ -28,6 +30,7 @@ class ContentManager: NSObject, FirebaseSynchornizeDelegate{
     }
     
     //FirebaseSynchornizeDelegate func (protocol definition in FirebaseSynchronizer.swift)
+    //This event fires as soon as data fields in the database have changed
     func firebaseDataDidUpdate(key: String, value: String){
         content.updateAttribute(key: key, value: value)
         delegate?.contentDidUpdate!()
@@ -61,7 +64,6 @@ class ContentManager: NSObject, FirebaseSynchornizeDelegate{
     }
     
     func downloadFile(){
-        
         Alamofire.request(content.url).response { response in
             debugPrint(response)
             if let data = response.data {
