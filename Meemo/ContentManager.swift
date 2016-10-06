@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import Alamofire
+
 
 @objc protocol ContentManagerDelegate{
     @objc optional func contentDidUpdate()
     @objc optional func fileDidUpdate()
-    @objc optional func fileIsLoading()
     @objc optional func fileDidLoad()
 }
 
@@ -19,14 +20,52 @@ import Foundation
 class ContentManager: NSObject, FirebaseSynchornizeDelegate{
     
     let content:Content = Content()
+    var delegate:ContentManagerDelegate?
     
     //FirebaseSynchornizeDelegate func (protocol definition in FirebaseSynchronizer.swift)
     func firebaseDataDidUpdate(key: String, value: String){
         content.updateAttribute(key: key, value: value)
+        delegate?.contentDidUpdate!()
+        if(key == content.urlKey){
+            self.delegate?.fileDidUpdate!()
+        }
     }
     
     func connectToDB(){
         FirebaseSynchronizer.initSubscription(dataFields: content.dataFields)
+    }
+    
+    func quote() -> String{
+        return content.quote
+    }
+    
+    func author() -> String{
+        return content.author
+    }
+    
+    func job() -> String{
+        return content.job
+    }
+    
+    func file() -> Data{
+        return content.file
+    }
+    
+    func duration() -> Int{
+        return content.duration
+    }
+    
+    func downloadFile(){
+        
+        Alamofire.request(content.url).response { response in
+            debugPrint(response)
+            if let data = response.data {
+                self.content.file = data
+                self.delegate?.fileDidLoad!()
+            }else{
+                //TODO error handling hhtp request
+            }
+        }
     }
     
     
