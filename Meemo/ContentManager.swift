@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+class ContentManager: NSObject, FirebaseSynchornizeDelegate{
+    
+    let dataFields: Set<String> = ["url", "quote", "author", "job", "duration"]
+    
+    //FirebaseSynchornizeDelegate func (protocol definition in FirebaseSynchronizer.swift)
+    func firebaseDataDidUpdate(key: String, value: String){
+        
+    }
+    
+    func connectToDB(){
+        FirebaseSynchronizer.initSubscription(dataFields: dataFields)
+    }
+    
+    
+}

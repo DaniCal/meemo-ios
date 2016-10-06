@@ -15,22 +15,21 @@ import Firebase
 
 
 class FirebaseSynchronizer: NSObject{
-    var delegate:FirebaseSynchornizeDelegate?
-
-    let rootRef = FIRDatabase.database().reference()
+    static var delegate:FirebaseSynchornizeDelegate?
+    static let rootRef = FIRDatabase.database().reference()
 
     override init(){
         super.init()
         
     }
     
-    func initSubscription(dataFields: Set<String>){
+    static func initSubscription(dataFields: Set<String>){
         for field in dataFields{
             subscribeToString(key: field)
         }
     }
     
-    func subscribeToString(key: String){
+    static func subscribeToString(key: String){
         let conditionRef = rootRef.child(key)
         conditionRef.observe(.value, with: { (snapshot: FIRDataSnapshot) in
             let value:String = (snapshot.value as? String)!
