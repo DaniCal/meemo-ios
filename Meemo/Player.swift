@@ -20,7 +20,7 @@ import AVFoundation
 class Player: NSObject, AVAudioPlayerDelegate{
     var player: AVAudioPlayer!
     var delegate:PlayerDelegate?
-    var duration:Int
+    var duration:Int!
     var timer = Timer.init()
 
     
@@ -30,6 +30,8 @@ class Player: NSObject, AVAudioPlayerDelegate{
     }
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool){
+        self.player = nil
+        timer.invalidate()
         self.delegate?.playerDidFinishPlaying!()
     }
     
@@ -46,11 +48,18 @@ class Player: NSObject, AVAudioPlayerDelegate{
         }
     }
     
+    func isInitialized()-> Bool{
+        if(player == nil){
+            return false
+        }else{
+            return true
+        }
+    }
+    
     func setFile(data: Data){
         do{
             self.player = try AVAudioPlayer(data: data, fileTypeHint: "mp3")
             self.player.delegate = self
-            self.play()
         }
         catch{
             //TODO error hanlding creating AVAudioPlayer object with raw data
@@ -62,10 +71,12 @@ class Player: NSObject, AVAudioPlayerDelegate{
         self.duration = duration
     }
     
+    
+    
     func play(){
         if(self.player != nil){
             self.player.play()
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTime), userInfo: nil,repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(Player.updateTime), userInfo: nil,repeats: true)
         }
     }
     
@@ -76,7 +87,7 @@ class Player: NSObject, AVAudioPlayerDelegate{
         let timeLeftInMinutes = Int(timeLeft/60)
         let timeLeftInSeconds:Int = Int(timeLeft - (timeLeftInMinutes * 60))
         let timeLeftString:String = "\(transformTo2Digits(number: timeLeftInMinutes)):\(transformTo2Digits(number: timeLeftInSeconds))"
-        self.delegate?.playerUpdateTime(timeLeftString)
+        self.delegate?.playerUpdateTime!(timeLeft: timeLeftString)
         
     }
     
@@ -93,6 +104,11 @@ class Player: NSObject, AVAudioPlayerDelegate{
             self.player.pause()
             timer.invalidate()
         }
+    }
+    
+    func reset(){
+        self.pause()
+        player = nil
     }
     
     func isPlaying() -> Bool{

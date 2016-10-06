@@ -11,7 +11,7 @@ import AVFoundation
 import Alamofire
 import Firebase
 
-class ViewController: UIViewController, AVAudioPlayerDelegate {
+class ViewController: UIViewController, PlayerDelegate {
     
     
     
@@ -25,8 +25,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     let rootRef = FIRDatabase.database().reference()
     
-    var player: AVAudioPlayer!
-    var meemoPlayer:Player = Player()
+    var player:Player = Player()
 
     var urlString: String!
     var quote: String!
@@ -36,30 +35,28 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var duration: Int!
 
     
-    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool){
-        
+    //PlayerDelegate func (protocol definition in Player.swift)
+    
+    func playerDidFinishPlaying(){
         self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
-        self.player = nil
         FIRAnalytics.logEvent(withName: "finished_play", parameters: nil)
-        timer.invalidate()
+        timerTextView.text = ""
     }
     
-    func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?){
-        
+    func playerErrorDidOccur(){
     }
-
+    
+    func playerFileErrorDidOccur(){
+    }
+    
+    func playerUpdateTime(timeLeft: String){
+        timerTextView.text = timeLeft
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        do{
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            UIApplication.shared.beginReceivingRemoteControlEvents()
-        }catch{
-            //TODO error hanlding
-        }
+        self.player.delegate = self
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
         subscribeURL()
@@ -79,12 +76,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             let url = snapshot.value as? String
             if(url != nil){
                 self.urlString = url!
-                
-                if(self.player != nil){
-                    self.player.pause()
-                    self.player = nil
-                    self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
-                }
+                self.player.reset()
+                self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
             }
         })
     }
@@ -127,9 +120,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     func subscribeDuration(){
         let conditionRef = rootRef.child("duration")
         conditionRef.observe(.value, with: { (snapshot: FIRDataSnapshot) in
-            let duration = snapshot.value as? String
-            if(duration != nil){
-                self.duration = Int(duration!)
+            let durationData = snapshot.value as? String
+            if(durationData != nil){
+                let duration:Int = Int(durationData!)!
+                self.player.setDuration(duration: duration)
             }
         })
     }
@@ -139,35 +133,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     func play(){
         self.playButton.setImage(#imageLiteral(resourceName: "pause_button"), for: .normal)
         self.fileLoadingIndicator.stopAnimating()
-        self.player.play()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTime), userInfo: nil,repeats: true)
+        player.play()
+
         let hourOfTheDay = Calendar.current.component(.hour, from: Date())
         FIRAnalytics.logEvent(withName: "press_play", parameters: ["time": hourOfTheDay as NSObject])
         
     }
     
-    func updateTime(){
-        let duration: Int = self.duration
-        let currentTime: Int =  Int(self.player.currentTime)
-        let timeLeft: Int = duration - currentTime
-        let timeLeftInMinutes = Int(timeLeft/60)
-        let timeLeftInSeconds:Int = Int(timeLeft - (timeLeftInMinutes * 60))
-        
-        timerTextView.text = "\(transformTo2Digits(number: timeLeftInMinutes)):\(transformTo2Digits(number: timeLeftInSeconds))"
-    }
-    
-    func transformTo2Digits(number: Int) -> String{
-        if(number < 10){
-            return String("0\(number)")
-        }else{
-            return String("\(number)")
-        }
-    }
-    
     func pause(){
         self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
-        self.player.pause()
-        timer.invalidate()
+        player.pause()
     }
     
     func load(){
@@ -176,14 +151,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         Alamofire.request(urlString).response { response in
             debugPrint(response)
             if let data = response.data {
-                do{
-                    self.player = try AVAudioPlayer(data: data, fileTypeHint: "mp3")
-                    self.player.delegate = self
-                    self.play()
-                }
-                catch{
-                    //TODO error hanlding creating AVAudioPlayer object with raw data
-                }
+                self.player.setFile(data: data)
+                self.play()
             }else{
                 //TODO error handling hhtp request
             }
@@ -191,17 +160,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     @IBAction func playDidTouch(_ sender: AnyObject) {
-        if(player == nil){
+        if(!player.isInitialized()){
             load()
-        }else if(player.isPlaying){
+        }else if(self.player.isPlaying()){
             pause()
-        }else if(!player.isPlaying){
+        }else if(!self.player.isPlaying()){
             play()
         }else{
             load()
         }
     }
-    
-
-    
 }
