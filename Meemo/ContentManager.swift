@@ -39,6 +39,7 @@ class ContentManager: NSObject, FirebaseSynchornizeDelegate{
         }
     }
     
+    
     func connectToDB(){
         FirebaseSynchronizer.initSubscription(dataFields: content.dataFields)
     }
