@@ -126,6 +126,12 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Plh-EE-UwM">
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKF-4N-H6L">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="5" id="J4o-4e-eCM"/>
+                                        </constraints>
+                                    </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagonal_shape_white" translatesAutoresizingMaskIntoConstraints="NO" id="3XC-OY-RlL">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="158" id="JYh-nP-hUx"/>
@@ -172,9 +178,12 @@
                                     <constraint firstAttribute="bottom" secondItem="3XC-OY-RlL" secondAttribute="bottom" id="5iL-HJ-Sst"/>
                                     <constraint firstItem="3XC-OY-RlL" firstAttribute="top" secondItem="Plh-EE-UwM" secondAttribute="top" constant="842" id="82C-7f-bMH"/>
                                     <constraint firstAttribute="trailing" secondItem="3XC-OY-RlL" secondAttribute="trailing" id="DSa-Yc-I0K"/>
+                                    <constraint firstItem="IKF-4N-H6L" firstAttribute="centerX" secondItem="3XC-OY-RlL" secondAttribute="centerX" id="JeP-Ci-Bl3"/>
                                     <constraint firstItem="3XC-OY-RlL" firstAttribute="width" secondItem="Plh-EE-UwM" secondAttribute="width" id="QsC-PO-0Qt"/>
                                     <constraint firstAttribute="bottom" secondItem="3XC-OY-RlL" secondAttribute="bottom" id="VGq-95-DxP"/>
                                     <constraint firstItem="3XC-OY-RlL" firstAttribute="leading" secondItem="Plh-EE-UwM" secondAttribute="leading" id="Wl8-rs-q6x"/>
+                                    <constraint firstItem="IKF-4N-H6L" firstAttribute="bottom" secondItem="3XC-OY-RlL" secondAttribute="bottom" id="bPA-sf-rA9"/>
+                                    <constraint firstItem="IKF-4N-H6L" firstAttribute="top" secondItem="y5h-ox-fcf" secondAttribute="top" id="ns5-iJ-fSN"/>
                                     <constraint firstItem="y5h-ox-fcf" firstAttribute="leading" secondItem="3XC-OY-RlL" secondAttribute="leading" id="oTb-qF-Sza"/>
                                     <constraint firstItem="y5h-ox-fcf" firstAttribute="top" secondItem="Plh-EE-UwM" secondAttribute="top" constant="73" id="xql-79-9OY"/>
                                 </constraints>
