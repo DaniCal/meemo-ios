@@ -26,7 +26,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tfl-WV-zsT">
@@ -131,15 +131,52 @@
                                             <constraint firstAttribute="height" constant="158" id="JYh-nP-hUx"/>
                                         </constraints>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="y5h-ox-fcf">
+                                        <subviews>
+                                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUk-up-CvW" customClass="ContentLabelView" customModule="Meemo" customModuleProvider="target">
+                                                <color key="backgroundColor" red="0.96906061617563477" green="1" blue="0.36786214598989631" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-3V-W1c" customClass="ContentLabelView" customModule="Meemo" customModuleProvider="target">
+                                                <color key="backgroundColor" red="0.96906061619999995" green="1" blue="0.367862146" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHO-bn-kcD" customClass="ContentLabelView" customModule="Meemo" customModuleProvider="target">
+                                                <color key="backgroundColor" red="0.96906061619999995" green="1" blue="0.367862146" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGd-JK-fpM" customClass="ContentLabelView" customModule="Meemo" customModuleProvider="target">
+                                                <color key="backgroundColor" red="0.96906061619999995" green="1" blue="0.367862146" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TlY-kD-Ptd" customClass="ContentLabelView" customModule="Meemo" customModuleProvider="target">
+                                                <color key="backgroundColor" red="0.96906061619999995" green="1" blue="0.367862146" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pzs-i0-aYV" customClass="ContentLabelView" customModule="Meemo" customModuleProvider="target">
+                                                <color key="backgroundColor" red="0.96906061619999995" green="1" blue="0.367862146" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFm-sh-KKk" customClass="ContentLabelView" customModule="Meemo" customModuleProvider="target">
+                                                <color key="backgroundColor" red="0.96906061619999995" green="1" blue="0.367862146" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hhp-3V-W1c" firstAttribute="top" secondItem="y5h-ox-fcf" secondAttribute="top" constant="110" id="1sW-qQ-m0Y"/>
+                                            <constraint firstItem="Pzs-i0-aYV" firstAttribute="top" secondItem="y5h-ox-fcf" secondAttribute="top" constant="550" id="FiF-YN-gLa"/>
+                                            <constraint firstItem="LGd-JK-fpM" firstAttribute="top" secondItem="y5h-ox-fcf" secondAttribute="top" constant="330" id="YuH-g4-cwT"/>
+                                            <constraint firstAttribute="height" constant="770" id="fLs-F9-46g"/>
+                                            <constraint firstItem="LGd-JK-fpM" firstAttribute="centerY" secondItem="y5h-ox-fcf" secondAttribute="centerY" id="i7d-f5-rnV"/>
+                                            <constraint firstItem="MFm-sh-KKk" firstAttribute="top" secondItem="y5h-ox-fcf" secondAttribute="top" constant="660" id="lRY-hY-BrP"/>
+                                            <constraint firstItem="fHO-bn-kcD" firstAttribute="top" secondItem="y5h-ox-fcf" secondAttribute="top" constant="220" id="n6B-Jr-1ad"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.42352941176470588" green="0.88235294117647056" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="y5h-ox-fcf" firstAttribute="trailing" secondItem="3XC-OY-RlL" secondAttribute="trailing" id="0Te-qj-CoD"/>
                                     <constraint firstAttribute="bottom" secondItem="3XC-OY-RlL" secondAttribute="bottom" id="5iL-HJ-Sst"/>
                                     <constraint firstItem="3XC-OY-RlL" firstAttribute="top" secondItem="Plh-EE-UwM" secondAttribute="top" constant="842" id="82C-7f-bMH"/>
                                     <constraint firstAttribute="trailing" secondItem="3XC-OY-RlL" secondAttribute="trailing" id="DSa-Yc-I0K"/>
                                     <constraint firstItem="3XC-OY-RlL" firstAttribute="width" secondItem="Plh-EE-UwM" secondAttribute="width" id="QsC-PO-0Qt"/>
                                     <constraint firstAttribute="bottom" secondItem="3XC-OY-RlL" secondAttribute="bottom" id="VGq-95-DxP"/>
                                     <constraint firstItem="3XC-OY-RlL" firstAttribute="leading" secondItem="Plh-EE-UwM" secondAttribute="leading" id="Wl8-rs-q6x"/>
+                                    <constraint firstItem="y5h-ox-fcf" firstAttribute="leading" secondItem="3XC-OY-RlL" secondAttribute="leading" id="oTb-qF-Sza"/>
+                                    <constraint firstItem="y5h-ox-fcf" firstAttribute="top" secondItem="Plh-EE-UwM" secondAttribute="top" constant="73" id="xql-79-9OY"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -159,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiS-MM-q1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041.5625" y="114.08450704225352"/>
+            <point key="canvasLocation" x="1041.304347826087" y="113.31521739130436"/>
         </scene>
     </scenes>
     <resources>
