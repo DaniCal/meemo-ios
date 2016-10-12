@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OrW-Ds-AX3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kix-iS-fp0">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -26,7 +26,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tfl-WV-zsT">
@@ -112,33 +112,53 @@
             </objects>
             <point key="canvasLocation" x="128.80000000000001" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="NGf-LB-jy0">
+        <!--Journey View Controller-->
+        <scene sceneID="ZII-h3-2hH">
             <objects>
-                <viewController id="OrW-Ds-AX3" sceneMemberID="viewController">
+                <viewController id="kix-iS-fp0" customClass="JourneyViewController" customModule="Meemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2My-zv-v6u"/>
-                        <viewControllerLayoutGuide type="bottom" id="5Um-Qe-OGW"/>
+                        <viewControllerLayoutGuide type="top" id="5jP-da-VXg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Syv-ob-I2G"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DXn-jZ-JNy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" contentMode="scaleToFill" id="wlp-Nn-rUU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="diagonal_shape_white" translatesAutoresizingMaskIntoConstraints="NO" id="bhm-37-vYS">
-                                <frame key="frameInset" height="21.04%"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="7days_button" translatesAutoresizingMaskIntoConstraints="NO" id="5aD-ju-CcR">
-                                <frame key="frameInset" minX="35.47%" minY="78.96%" width="24.69%" height="13.73%"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Plh-EE-UwM">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagonal_shape_white" translatesAutoresizingMaskIntoConstraints="NO" id="tsc-09-juh"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="7days_button" translatesAutoresizingMaskIntoConstraints="NO" id="4nV-a9-7nU">
+                                        <rect key="frame" x="144" y="861" width="86" height="85"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.42352941176470588" green="0.88235294117647056" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tsc-09-juh" secondAttribute="trailing" id="30O-2G-db3"/>
+                                    <constraint firstItem="tsc-09-juh" firstAttribute="top" secondItem="Plh-EE-UwM" secondAttribute="top" constant="861" id="QiA-Tb-6pU"/>
+                                    <constraint firstAttribute="bottom" secondItem="tsc-09-juh" secondAttribute="bottom" id="XdN-lT-eFu"/>
+                                    <constraint firstItem="tsc-09-juh" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="g9v-wB-XRv"/>
+                                    <constraint firstItem="tsc-09-juh" firstAttribute="leading" secondItem="Plh-EE-UwM" secondAttribute="leading" id="pVq-dq-xCp"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.42352941176470588" green="0.88235294117647056" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Plh-EE-UwM" firstAttribute="leading" secondItem="wlp-Nn-rUU" secondAttribute="leading" id="H94-dv-g9x"/>
+                            <constraint firstItem="Plh-EE-UwM" firstAttribute="bottom" secondItem="Syv-ob-I2G" secondAttribute="top" id="ad3-zv-4Oa"/>
+                            <constraint firstItem="Plh-EE-UwM" firstAttribute="width" secondItem="wlp-Nn-rUU" secondAttribute="width" id="cjR-OQ-RWN"/>
+                            <constraint firstItem="Plh-EE-UwM" firstAttribute="height" secondItem="wlp-Nn-rUU" secondAttribute="height" id="i7f-nb-Lix"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="scrollView" destination="Plh-EE-UwM" id="bU2-tZ-xlb"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SAK-yU-Vdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tiS-MM-q1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979.71014492753636" y="122.28260869565219"/>
+            <point key="canvasLocation" x="1048.5507246376812" y="117.39130434782609"/>
         </scene>
     </scenes>
     <resources>
