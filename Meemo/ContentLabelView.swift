@@ -9,7 +9,10 @@
 import UIKit
 
 class ContentLabelView: UIView {
+    @IBOutlet weak var author: UILabel!
 
+    @IBOutlet weak var titel: UILabel!
+    @IBOutlet weak var portrait: UIImageView!
     @IBOutlet var view: UIView!
     
     required init(coder aDecoder: NSCoder) {

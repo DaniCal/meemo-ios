@@ -8,6 +8,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContentLabelView" customModule="Meemo" customModuleProvider="target">
             <connections>
+                <outlet property="author" destination="ADw-uA-Zvw" id="m2k-CD-zyZ"/>
+                <outlet property="portrait" destination="Imc-6h-mHh" id="bbQ-hs-NDA"/>
+                <outlet property="titel" destination="Cqz-SX-8oc" id="EvU-IS-ZdH"/>
                 <outlet property="view" destination="iN0-l3-epB" id="46b-JA-3lh"/>
             </connections>
         </placeholder>
