@@ -41,6 +41,5 @@ class ReactionViewController: UIViewController {
     
     @IBAction func brainwashDidTouch(_ sender: AnyObject) {
         FIRAnalytics.logEvent(withName: "press_reaction", parameters: ["emotion": "are you trying to brainwash me?g" as NSString])
-
     }
 }

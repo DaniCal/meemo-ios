@@ -167,6 +167,7 @@
                                                 <state key="normal" image="emotions_rocket"/>
                                                 <connections>
                                                     <action selector="rockinDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="mL0-hO-KxF"/>
+                                                    <segue destination="Zgf-ni-Vl5" kind="show" id="lZh-dQ-0s0"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpZ-eF-v1I">
@@ -174,6 +175,7 @@
                                                 <state key="normal" image="emotions_smile"/>
                                                 <connections>
                                                     <action selector="downDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="cyT-Yg-L8C"/>
+                                                    <segue destination="Zgf-ni-Vl5" kind="show" id="FpV-1e-8I9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhi-C1-d4G">
@@ -181,6 +183,7 @@
                                                 <state key="normal" image="emotions_cool"/>
                                                 <connections>
                                                     <action selector="kickAssDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="wuE-DZ-kGy"/>
+                                                    <segue destination="Zgf-ni-Vl5" kind="show" id="jqW-OF-LWb"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtT-w6-dAP">
@@ -188,6 +191,7 @@
                                                 <state key="normal" image="emotions_monkey"/>
                                                 <connections>
                                                     <action selector="notSeriousDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="9zi-gj-xqE"/>
+                                                    <segue destination="Zgf-ni-Vl5" kind="show" id="lKx-hx-rcp"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZB-RJ-G0O">
@@ -195,6 +199,7 @@
                                                 <state key="normal" image="emotions_brainwash"/>
                                                 <connections>
                                                     <action selector="brainwashDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="d3E-TQ-RTK"/>
+                                                    <segue destination="Zgf-ni-Vl5" kind="show" id="9li-4E-Xvs"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -216,6 +221,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMG-XA-Hc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="82.5" y="213.38028169014083"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZxK-T4-g6L">
+            <objects>
+                <viewController id="Zgf-ni-Vl5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="suy-JB-vgA"/>
+                        <viewControllerLayoutGuide type="bottom" id="L0t-gv-vob"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2tF-Pk-JjW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thankyou_sticker" translatesAutoresizingMaskIntoConstraints="NO" id="EyV-Pe-jVg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="0fN-RH-rf6"/>
+                                    <constraint firstAttribute="height" constant="160" id="i9S-Ay-XLR"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1e-EL-N62">
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Awesome! 
+You're a star!
+Now let's rock this day!</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APh-I4-Op0">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8cr-zz-N7N"/>
+                                    <constraint firstAttribute="width" constant="172" id="SIL-dM-Lrd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="YEAH LET'S GO"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="R6T-uw-O7O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41960784313725491" green="0.85098039215686272" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="APh-I4-Op0" firstAttribute="centerX" secondItem="2tF-Pk-JjW" secondAttribute="centerX" id="DfT-Bl-qnj"/>
+                            <constraint firstItem="m1e-EL-N62" firstAttribute="leading" secondItem="2tF-Pk-JjW" secondAttribute="leadingMargin" constant="15" id="Fv9-pw-8c7"/>
+                            <constraint firstItem="L0t-gv-vob" firstAttribute="top" secondItem="APh-I4-Op0" secondAttribute="bottom" constant="28" id="IMA-jp-EMN"/>
+                            <constraint firstItem="EyV-Pe-jVg" firstAttribute="centerX" secondItem="2tF-Pk-JjW" secondAttribute="centerX" id="LOt-LS-wjp"/>
+                            <constraint firstItem="EyV-Pe-jVg" firstAttribute="centerY" secondItem="2tF-Pk-JjW" secondAttribute="centerY" id="Shn-gB-Mr8"/>
+                            <constraint firstItem="m1e-EL-N62" firstAttribute="top" secondItem="EyV-Pe-jVg" secondAttribute="bottom" constant="8" symbolic="YES" id="ftb-uD-TF5"/>
+                            <constraint firstItem="APh-I4-Op0" firstAttribute="top" secondItem="m1e-EL-N62" secondAttribute="bottom" constant="32" id="rEy-7o-rGP"/>
+                            <constraint firstItem="m1e-EL-N62" firstAttribute="centerX" secondItem="APh-I4-Op0" secondAttribute="centerX" id="w69-Sg-VsR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBd-DI-5Rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="766.875" y="208.09859154929578"/>
         </scene>
         <!--Journey View Controller-->
         <scene sceneID="ZII-h3-2hH">
@@ -282,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiS-MM-q1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1037.5999999999999" y="111.54422788605699"/>
+            <point key="canvasLocation" x="1466" y="105"/>
         </scene>
     </scenes>
     <resources>
@@ -298,5 +359,9 @@
         <image name="player_heart_empty" width="79" height="72"/>
         <image name="player_play_button" width="154" height="154"/>
         <image name="player_replay" width="38" height="46"/>
+        <image name="thankyou_sticker" width="139" height="139"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="lZh-dQ-0s0"/>
+    </inferredMetricsTieBreakers>
 </document>
