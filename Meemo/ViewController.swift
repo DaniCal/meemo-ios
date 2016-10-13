@@ -52,8 +52,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
         FIRAnalytics.logEvent(withName: "finished_play", parameters: nil)
         timerTextView.text = ""
-        
-
+        performSegue(withIdentifier: "showreactionview", sender: self)
     }
     
     func playerErrorDidOccur(){
@@ -101,14 +100,13 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     }
     
     @IBAction func heartDidTouch(_ sender: AnyObject) {
-        performSegue(withIdentifier: "showreactionview", sender: sender)
-//        if(liked == false){
-//            heartButton.setImage(#imageLiteral(resourceName: "player_heart_full"), for: .normal)
-//            liked = true
-//        }else{
-//            heartButton.setImage(#imageLiteral(resourceName: "player_heart_empty"), for: .normal)
-//            liked = false
-//        }
+        if(liked == false){
+            heartButton.setImage(#imageLiteral(resourceName: "player_heart_full"), for: .normal)
+            liked = true
+        }else{
+            heartButton.setImage(#imageLiteral(resourceName: "player_heart_empty"), for: .normal)
+            liked = false
+        }
     }
     
     @IBAction func replayDidTouch(_ sender: AnyObject) {

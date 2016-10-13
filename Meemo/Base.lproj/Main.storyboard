@@ -166,7 +166,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUY-4t-Z2Q">
-                                                <frame key="frameInset" minX="29" minY="24" width="174" height="98"/>
+                                                <frame key="frameInset" minX="30" minY="24" width="174" height="98"/>
                                                 <state key="normal" image="emotions_rocket"/>
                                                 <connections>
                                                     <action selector="rockinDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="mL0-hO-KxF"/>
@@ -182,7 +182,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhi-C1-d4G">
-                                                <frame key="frameInset" minX="9" minY="220" width="214" height="99"/>
+                                                <frame key="frameInset" minX="10" minY="220" width="214" height="99"/>
                                                 <state key="normal" image="emotions_cool"/>
                                                 <connections>
                                                     <action selector="kickAssDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="wuE-DZ-kGy"/>
@@ -198,7 +198,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZB-RJ-G0O">
-                                                <frame key="frameInset" minX="21" minY="417" width="190" height="111"/>
+                                                <frame key="frameInset" minX="22" minY="417" width="190" height="111"/>
                                                 <state key="normal" image="emotions_brainwash"/>
                                                 <connections>
                                                     <action selector="brainwashDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="d3E-TQ-RTK"/>
