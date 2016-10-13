@@ -13,6 +13,7 @@ import Firebase
 
 class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     
+    @IBOutlet weak var portraitImageView: UIImageView!
     
     
     @IBOutlet weak var timerTextView: UITextView!    
@@ -45,6 +46,11 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     func fileDidLoad(){
         player.setFile(data: self.contentManager.content.file)
         play()
+    }
+    
+    
+    func pictureDidLoad(){
+        portraitImageView.image = UIImage(data: self.contentManager.content.picture)
     }
     
     //PlayerDelegate func (protocol definition in Player.swift)

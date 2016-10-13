@@ -10,6 +10,7 @@ import Foundation
 
 class Content:NSObject{
     
+    let portraitKey = "portrait"
     let urlKey = "url"
     let quoteKey = "quote"
     let authorKey = "author"
@@ -20,13 +21,15 @@ class Content:NSObject{
     var job:String!
     var url:String!
     var file:Data!
+    var picture:Data!
     var duration:Int = 0
+    var portrait:String!
     
     var dataFields: Set<String>!
 
     override init(){
         super.init()
-        dataFields = [urlKey, quoteKey, authorKey, durationKey]
+        dataFields = [urlKey, quoteKey, authorKey, durationKey, portraitKey]
     }
     
     func updateAttribute(key: String, value: String){
@@ -43,6 +46,8 @@ class Content:NSObject{
         case durationKey:
             updateDuration(value: value)
             break
+        case portraitKey:
+            updatePortrait(value: value)
         default:
             break
         }
@@ -66,6 +71,9 @@ class Content:NSObject{
         self.duration = Int(value)!
     }
     
+    func updatePortrait(value: String){
+        self.portrait = value;
+    }
     
     
     

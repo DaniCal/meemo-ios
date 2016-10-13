@@ -16,6 +16,7 @@ import Alamofire
     @objc optional func contentDidUpdate()
     @objc optional func fileDidUpdate()
     @objc optional func fileDidLoad()
+    @objc optional func pictureDidLoad()
 }
 
 
@@ -36,6 +37,8 @@ class ContentManager: NSObject, FirebaseSynchornizeDelegate{
         delegate?.contentDidUpdate!()
         if(key == content.urlKey){
             self.delegate?.fileDidUpdate!()
+        }else if(key == content.portraitKey){
+            self.downloadPicture()
         }
     }
     
@@ -70,6 +73,18 @@ class ContentManager: NSObject, FirebaseSynchornizeDelegate{
             if let data = response.data {
                 self.content.file = data
                 self.delegate?.fileDidLoad!()
+            }else{
+                //TODO error handling hhtp request
+            }
+        }
+    }
+    
+    func downloadPicture(){
+        Alamofire.request(content.portrait).response { response in
+            debugPrint(response)
+            if let data = response.data {
+                self.content.picture = data
+                self.delegate?.pictureDidLoad!()
             }else{
                 //TODO error handling hhtp request
             }
