@@ -15,6 +15,8 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     
     
     
+    
+    @IBOutlet weak var heartButton: UIButton!
     @IBOutlet weak var timerTextView: UITextView!
     @IBOutlet weak var authorTextView: UITextView!
     @IBOutlet weak var clockTextView: UITextView!
@@ -22,6 +24,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var fileLoadingIndicator: UIActivityIndicatorView!
     
+    var liked: Bool = false
     let rootRef = FIRDatabase.database().reference()
     var player:Player = Player()
     var contentManager: ContentManager = ContentManager()
@@ -96,6 +99,27 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         player.pause()
     }
     
+    @IBAction func heartDidTouch(_ sender: AnyObject) {
+        if(liked == false){
+            heartButton.setImage(#imageLiteral(resourceName: "player_heart_full"), for: .normal)
+            liked = true
+        }else{
+            heartButton.setImage(#imageLiteral(resourceName: "player_heart_empty"), for: .normal)
+            liked = false
+        }
+    }
+    
+    @IBAction func replayDidTouch(_ sender: AnyObject) {
+        if(player.isInitialized()){
+            self.player.reset()
+            player.setFile(data: self.contentManager.content.file)
+            play()
+        }else{
+            playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
+            fileLoadingIndicator.startAnimating()
+            self.contentManager.downloadFile()
+        }
+    }
     
     @IBAction func playDidTouch(_ sender: AnyObject) {
         if(!player.isInitialized()){

@@ -83,13 +83,19 @@
                                     <constraint firstAttribute="height" constant="24" id="UJf-7m-UkT"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="player_replay"/>
+                                <connections>
+                                    <action selector="replayDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uLf-AX-Iim"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sId-ef-Nox">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Nnv-bp-aVG"/>
                                     <constraint firstAttribute="width" constant="20" id="h8k-S4-76z"/>
                                 </constraints>
-                                <state key="normal" image="player_heart_full"/>
+                                <state key="normal" image="player_heart_empty"/>
+                                <connections>
+                                    <action selector="heartDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Bo-gO-U5L"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
@@ -124,6 +130,7 @@
                     <connections>
                         <outlet property="authorTextView" destination="1nU-al-NDA" id="yzW-Qt-Ltp"/>
                         <outlet property="fileLoadingIndicator" destination="YSU-xR-8Pk" id="dH1-Ej-tal"/>
+                        <outlet property="heartButton" destination="sId-ef-Nox" id="LT8-dU-vZ7"/>
                         <outlet property="playButton" destination="cZJ-yi-9GZ" id="f1b-7E-MvC"/>
                         <outlet property="quoteTextView" destination="PRg-E3-Yu3" id="Snu-XZ-jKg"/>
                         <outlet property="timerTextView" destination="w7C-pR-bjp" id="Cd1-E0-6Jo"/>
@@ -206,7 +213,7 @@
         <image name="player_author_portrait_large" width="243" height="243"/>
         <image name="player_bottom_background" width="375" height="139"/>
         <image name="player_button_background" width="173" height="173"/>
-        <image name="player_heart_full" width="52" height="47"/>
+        <image name="player_heart_empty" width="79" height="72"/>
         <image name="player_play_button" width="154" height="154"/>
         <image name="player_replay" width="38" height="46"/>
     </resources>
