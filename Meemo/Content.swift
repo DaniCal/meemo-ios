@@ -13,7 +13,6 @@ class Content:NSObject{
     let urlKey = "url"
     let quoteKey = "quote"
     let authorKey = "author"
-    let jobKey = "job"
     let durationKey = "duration"
     
     var quote:String!
@@ -27,7 +26,7 @@ class Content:NSObject{
 
     override init(){
         super.init()
-        dataFields = [urlKey, quoteKey, authorKey, jobKey, durationKey]
+        dataFields = [urlKey, quoteKey, authorKey, durationKey]
     }
     
     func updateAttribute(key: String, value: String){
@@ -40,9 +39,6 @@ class Content:NSObject{
             break
         case authorKey:
             updateAuthor(value: value)
-            break
-        case jobKey:
-            updateJob(value: value)
             break
         case durationKey:
             updateDuration(value: value)

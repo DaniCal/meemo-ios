@@ -16,7 +16,6 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     
     
     @IBOutlet weak var timerTextView: UITextView!
-    @IBOutlet weak var jobTextView: UITextView!
     @IBOutlet weak var authorTextView: UITextView!
     @IBOutlet weak var clockTextView: UITextView!
     @IBOutlet weak var quoteTextView: UITextView!
@@ -31,13 +30,12 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     func contentDidUpdate(){
         self.quoteTextView.text = contentManager.content.quote
         self.authorTextView.text = contentManager.content.author
-        self.jobTextView.text = contentManager.content.job
         self.player.setDuration(duration: contentManager.content.duration)
     }
     
     func fileDidUpdate(){
         self.player.reset()
-        self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
+        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
     }
     
     func fileDidLoad(){
@@ -47,7 +45,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     
     //PlayerDelegate func (protocol definition in Player.swift)
     func playerDidFinishPlaying(){
-        self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
+        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
         FIRAnalytics.logEvent(withName: "finished_play", parameters: nil)
         timerTextView.text = ""
     }
@@ -82,7 +80,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     //Player interactions
     
     func play(){
-        self.playButton.setImage(#imageLiteral(resourceName: "pause_button"), for: .normal)
+        self.playButton.setImage(#imageLiteral(resourceName: "player_pause_button"), for: .normal)
         self.fileLoadingIndicator.stopAnimating()
         player.play()
 
@@ -92,14 +90,14 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     }
     
     func pause(){
-        self.playButton.setImage(#imageLiteral(resourceName: "play_button"), for: .normal)
+        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
         player.pause()
     }
     
     
     @IBAction func playDidTouch(_ sender: AnyObject) {
         if(!player.isInitialized()){
-            playButton.setImage(#imageLiteral(resourceName: "transparent_button"), for: .normal)
+            playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
             fileLoadingIndicator.startAnimating()
             self.contentManager.downloadFile()
         }else if(self.player.isPlaying()){
@@ -107,7 +105,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         }else if(!self.player.isPlaying()){
             play()
         }else{
-            playButton.setImage(#imageLiteral(resourceName: "transparent_button"), for: .normal)
+            playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
             fileLoadingIndicator.startAnimating()
             self.contentManager.downloadFile()
         }

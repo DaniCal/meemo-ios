@@ -9,15 +9,15 @@
 import UIKit
 
 class ContentLabelView: UIView {
-    @IBOutlet weak var author: UILabel!
-
-    @IBOutlet weak var titel: UILabel!
-    @IBOutlet weak var portrait: UIImageView!
-    @IBOutlet var view: UIView!
     
+    @IBOutlet var view: UIView!
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         Bundle.main.loadNibNamed("ContentLabelView", owner: self, options: nil)
         self.addSubview(self.view)
+        //self.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        //self.view.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
     }
 }
