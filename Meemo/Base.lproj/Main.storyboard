@@ -212,11 +212,6 @@
                             <constraint firstItem="6iP-Dt-9zB" firstAttribute="centerX" secondItem="Kxv-MQ-gVg" secondAttribute="centerX" id="Nrl-32-NPA"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="brainwashDidTouch" destination="vZB-RJ-G0O" id="rk0-S8-vnw"/>
-                        <outlet property="downDidTouch" destination="CpZ-eF-v1I" id="7B4-Nr-EDd"/>
-                        <outlet property="kickAssDidTouch" destination="Uhi-C1-d4G" id="iFU-Nm-WCg"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMG-XA-Hc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
