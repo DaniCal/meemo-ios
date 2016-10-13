@@ -116,6 +116,18 @@ class Player: NSObject, AVAudioPlayerDelegate{
         }
     }
     
+    func getDurationString() -> String{
+        if(duration != nil){
+            let timeLeftInMinutes = Int(self.duration/60)
+            let timeLeftInSeconds:Int = Int(self.duration - (timeLeftInMinutes * 60))
+            let timeLeftString:String = "\(transformTo2Digits(number: timeLeftInMinutes)):\(transformTo2Digits(number: timeLeftInSeconds))"
+
+            return timeLeftString
+        }else{
+            return ""
+        }
+    }
+    
     //----------------------SET Functions--------------------------------------
 
     

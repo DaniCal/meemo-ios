@@ -31,6 +31,8 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         self.quoteTextView.text = contentManager.content.quote
         self.authorTextView.text = contentManager.content.author
         self.player.setDuration(duration: contentManager.content.duration)
+        self.timerTextView.text = player.getDurationString()
+        
     }
     
     func fileDidUpdate(){
