@@ -15,9 +15,8 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     
     
     
-    
+    @IBOutlet weak var timerTextView: UITextView!    
     @IBOutlet weak var heartButton: UIButton!
-    @IBOutlet weak var timerTextView: UITextView!
     @IBOutlet weak var authorTextView: UITextView!
     @IBOutlet weak var clockTextView: UITextView!
     @IBOutlet weak var quoteTextView: UITextView!
@@ -53,6 +52,8 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
         FIRAnalytics.logEvent(withName: "finished_play", parameters: nil)
         timerTextView.text = ""
+        
+
     }
     
     func playerErrorDidOccur(){
@@ -100,13 +101,14 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     }
     
     @IBAction func heartDidTouch(_ sender: AnyObject) {
-        if(liked == false){
-            heartButton.setImage(#imageLiteral(resourceName: "player_heart_full"), for: .normal)
-            liked = true
-        }else{
-            heartButton.setImage(#imageLiteral(resourceName: "player_heart_empty"), for: .normal)
-            liked = false
-        }
+        performSegue(withIdentifier: "showreactionview", sender: sender)
+//        if(liked == false){
+//            heartButton.setImage(#imageLiteral(resourceName: "player_heart_full"), for: .normal)
+//            liked = true
+//        }else{
+//            heartButton.setImage(#imageLiteral(resourceName: "player_heart_empty"), for: .normal)
+//            liked = false
+//        }
     }
     
     @IBAction func replayDidTouch(_ sender: AnyObject) {
