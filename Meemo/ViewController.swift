@@ -109,6 +109,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         if(liked == false){
             heartButton.setImage(#imageLiteral(resourceName: "player_heart_full"), for: .normal)
             liked = true
+            FIRAnalytics.logEvent(withName: "like", parameters: nil)
         }else{
             heartButton.setImage(#imageLiteral(resourceName: "player_heart_empty"), for: .normal)
             liked = false
