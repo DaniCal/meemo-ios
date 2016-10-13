@@ -4,13 +4,9 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="OpenSans-ExtraBold.ttf">
-            <string>OpenSans-Extrabold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -64,11 +60,10 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7C-pR-bjp" userLabel="timer">
-                                <frame key="frameInset" minY="288" width="320" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7C-pR-bjp" userLabel="timer">
+                                <frame key="frameInset" minY="296" width="320" height="42"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YSU-xR-8Pk">
@@ -82,22 +77,43 @@
                                     <constraint firstAttribute="width" secondItem="HLj-R4-MXv" secondAttribute="height" multiplier="5:4" id="QxO-Sy-xns"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B67-K3-zoU">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="FRq-sd-qAa"/>
+                                    <constraint firstAttribute="height" constant="24" id="UJf-7m-UkT"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="player_replay"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sId-ef-Nox">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Nnv-bp-aVG"/>
+                                    <constraint firstAttribute="width" constant="20" id="h8k-S4-76z"/>
+                                </constraints>
+                                <state key="normal" image="player_heart_full"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.20784313725490194" green="0.83921568627450982" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="c2e-0J-GRV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0uq-Kg-bqL"/>
+                            <constraint firstItem="w7C-pR-bjp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1vt-nH-Obz"/>
                             <constraint firstItem="cZJ-yi-9GZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2d4-jQ-HNW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cZJ-yi-9GZ" secondAttribute="bottom" constant="47" id="4rr-Tv-xHM"/>
                             <constraint firstItem="1nU-al-NDA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6bn-1u-Ffr"/>
                             <constraint firstItem="PRg-E3-Yu3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="8wp-ZB-WdW"/>
+                            <constraint firstItem="PRg-E3-Yu3" firstAttribute="top" secondItem="w7C-pR-bjp" secondAttribute="bottom" id="9mQ-zz-a4a"/>
                             <constraint firstItem="cZJ-yi-9GZ" firstAttribute="top" secondItem="1nU-al-NDA" secondAttribute="bottom" constant="28" id="9vO-9E-mW9"/>
                             <constraint firstItem="1nU-al-NDA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="E53-sZ-Zus"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sId-ef-Nox" secondAttribute="bottom" constant="75" id="In2-Np-iNH"/>
                             <constraint firstItem="1nU-al-NDA" firstAttribute="top" secondItem="PRg-E3-Yu3" secondAttribute="bottom" id="OxU-5k-Wn4"/>
                             <constraint firstItem="HLj-R4-MXv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Qv3-Zb-OOZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c2e-0J-GRV" secondAttribute="bottom" id="Uek-tK-KEC"/>
+                            <constraint firstItem="sId-ef-Nox" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="V5V-lh-glc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YSU-xR-8Pk" secondAttribute="bottom" constant="77" id="Yn9-YK-q7L"/>
+                            <constraint firstItem="w7C-pR-bjp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="a8b-r5-xAT"/>
                             <constraint firstItem="c2e-0J-GRV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="aab-gc-VWE"/>
                             <constraint firstItem="HLj-R4-MXv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="cS3-4O-Eyr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B67-K3-zoU" secondAttribute="trailing" constant="30" id="jzF-dh-2UD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="B67-K3-zoU" secondAttribute="bottom" constant="75" id="lb2-zd-Eth"/>
                             <constraint firstItem="PRg-E3-Yu3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ubs-JM-Ffh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gk7-HE-BrL" secondAttribute="bottom" constant="42" id="vRD-1x-eKK"/>
                             <constraint firstItem="YSU-xR-8Pk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vnT-Km-bDo"/>
@@ -190,6 +206,8 @@
         <image name="player_author_portrait_large" width="243" height="243"/>
         <image name="player_bottom_background" width="375" height="139"/>
         <image name="player_button_background" width="173" height="173"/>
+        <image name="player_heart_full" width="52" height="47"/>
         <image name="player_play_button" width="154" height="154"/>
+        <image name="player_replay" width="38" height="46"/>
     </resources>
 </document>
