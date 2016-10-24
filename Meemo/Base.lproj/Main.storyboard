@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kix-iS-fp0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2RN-Wt-1mh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_button_background" translatesAutoresizingMaskIntoConstraints="NO" id="gk7-HE-BrL">
@@ -153,7 +153,7 @@
                         <viewControllerLayoutGuide type="bottom" id="dCk-QO-8GZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kxv-MQ-gVg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6iP-Dt-9zB">
@@ -229,7 +229,7 @@
                         <viewControllerLayoutGuide type="bottom" id="L0t-gv-vob"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2tF-Pk-JjW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thankyou_sticker" translatesAutoresizingMaskIntoConstraints="NO" id="EyV-Pe-jVg">
@@ -276,6 +276,37 @@ Now let's rock this day!</string>
             </objects>
             <point key="canvasLocation" x="766.875" y="208.09859154929578"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="dY4-Zp-PDo">
+            <objects>
+                <viewController id="2RN-Wt-1mh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EtM-aY-G2s"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Es-TZ-dyr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yQ0-ki-LBY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5I-iZ-BLW">
+                                <connections>
+                                    <segue destination="kix-iS-fp0" kind="embed" id="jD1-Zm-h5C"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r5I-iZ-BLW" firstAttribute="centerY" secondItem="yQ0-ki-LBY" secondAttribute="centerY" id="DvZ-ZP-Fib"/>
+                            <constraint firstItem="r5I-iZ-BLW" firstAttribute="width" secondItem="yQ0-ki-LBY" secondAttribute="width" id="Qcj-Le-7bs"/>
+                            <constraint firstItem="r5I-iZ-BLW" firstAttribute="centerX" secondItem="yQ0-ki-LBY" secondAttribute="centerX" id="owh-Qt-IML"/>
+                            <constraint firstItem="r5I-iZ-BLW" firstAttribute="height" secondItem="yQ0-ki-LBY" secondAttribute="height" id="zOh-XF-Ruh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cm4-e5-u6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1416.8" y="-526.6866566716642"/>
+        </scene>
         <!--Journey View Controller-->
         <scene sceneID="ZII-h3-2hH">
             <objects>
@@ -304,48 +335,104 @@ Now let's rock this day!</string>
                                     </imageView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xef-Yq-L4f">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="320" id="ETV-dq-KRz"/>
-                                            <constraint firstAttribute="height" constant="80" id="HTx-ef-7df"/>
+                                            <constraint firstAttribute="height" constant="90" id="sCZ-Ez-0yb"/>
+                                            <constraint firstAttribute="width" constant="320" id="zxE-H6-xmJ"/>
                                         </constraints>
                                         <connections>
                                             <segue destination="0PI-C6-0dv" kind="embed" id="z27-K7-31b"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMI-Fs-jBR">
+                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NMI-Fs-jBR">
+                                        <rect key="frame" x="27" y="662" width="320" height="90"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="Mlh-WR-xrD"/>
                                             <constraint firstAttribute="height" constant="80" id="W7Z-yY-MxB"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="aDH-4E-0YD"/>
                                             <constraint firstAttribute="width" constant="320" id="cBY-pw-xFF"/>
                                         </constraints>
                                         <connections>
                                             <segue destination="0PI-C6-0dv" kind="embed" id="4zR-tt-hTL"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4na-Wa-jDU">
+                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4na-Wa-jDU">
+                                        <rect key="frame" x="27" y="572" width="320" height="90"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="c7e-IA-UT6"/>
-                                            <constraint firstAttribute="width" constant="320" id="jBV-aW-ElQ"/>
+                                            <constraint firstAttribute="height" constant="90" id="9Hq-N0-gs3"/>
+                                            <constraint firstAttribute="width" constant="320" id="aE9-cS-mQs"/>
                                         </constraints>
                                         <connections>
                                             <segue destination="0PI-C6-0dv" kind="embed" id="DNC-Yv-hRo"/>
                                         </connections>
                                     </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6gv-aB-RRc">
+                                        <rect key="frame" x="27" y="482" width="320" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="CqH-J3-gwG"/>
+                                            <constraint firstAttribute="height" constant="80" id="GxG-Hs-0oY"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="Gxf-uk-YQ7"/>
+                                            <constraint firstAttribute="width" constant="320" id="a4Q-EV-Sa3"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="0PI-C6-0dv" kind="embed" id="fcI-vi-RWl"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-Er-1GP">
+                                        <rect key="frame" x="27" y="392" width="320" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="3rx-vK-IOZ"/>
+                                            <constraint firstAttribute="width" constant="320" id="YiX-T1-5m4"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="0PI-C6-0dv" kind="embed" id="Sok-xX-uMN"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OA6-FM-ssR">
+                                        <rect key="frame" x="27" y="302" width="320" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="Pf0-aH-Lew"/>
+                                            <constraint firstAttribute="height" constant="90" id="jFY-G1-toI"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="0PI-C6-0dv" kind="embed" id="BGd-pg-6NC"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qH9-AU-g4l">
+                                        <rect key="frame" x="27" y="212" width="320" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="hG6-Z0-APi"/>
+                                            <constraint firstAttribute="width" constant="320" id="vLZ-aG-lLI"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="0PI-C6-0dv" kind="embed" id="plT-ZR-fSx"/>
+                                        </connections>
+                                    </containerView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.42352941176470588" green="0.88235294117647056" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="3XC-OY-RlL" firstAttribute="top" secondItem="xef-Yq-L4f" secondAttribute="bottom" id="0jI-I9-lkk"/>
+                                    <constraint firstItem="xfF-Er-1GP" firstAttribute="top" secondItem="OA6-FM-ssR" secondAttribute="bottom" id="2YE-C1-Kap"/>
                                     <constraint firstAttribute="bottom" secondItem="3XC-OY-RlL" secondAttribute="bottom" id="5iL-HJ-Sst"/>
-                                    <constraint firstItem="4na-Wa-jDU" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="7Tg-Wp-4Jd"/>
                                     <constraint firstItem="3XC-OY-RlL" firstAttribute="top" secondItem="Plh-EE-UwM" secondAttribute="top" constant="842" id="82C-7f-bMH"/>
-                                    <constraint firstItem="NMI-Fs-jBR" firstAttribute="top" secondItem="4na-Wa-jDU" secondAttribute="bottom" id="82S-o2-her"/>
                                     <constraint firstAttribute="trailing" secondItem="3XC-OY-RlL" secondAttribute="trailing" id="DSa-Yc-I0K"/>
-                                    <constraint firstItem="3XC-OY-RlL" firstAttribute="top" secondItem="xef-Yq-L4f" secondAttribute="bottom" id="H7X-Li-Ysa"/>
+                                    <constraint firstItem="OA6-FM-ssR" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="ENs-5b-M9a"/>
+                                    <constraint firstItem="6gv-aB-RRc" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="FK9-qD-roN"/>
+                                    <constraint firstItem="NMI-Fs-jBR" firstAttribute="top" secondItem="4na-Wa-jDU" secondAttribute="bottom" id="Isn-nq-HB8"/>
+                                    <constraint firstItem="xfF-Er-1GP" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="NAD-if-mWv"/>
                                     <constraint firstItem="NMI-Fs-jBR" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="Nvb-uo-K8J"/>
                                     <constraint firstItem="3XC-OY-RlL" firstAttribute="width" secondItem="Plh-EE-UwM" secondAttribute="width" id="QsC-PO-0Qt"/>
                                     <constraint firstAttribute="bottom" secondItem="3XC-OY-RlL" secondAttribute="bottom" id="VGq-95-DxP"/>
                                     <constraint firstItem="3XC-OY-RlL" firstAttribute="leading" secondItem="Plh-EE-UwM" secondAttribute="leading" id="Wl8-rs-q6x"/>
-                                    <constraint firstItem="xef-Yq-L4f" firstAttribute="top" secondItem="NMI-Fs-jBR" secondAttribute="bottom" id="ewS-oM-7Ne"/>
-                                    <constraint firstItem="xef-Yq-L4f" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="fEQ-7f-kdH"/>
+                                    <constraint firstItem="NMI-Fs-jBR" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="ZpJ-dS-hR1"/>
+                                    <constraint firstItem="xef-Yq-L4f" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="aTo-7W-ejK"/>
+                                    <constraint firstItem="4na-Wa-jDU" firstAttribute="top" secondItem="6gv-aB-RRc" secondAttribute="bottom" id="ag3-Pp-wSW"/>
+                                    <constraint firstItem="xef-Yq-L4f" firstAttribute="top" secondItem="NMI-Fs-jBR" secondAttribute="bottom" id="box-o3-Jny"/>
+                                    <constraint firstItem="4na-Wa-jDU" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="buk-yc-czI"/>
+                                    <constraint firstItem="6gv-aB-RRc" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="f8F-gS-Mbi"/>
                                     <constraint firstAttribute="bottom" secondItem="IKF-4N-H6L" secondAttribute="bottom" id="pBF-he-ocK"/>
+                                    <constraint firstItem="qH9-AU-g4l" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="pFq-5l-E4d"/>
+                                    <constraint firstItem="6gv-aB-RRc" firstAttribute="top" secondItem="xfF-Er-1GP" secondAttribute="bottom" id="rM4-We-Gc7"/>
                                     <constraint firstItem="IKF-4N-H6L" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="rVA-v5-EL3"/>
+                                    <constraint firstItem="OA6-FM-ssR" firstAttribute="top" secondItem="qH9-AU-g4l" secondAttribute="bottom" id="udf-wD-e8B"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -365,7 +452,7 @@ Now let's rock this day!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiS-MM-q1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645.3125" y="57.04225352112676"/>
+            <point key="canvasLocation" x="2358" y="-526"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mpE-Lo-HDU">
@@ -376,7 +463,7 @@ Now let's rock this day!</string>
                         <viewControllerLayoutGuide type="bottom" id="PH6-Gn-jer"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="O0f-4Z-QUT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Onx-1W-uo3">
@@ -435,6 +522,7 @@ Now let's rock this day!</string>
                                 </constraints>
                             </view>
                         </subviews>
+                        <color key="backgroundColor" red="1" green="0.84666568080000004" blue="0.55939542819999999" alpha="0.0" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Onx-1W-uo3" firstAttribute="centerX" secondItem="O0f-4Z-QUT" secondAttribute="centerX" id="b1W-ag-L7r"/>
                             <constraint firstItem="Onx-1W-uo3" firstAttribute="top" secondItem="Fqh-MG-KVV" secondAttribute="bottom" id="cEy-Vy-mN3"/>
@@ -443,7 +531,7 @@ Now let's rock this day!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEC-JO-gju" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2574.375" y="208.09859154929578"/>
+            <point key="canvasLocation" x="3414" y="-526"/>
         </scene>
     </scenes>
     <resources>

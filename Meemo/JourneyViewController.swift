@@ -13,6 +13,7 @@ class JourneyViewController: UIViewController{
 
     
     @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         scrollView.contentSize.height = 1000
         let bottomOffset: CGPoint = CGPoint(x: 0, y: self.scrollView.contentSize.height);
