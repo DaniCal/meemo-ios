@@ -12,6 +12,14 @@ import UIKit
 class JourneyViewController: UIViewController{
 
     
+    @IBOutlet weak var day5: UIView!
+    @IBOutlet weak var day4: UIView!
+    @IBOutlet weak var day7: UIView!
+    @IBOutlet weak var day6: UIView!
+    @IBOutlet weak var day3: UIView!
+    @IBOutlet weak var day2: UIView!
+    @IBOutlet weak var day1: UIView!
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
