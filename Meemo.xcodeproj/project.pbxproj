@@ -23,8 +23,7 @@
 		82C6E9091D92C45500FA765C /* MeemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E9081D92C45500FA765C /* MeemoTests.swift */; };
 		82C6E9141D92C45500FA765C /* MeemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E9131D92C45500FA765C /* MeemoUITests.swift */; };
 		82D285D01DAFEC87002F1A7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82D285CF1DAFEC87002F1A7B /* GoogleService-Info.plist */; };
-		82D285D21DBA6855002F1A7B /* JourneyBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D285D11DBA6855002F1A7B /* JourneyBoxView.xib */; };
-		82D285D41DBA68DE002F1A7B /* JourneyBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D285D31DBA68DE002F1A7B /* JourneyBoxView.swift */; };
+		82D285D81DBE5E95002F1A7B /* JourneyBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D285D71DBE5E95002F1A7B /* JourneyBoxViewController.swift */; };
 		82FC88901D9BB3080090D448 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88861D9BB3080090D448 /* OpenSans-Bold.ttf */; };
 		82FC88911D9BB3080090D448 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88871D9BB3080090D448 /* OpenSans-BoldItalic.ttf */; };
 		82FC88921D9BB3080090D448 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88881D9BB3080090D448 /* OpenSans-ExtraBold.ttf */; };
@@ -82,8 +81,7 @@
 		82C6E9131D92C45500FA765C /* MeemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeemoUITests.swift; sourceTree = "<group>"; };
 		82C6E9151D92C45500FA765C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82D285CF1DAFEC87002F1A7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		82D285D11DBA6855002F1A7B /* JourneyBoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JourneyBoxView.xib; sourceTree = "<group>"; };
-		82D285D31DBA68DE002F1A7B /* JourneyBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyBoxView.swift; sourceTree = "<group>"; };
+		82D285D71DBE5E95002F1A7B /* JourneyBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyBoxViewController.swift; sourceTree = "<group>"; };
 		82FC88861D9BB3080090D448 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		82FC88871D9BB3080090D448 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		82FC88881D9BB3080090D448 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -141,8 +139,6 @@
 		82B256271DAE91F60092A5C7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				82D285D11DBA6855002F1A7B /* JourneyBoxView.xib */,
-				82D285D31DBA68DE002F1A7B /* JourneyBoxView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -177,6 +173,7 @@
 				82B256271DAE91F60092A5C7 /* Views */,
 				8203522C1DA670AB0049C4BE /* API */,
 				82C6E8F31D92C45500FA765C /* AppDelegate.swift */,
+				82D285D71DBE5E95002F1A7B /* JourneyBoxViewController.swift */,
 				820352311DAE56590049C4BE /* JourneyViewController.swift */,
 				8229844B1DAFC49A00D544B1 /* ReactionViewController.swift */,
 				82C6E8F51D92C45500FA765C /* ViewController.swift */,
@@ -370,7 +367,6 @@
 				82FC88941D9BB3080090D448 /* OpenSans-Italic.ttf in Resources */,
 				82D285D01DAFEC87002F1A7B /* GoogleService-Info.plist in Resources */,
 				82FC88911D9BB3080090D448 /* OpenSans-BoldItalic.ttf in Resources */,
-				82D285D21DBA6855002F1A7B /* JourneyBoxView.xib in Resources */,
 				82C6E8FE1D92C45500FA765C /* LaunchScreen.storyboard in Resources */,
 				82FC88981D9BB3080090D448 /* OpenSans-Semibold.ttf in Resources */,
 				82FC88921D9BB3080090D448 /* OpenSans-ExtraBold.ttf in Resources */,
@@ -530,9 +526,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				82C6E8F61D92C45500FA765C /* ViewController.swift in Sources */,
+				82D285D81DBE5E95002F1A7B /* JourneyBoxViewController.swift in Sources */,
 				820352321DAE56590049C4BE /* JourneyViewController.swift in Sources */,
 				8203522B1DA670A40049C4BE /* ContentManager.swift in Sources */,
-				82D285D41DBA68DE002F1A7B /* JourneyBoxView.swift in Sources */,
 				820352291DA652500049C4BE /* Player.swift in Sources */,
 				82C6E8F41D92C45500FA765C /* AppDelegate.swift in Sources */,
 				8229844C1DAFC49A00D544B1 /* ReactionViewController.swift in Sources */,

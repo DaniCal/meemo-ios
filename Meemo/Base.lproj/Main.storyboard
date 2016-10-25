@@ -290,7 +290,7 @@ Now let's rock this day!</string>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5I-iZ-BLW">
                                 <connections>
-                                    <segue destination="kix-iS-fp0" kind="embed" id="jD1-Zm-h5C"/>
+                                    <segue destination="kix-iS-fp0" kind="embed" identifier="scrollView_embed" id="jD1-Zm-h5C"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -339,7 +339,7 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="height" constant="60" id="lwe-ex-oOd"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="0PI-C6-0dv" kind="embed" id="4zR-tt-hTL"/>
+                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day5_embed" id="4zR-tt-hTL"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4na-Wa-jDU">
@@ -348,7 +348,7 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="width" constant="320" id="YuS-f0-B4g"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="0PI-C6-0dv" kind="embed" id="DNC-Yv-hRo"/>
+                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day1_embed" id="DNC-Yv-hRo"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gv-aB-RRc">
@@ -357,7 +357,7 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="height" constant="60" id="eaa-b2-baE"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="0PI-C6-0dv" kind="embed" id="fcI-vi-RWl"/>
+                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day3_embed" id="fcI-vi-RWl"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-Er-1GP">
@@ -366,7 +366,7 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="height" constant="60" id="idG-7y-bkU"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="0PI-C6-0dv" kind="embed" id="Sok-xX-uMN"/>
+                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day4_embed" id="Sok-xX-uMN"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OA6-FM-ssR">
@@ -375,7 +375,7 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="width" constant="320" id="yXo-Qj-oyg"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="0PI-C6-0dv" kind="embed" id="BGd-pg-6NC"/>
+                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day2_embed" id="BGd-pg-6NC"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qH9-AU-g4l">
@@ -384,7 +384,7 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="height" constant="60" id="NtJ-TF-roQ"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="0PI-C6-0dv" kind="embed" id="plT-ZR-fSx"/>
+                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day6_embed" id="plT-ZR-fSx"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xef-Yq-L4f">
@@ -393,7 +393,7 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="height" constant="60" id="si8-KW-h0Y"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="0PI-C6-0dv" kind="embed" id="z27-K7-31b"/>
+                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day7_embed" id="z27-K7-31b"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
@@ -449,10 +449,10 @@ Now let's rock this day!</string>
             </objects>
             <point key="canvasLocation" x="2358" y="-526"/>
         </scene>
-        <!--View Controller-->
+        <!--Journey Box View Controller-->
         <scene sceneID="mpE-Lo-HDU">
             <objects>
-                <viewController id="0PI-C6-0dv" sceneMemberID="viewController">
+                <viewController id="0PI-C6-0dv" customClass="JourneyBoxViewController" customModule="Meemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fqh-MG-KVV"/>
                         <viewControllerLayoutGuide type="bottom" id="PH6-Gn-jer"/>
@@ -523,6 +523,14 @@ Now let's rock this day!</string>
                             <constraint firstItem="Onx-1W-uo3" firstAttribute="top" secondItem="Fqh-MG-KVV" secondAttribute="bottom" id="cEy-Vy-mN3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="author" destination="Ozx-3u-EiL" id="Q3Z-qn-yvr"/>
+                        <outlet property="boxAuthor" destination="Ozx-3u-EiL" id="0K9-z6-i4W"/>
+                        <outlet property="boxImage" destination="JIv-SX-xFT" id="ftK-tl-Dtk"/>
+                        <outlet property="boxTitle" destination="3h6-fT-nYo" id="8bl-2S-Vmj"/>
+                        <outlet property="image" destination="JIv-SX-xFT" id="FuE-ai-ChA"/>
+                        <outlet property="title" destination="3h6-fT-nYo" id="aaD-2H-zud"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEC-JO-gju" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -547,7 +555,7 @@ Now let's rock this day!</string>
         <image name="thankyou_sticker" width="139" height="139"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="z27-K7-31b"/>
+        <segue reference="4zR-tt-hTL"/>
         <segue reference="lZh-dQ-0s0"/>
     </inferredMetricsTieBreakers>
 </document>

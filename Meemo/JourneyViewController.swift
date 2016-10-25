@@ -26,12 +26,6 @@ class JourneyViewController: UIViewController{
         scrollView.contentSize.height = 1000
         let bottomOffset: CGPoint = CGPoint(x: 0, y: self.scrollView.contentSize.height);
         scrollView.setContentOffset(bottomOffset, animated: false)
-        
-        
-        
-
-        
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
