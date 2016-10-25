@@ -40,6 +40,9 @@ class JourneyViewController: UIViewController{
     var day7ViewController: JourneyBoxViewController! = nil
 
     
+    var programDaysViewController = [JourneyBoxViewController?](repeating: nil, count: 7)
+    var programContent: [Content]! = []
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
@@ -48,14 +51,7 @@ class JourneyViewController: UIViewController{
         scrollView.setContentOffset(bottomOffset, animated: false)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        day1ViewController.setTitle(title: "1")
-        day2ViewController.setTitle(title: "2")
-        day3ViewController.setTitle(title: "3")
-        day4ViewController.setTitle(title: "4")
-        day5ViewController.setTitle(title: "5")
-        day6ViewController.setTitle(title: "6")
-        day7ViewController.setTitle(title: "7")
+    override func viewDidAppear(_ animated: Bool){
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,6 +62,7 @@ class JourneyViewController: UIViewController{
         let segueName:String = segue.identifier!;
         switch(segueName){
         case self.day1Identifier:
+            programDaysViewController[0] = segue.destination as! JourneyBoxViewController
             day1ViewController = segue.destination as! JourneyBoxViewController
             break
         case self.day2Identifier:
@@ -89,5 +86,20 @@ class JourneyViewController: UIViewController{
         default:
             break
         }
+    }
+    
+    func setProgramContent(programContent: [Content]){
+        self.programContent = programContent
+        initDayContent(day: self.day1ViewController, content: self.programContent[0])
+        initDayContent(day: self.day2ViewController, content: self.programContent[1])
+        initDayContent(day: self.day3ViewController, content: self.programContent[2])
+        initDayContent(day: self.day4ViewController, content: self.programContent[3])
+        initDayContent(day: self.day5ViewController, content: self.programContent[4])
+        initDayContent(day: self.day6ViewController, content: self.programContent[5])
+        initDayContent(day: self.day7ViewController, content: self.programContent[6])
+    }
+    
+    func initDayContent(day: JourneyBoxViewController, content: Content){
+        day.setContent(content: content)
     }
 }

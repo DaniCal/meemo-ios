@@ -14,6 +14,7 @@ class JourneyBoxViewController: UIViewController {
     @IBOutlet weak var boxAuthor: UILabel!
     @IBOutlet weak var boxTitle: UILabel!
 
+    var imageURL: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,17 @@ class JourneyBoxViewController: UIViewController {
         if(boxTitle != nil){
             boxTitle.text = title
         }
+    }
+    
+    func setAuthor(author: String){
+        if(boxAuthor != nil){
+            boxAuthor.text = author
+        }
+    }
+    
+    func setContent(content: Content){
+        setTitle(title: content.quote)
+        setAuthor(author: content.author)
     }
 
     
