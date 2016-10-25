@@ -8,6 +8,11 @@
 
 import UIKit
 
+@objc protocol JourneyBoxDelegate{
+    @objc optional func playDidTouch()
+}
+
+
 class JourneyBoxViewController: UIViewController {
 
     @IBOutlet weak var boxImage: UIImageView!
@@ -15,6 +20,9 @@ class JourneyBoxViewController: UIViewController {
     @IBOutlet weak var boxTitle: UILabel!
 
     var imageURL: String = ""
+    
+    var delegate:JourneyBoxDelegate?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +40,7 @@ class JourneyBoxViewController: UIViewController {
     
     
     func setTitle(title: String){
+
         if(boxTitle != nil){
             boxTitle.text = title
         }
@@ -46,6 +55,10 @@ class JourneyBoxViewController: UIViewController {
     func setContent(content: Content){
         setTitle(title: content.quote)
         setAuthor(author: content.author)
+    }
+    
+    @IBAction func playDidTouch(_ sender: AnyObject) {
+        delegate?.playDidTouch!()
     }
 
     

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class JourneyViewController: UIViewController{
+class JourneyViewController: UIViewController, JourneyBoxDelegate{
 
     
     @IBOutlet weak var day5: UIView!
@@ -45,6 +45,9 @@ class JourneyViewController: UIViewController{
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    func playDidTouch() {
+    }
+    
     override func viewDidLoad() {
         scrollView.contentSize.height = 1000
         let bottomOffset: CGPoint = CGPoint(x: 0, y: self.scrollView.contentSize.height);
@@ -64,24 +67,31 @@ class JourneyViewController: UIViewController{
         case self.day1Identifier:
             programDaysViewController[0] = segue.destination as! JourneyBoxViewController
             day1ViewController = segue.destination as! JourneyBoxViewController
+            day1ViewController.delegate = self
             break
         case self.day2Identifier:
             day2ViewController = segue.destination as! JourneyBoxViewController
+            day2ViewController.delegate = self
             break
         case self.day3Identifier:
             day3ViewController = segue.destination as! JourneyBoxViewController
+            day3ViewController.delegate = self
             break
         case self.day4Identifier:
             day4ViewController = segue.destination as! JourneyBoxViewController
+            day4ViewController.delegate = self
             break
         case self.day5Identifier:
             day5ViewController = segue.destination as! JourneyBoxViewController
+            day5ViewController.delegate = self
             break
         case self.day6Identifier:
             day6ViewController = segue.destination as! JourneyBoxViewController
+            day6ViewController.delegate = self
             break
         case self.day7Identifier:
             day7ViewController = segue.destination as! JourneyBoxViewController
+            day7ViewController.delegate = self
             break
         default:
             break

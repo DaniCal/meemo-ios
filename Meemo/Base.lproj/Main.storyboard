@@ -499,6 +499,9 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="width" constant="18" id="rqL-Q9-cqw"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="play_icon"/>
+                                        <connections>
+                                            <action selector="playDidTouch:" destination="0PI-C6-0dv" eventType="touchUpInside" id="hkO-8X-01j"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
