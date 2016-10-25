@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 
+@objc protocol JourneyDelegate{
+    @objc optional func playDidTouch()
+}
+
 class JourneyViewController: UIViewController, JourneyBoxDelegate{
+    var delegate:JourneyDelegate?
 
     
     @IBOutlet weak var day5: UIView!
@@ -45,7 +50,8 @@ class JourneyViewController: UIViewController, JourneyBoxDelegate{
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    func playDidTouch() {
+    func playDidTouch(){
+        delegate?.playDidTouch!()
     }
     
     override func viewDidLoad() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JourneyMainViewController: UIViewController {
+class JourneyMainViewController: UIViewController,JourneyDelegate{
 
     let scrollViewidentifier:String = "scrollView_embed"
     var scrollViewController:JourneyViewController! = nil
@@ -25,6 +25,10 @@ class JourneyMainViewController: UIViewController {
     let day6Content:Content! = Content()
     let day7Content:Content! = Content()
 
+    
+    func playDidTouch(){
+        print("Hello")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +66,8 @@ class JourneyMainViewController: UIViewController {
         let segueName:String = segue.identifier!;
         if(segueName ==  scrollViewidentifier){
             self.scrollViewController = segue.destination as! JourneyViewController
+            scrollViewController.delegate = self
+
         }
     }
     
