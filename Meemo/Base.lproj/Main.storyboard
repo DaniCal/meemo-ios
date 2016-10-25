@@ -290,7 +290,7 @@ Now let's rock this day!</string>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5I-iZ-BLW">
                                 <connections>
-                                    <segue destination="kix-iS-fp0" kind="embed" identifier="scrollView_embed" id="jD1-Zm-h5C"/>
+                                    <segue destination="kix-iS-fp0" kind="embed" identifier="scrollView_embed" id="5sh-vF-6Te"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -302,10 +302,13 @@ Now let's rock this day!</string>
                             <constraint firstItem="r5I-iZ-BLW" firstAttribute="height" secondItem="yQ0-ki-LBY" secondAttribute="height" id="zOh-XF-Ruh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showPlayer" id="IHV-ED-tMO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cm4-e5-u6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1416.8" y="-526.6866566716642"/>
+            <point key="canvasLocation" x="1244" y="-526"/>
         </scene>
         <!--Journey View Controller-->
         <scene sceneID="ZII-h3-2hH">
@@ -556,7 +559,8 @@ Now let's rock this day!</string>
         <image name="thankyou_sticker" width="139" height="139"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fcI-vi-RWl"/>
+        <segue reference="IHV-ED-tMO"/>
         <segue reference="lZh-dQ-0s0"/>
+        <segue reference="fcI-vi-RWl"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -27,7 +27,7 @@ class JourneyMainViewController: UIViewController,JourneyDelegate{
 
     
     func playDidTouch(){
-        print("Hello")
+        performSegue(withIdentifier: "showPlayer", sender: nil)
     }
     
     override func viewDidLoad() {
