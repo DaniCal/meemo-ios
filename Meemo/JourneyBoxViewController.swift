@@ -16,16 +16,25 @@ class JourneyBoxViewController: UIViewController {
 
     
     override func viewDidLoad() {
-        
-        
         super.viewDidLoad()
 
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    
+    
+    func setTitle(title: String){
+        if(boxTitle != nil){
+            boxTitle.text = title
+        }
+    }
 
     
 

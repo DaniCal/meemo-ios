@@ -339,7 +339,7 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="height" constant="60" id="lwe-ex-oOd"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day5_embed" id="4zR-tt-hTL"/>
+                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day2_embed" id="4zR-tt-hTL"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4na-Wa-jDU">
@@ -348,7 +348,7 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="width" constant="320" id="YuS-f0-B4g"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day1_embed" id="DNC-Yv-hRo"/>
+                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day3_embed" id="DNC-Yv-hRo"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gv-aB-RRc">
@@ -357,7 +357,7 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="height" constant="60" id="eaa-b2-baE"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day3_embed" id="fcI-vi-RWl"/>
+                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day4_embed" id="fcI-vi-RWl"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-Er-1GP">
@@ -366,7 +366,7 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="height" constant="60" id="idG-7y-bkU"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day4_embed" id="Sok-xX-uMN"/>
+                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day5_embed" id="Sok-xX-uMN"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OA6-FM-ssR">
@@ -375,7 +375,7 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="width" constant="320" id="yXo-Qj-oyg"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day2_embed" id="BGd-pg-6NC"/>
+                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day6_embed" id="BGd-pg-6NC"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qH9-AU-g4l">
@@ -384,7 +384,7 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="height" constant="60" id="NtJ-TF-roQ"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day6_embed" id="plT-ZR-fSx"/>
+                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day7_embed" id="plT-ZR-fSx"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xef-Yq-L4f">
@@ -393,7 +393,7 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="height" constant="60" id="si8-KW-h0Y"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day7_embed" id="z27-K7-31b"/>
+                                            <segue destination="0PI-C6-0dv" kind="embed" identifier="day1_embed" id="z27-K7-31b"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
@@ -465,20 +465,14 @@ Now let's rock this day!</string>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oval_background_white" translatesAutoresizingMaskIntoConstraints="NO" id="bTj-XG-Bbq">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="270" id="pRO-s9-oeg"/>
-                                            <constraint firstAttribute="height" constant="60" id="xqr-hm-hgm"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ev2-Wc-9Wx">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="JmS-kx-Q2O"/>
-                                            <constraint firstAttribute="height" constant="24" id="qmZ-IC-q9l"/>
+                                            <constraint firstAttribute="width" constant="270" id="jgj-vd-RcW"/>
+                                            <constraint firstAttribute="height" constant="60" id="kEx-nl-S8K"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secret to Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3h6-fT-nYo">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="TBu-TS-Gdt"/>
-                                            <constraint firstAttribute="width" constant="139" id="ewV-qQ-Zu2"/>
+                                            <constraint firstAttribute="height" constant="21" id="BsC-ax-03q"/>
+                                            <constraint firstAttribute="width" constant="139" id="Pi0-NH-Zlw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
@@ -486,55 +480,59 @@ Now let's rock this day!</string>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="author_image" translatesAutoresizingMaskIntoConstraints="NO" id="JIv-SX-xFT">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="HS1-5d-e7j"/>
-                                            <constraint firstAttribute="width" constant="62" id="hS0-LA-mrH"/>
+                                            <constraint firstAttribute="width" constant="62" id="Vr6-Os-oYg"/>
+                                            <constraint firstAttribute="height" constant="60" id="rcH-I7-mlt"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Les Brown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozx-3u-EiL">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="8hM-QG-Fef"/>
-                                            <constraint firstAttribute="width" constant="139" id="WhV-aE-uWX"/>
+                                            <constraint firstAttribute="height" constant="21" id="qfb-7N-ICc"/>
+                                            <constraint firstAttribute="width" constant="139" id="zHG-SF-nbh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.51764705882352946" green="0.51764705882352946" blue="0.51764705882352946" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhK-IR-tqN">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="4ep-Qc-Pgq"/>
+                                            <constraint firstAttribute="width" constant="18" id="rqL-Q9-cqw"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="play_icon"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="8Vg-C7-1Rt"/>
-                                    <constraint firstItem="JIv-SX-xFT" firstAttribute="centerY" secondItem="Onx-1W-uo3" secondAttribute="centerY" id="GGu-o0-uVd"/>
-                                    <constraint firstItem="3h6-fT-nYo" firstAttribute="top" secondItem="Onx-1W-uo3" secondAttribute="top" constant="9" id="IDY-ej-a2k"/>
-                                    <constraint firstAttribute="trailing" secondItem="JIv-SX-xFT" secondAttribute="trailing" constant="11" id="WXA-ey-kIl"/>
-                                    <constraint firstItem="ev2-Wc-9Wx" firstAttribute="centerY" secondItem="Onx-1W-uo3" secondAttribute="centerY" id="ZlW-mq-gNZ"/>
-                                    <constraint firstItem="bTj-XG-Bbq" firstAttribute="centerY" secondItem="Onx-1W-uo3" secondAttribute="centerY" id="ZvK-Oa-IyJ"/>
-                                    <constraint firstItem="3h6-fT-nYo" firstAttribute="leading" secondItem="ev2-Wc-9Wx" secondAttribute="trailing" constant="12" id="dgw-E9-Cbe"/>
-                                    <constraint firstItem="bTj-XG-Bbq" firstAttribute="centerX" secondItem="Onx-1W-uo3" secondAttribute="centerX" id="fkL-1A-9ev"/>
-                                    <constraint firstItem="ev2-Wc-9Wx" firstAttribute="leading" secondItem="Onx-1W-uo3" secondAttribute="leading" constant="22" id="hld-Ry-aIM"/>
-                                    <constraint firstAttribute="width" constant="270" id="lhi-LY-mBV"/>
-                                    <constraint firstItem="Ozx-3u-EiL" firstAttribute="leading" secondItem="ev2-Wc-9Wx" secondAttribute="trailing" constant="12" id="oU8-zP-4FK"/>
-                                    <constraint firstItem="Ozx-3u-EiL" firstAttribute="top" secondItem="Onx-1W-uo3" secondAttribute="top" constant="29" id="qiK-HQ-jvZ"/>
+                                    <constraint firstItem="Ozx-3u-EiL" firstAttribute="top" secondItem="Onx-1W-uo3" secondAttribute="top" constant="29" id="Aby-va-fnJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="JIv-SX-xFT" secondAttribute="trailing" constant="11" id="GNf-cq-sXX"/>
+                                    <constraint firstItem="3h6-fT-nYo" firstAttribute="leading" secondItem="mhK-IR-tqN" secondAttribute="trailing" constant="22" id="GjT-Pf-vFb"/>
+                                    <constraint firstItem="mhK-IR-tqN" firstAttribute="leading" secondItem="Onx-1W-uo3" secondAttribute="leading" constant="33" id="Kd9-25-1SR"/>
+                                    <constraint firstAttribute="width" constant="270" id="RBp-RF-8ca"/>
+                                    <constraint firstItem="JIv-SX-xFT" firstAttribute="centerY" secondItem="Onx-1W-uo3" secondAttribute="centerY" id="UKe-Ur-8BJ"/>
+                                    <constraint firstItem="mhK-IR-tqN" firstAttribute="centerY" secondItem="Onx-1W-uo3" secondAttribute="centerY" id="afT-NH-cd3"/>
+                                    <constraint firstItem="bTj-XG-Bbq" firstAttribute="centerY" secondItem="Onx-1W-uo3" secondAttribute="centerY" id="bXQ-Oi-iYQ"/>
+                                    <constraint firstItem="Ozx-3u-EiL" firstAttribute="leading" secondItem="mhK-IR-tqN" secondAttribute="trailing" constant="22" id="kDJ-xs-06k"/>
+                                    <constraint firstAttribute="height" constant="60" id="yGk-De-ec1"/>
+                                    <constraint firstItem="bTj-XG-Bbq" firstAttribute="centerX" secondItem="Onx-1W-uo3" secondAttribute="centerX" id="zAC-8Y-8Bn"/>
+                                    <constraint firstItem="3h6-fT-nYo" firstAttribute="top" secondItem="Onx-1W-uo3" secondAttribute="top" constant="9" id="zqQ-Ij-MCJ"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.84666568080000004" blue="0.55939542819999999" alpha="0.0" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Onx-1W-uo3" firstAttribute="centerX" secondItem="O0f-4Z-QUT" secondAttribute="centerX" id="b1W-ag-L7r"/>
-                            <constraint firstItem="Onx-1W-uo3" firstAttribute="top" secondItem="Fqh-MG-KVV" secondAttribute="bottom" id="cEy-Vy-mN3"/>
+                            <constraint firstItem="Onx-1W-uo3" firstAttribute="centerY" secondItem="O0f-4Z-QUT" secondAttribute="centerY" id="uqQ-ym-49t"/>
+                            <constraint firstItem="Onx-1W-uo3" firstAttribute="centerX" secondItem="O0f-4Z-QUT" secondAttribute="centerX" id="xyQ-rK-dSF"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="author" destination="Ozx-3u-EiL" id="Q3Z-qn-yvr"/>
                         <outlet property="boxAuthor" destination="Ozx-3u-EiL" id="0K9-z6-i4W"/>
                         <outlet property="boxImage" destination="JIv-SX-xFT" id="ftK-tl-Dtk"/>
                         <outlet property="boxTitle" destination="3h6-fT-nYo" id="8bl-2S-Vmj"/>
-                        <outlet property="image" destination="JIv-SX-xFT" id="FuE-ai-ChA"/>
-                        <outlet property="title" destination="3h6-fT-nYo" id="aaD-2H-zud"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEC-JO-gju" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3414" y="-526"/>
+            <point key="canvasLocation" x="3412.8000000000002" y="-526.23688155922048"/>
         </scene>
     </scenes>
     <resources>
@@ -555,7 +553,7 @@ Now let's rock this day!</string>
         <image name="thankyou_sticker" width="139" height="139"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4zR-tt-hTL"/>
+        <segue reference="fcI-vi-RWl"/>
         <segue reference="lZh-dQ-0s0"/>
     </inferredMetricsTieBreakers>
 </document>
