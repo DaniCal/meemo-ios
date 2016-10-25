@@ -432,6 +432,13 @@ Now let's rock this day!</string>
                                             <constraint firstAttribute="width" constant="375" id="MXv-s8-paw"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYI-ct-qGx">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="375" id="Xkm-sP-ESZ"/>
+                                            <constraint firstAttribute="height" constant="254" id="bFY-Wh-ftz"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.41960784313725491" green="0.85098039215686272" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -443,6 +450,7 @@ Now let's rock this day!</string>
                                     <constraint firstItem="xef-Yq-L4f" firstAttribute="top" secondItem="NMI-Fs-jBR" secondAttribute="bottom" constant="30" id="E4p-Zx-z38"/>
                                     <constraint firstItem="6gv-aB-RRc" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="J6U-dV-diT"/>
                                     <constraint firstItem="OA6-FM-ssR" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="Ot0-o3-Kdt"/>
+                                    <constraint firstItem="YYI-ct-qGx" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="VFP-zp-RNq"/>
                                     <constraint firstItem="4na-Wa-jDU" firstAttribute="top" secondItem="6gv-aB-RRc" secondAttribute="bottom" constant="30" id="VxS-Ni-EVo"/>
                                     <constraint firstItem="NMI-Fs-jBR" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="Wzq-w5-oOY"/>
                                     <constraint firstItem="xfF-Er-1GP" firstAttribute="top" secondItem="OA6-FM-ssR" secondAttribute="bottom" constant="30" id="X0D-FF-HXU"/>
@@ -451,6 +459,7 @@ Now let's rock this day!</string>
                                     <constraint firstItem="xfF-Er-1GP" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="f39-eR-QDu"/>
                                     <constraint firstItem="4na-Wa-jDU" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="fna-yl-Ren"/>
                                     <constraint firstItem="3XC-OY-RlL" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="izO-BX-uMW"/>
+                                    <constraint firstItem="YYI-ct-qGx" firstAttribute="top" secondItem="xef-Yq-L4f" secondAttribute="bottom" constant="158" id="kWp-wx-Jhe"/>
                                     <constraint firstItem="IKF-4N-H6L" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="o3e-P3-N6P"/>
                                     <constraint firstItem="OA6-FM-ssR" firstAttribute="top" secondItem="qH9-AU-g4l" secondAttribute="bottom" constant="30" id="psc-8N-JiL"/>
                                     <constraint firstAttribute="height" constant="882" id="rJ2-VY-H9E"/>
