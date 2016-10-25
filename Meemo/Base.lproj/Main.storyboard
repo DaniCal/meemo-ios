@@ -276,10 +276,10 @@ Now let's rock this day!</string>
             </objects>
             <point key="canvasLocation" x="766.875" y="208.09859154929578"/>
         </scene>
-        <!--View Controller-->
+        <!--Journey Main View Controller-->
         <scene sceneID="dY4-Zp-PDo">
             <objects>
-                <viewController id="2RN-Wt-1mh" sceneMemberID="viewController">
+                <viewController id="2RN-Wt-1mh" customClass="JourneyMainViewController" customModule="Meemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EtM-aY-G2s"/>
                         <viewControllerLayoutGuide type="bottom" id="6Es-TZ-dyr"/>
