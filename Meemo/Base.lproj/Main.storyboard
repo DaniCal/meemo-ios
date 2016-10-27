@@ -360,7 +360,7 @@ Now let's rock this day!</string>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="2" id="5Rr-Kt-uDS"/>
-                                            <constraint firstAttribute="height" constant="882" id="sau-Ey-wVb"/>
+                                            <constraint firstAttribute="height" constant="1158" id="sau-Ey-wVb"/>
                                         </constraints>
                                     </view>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xef-Yq-L4f">
@@ -442,7 +442,7 @@ Now let's rock this day!</string>
                                 </subviews>
                                 <color key="backgroundColor" red="0.41960784313725491" green="0.85098039215686272" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="IKF-4N-H6L" firstAttribute="top" secondItem="Plh-EE-UwM" secondAttribute="top" id="3jd-RM-eNL"/>
+                                    <constraint firstItem="IKF-4N-H6L" firstAttribute="top" secondItem="Plh-EE-UwM" secondAttribute="top" constant="-276" id="3jd-RM-eNL"/>
                                     <constraint firstItem="qH9-AU-g4l" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="9n8-jo-82r"/>
                                     <constraint firstItem="qH9-AU-g4l" firstAttribute="top" secondItem="Plh-EE-UwM" secondAttribute="top" constant="94" id="BdX-rR-Lyp"/>
                                     <constraint firstItem="xef-Yq-L4f" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="DUn-bG-o1g"/>
