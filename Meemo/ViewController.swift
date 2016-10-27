@@ -23,7 +23,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     @IBOutlet weak var quoteTextView: UITextView!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var fileLoadingIndicator: UIActivityIndicatorView!
-    
+    var content:Content = Content()
     var liked: Bool = false
     let rootRef = FIRDatabase.database().reference()
     var player:Player = Player()
@@ -120,6 +120,8 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+
     
     //Player interactions
     

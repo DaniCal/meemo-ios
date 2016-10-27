@@ -9,7 +9,7 @@
 import UIKit
 
 @objc protocol JourneyBoxDelegate{
-    @objc optional func playDidTouch()
+    @objc optional func playDidTouch(content: Content)
 }
 
 
@@ -21,6 +21,8 @@ class JourneyBoxViewController: UIViewController {
     @IBOutlet weak var boxAuthor: UILabel!
     @IBOutlet weak var boxTitle: UILabel!
 
+    var content:Content = Content()
+    
     var imageURL: String = ""
     
     var delegate:JourneyBoxDelegate?
@@ -55,6 +57,7 @@ class JourneyBoxViewController: UIViewController {
     }
     
     func setContent(content: Content){
+        self.content = content
         setTitle(title: content.quote)
         setAuthor(author: content.author)
         if(!content.enabled){
@@ -70,7 +73,7 @@ class JourneyBoxViewController: UIViewController {
     
     
     @IBAction func playDidTouch(_ sender: AnyObject) {
-        delegate?.playDidTouch!()
+        delegate?.playDidTouch!(content: content)
     }
 
     

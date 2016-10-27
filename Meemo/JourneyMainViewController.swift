@@ -25,8 +25,9 @@ class JourneyMainViewController: UIViewController,JourneyDelegate, FirebaseSynch
     let day6Content:Content! = Content()
     let day7Content:Content! = Content()
 
-    
-    func playDidTouch(){
+    var content:Content = Content()
+    func playDidTouch(content:Content){
+        self.content = content
         performSegue(withIdentifier: "showPlayer", sender: nil)
     }
     
@@ -73,6 +74,9 @@ class JourneyMainViewController: UIViewController,JourneyDelegate, FirebaseSynch
             self.scrollViewController = segue.destination as! JourneyViewController
             scrollViewController.delegate = self
 
+        }else if(segueName == "showPlayer"){
+            var viewController:ViewController = segue.destination as! ViewController
+            viewController.content = self.content
         }
     }
     
