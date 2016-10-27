@@ -28,6 +28,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     let rootRef = FIRDatabase.database().reference()
     var player:Player = Player()
     var contentManager: ContentManager = ContentManager()
+    let testURL = "https://storage.googleapis.com/meemo/tomorrow.mp3"
     
     //ContentManagerDelegate func (protocol definition in ContentManager.swift)
     func contentDidUpdate(){
@@ -39,8 +40,8 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     }
     
     func fileDidUpdate(){
-        self.player.reset()
-        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
+//        self.player.reset()
+//        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
     }
     
     func fileDidLoad(){
@@ -77,6 +78,38 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         super.viewDidLoad()
         self.player.delegate = self
         self.contentManager.delegate = self
+        start()
+        
+    }
+    
+    func start(){
+        if(!player.isInitialized()){
+            playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
+            fileLoadingIndicator.startAnimating()
+            downloadFile(url: testURL)
+        }else if(self.player.isPlaying()){
+            pause()
+        }else if(!self.player.isPlaying()){
+            play()
+        }else{
+            playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
+            fileLoadingIndicator.startAnimating()
+            downloadFile(url: testURL)
+        }
+
+    }
+    
+    func downloadFile(url: String){
+        Alamofire.request(url).response { response in
+            debugPrint(response)
+            if let data = response.data {
+                self.player.setFile(data: data)
+                self.play()
+                
+            }else{
+                //TODO error handling hhtp request
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

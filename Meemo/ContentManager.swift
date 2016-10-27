@@ -79,6 +79,18 @@ class ContentManager: NSObject, FirebaseSynchornizeDelegate{
         }
     }
     
+    func downloadFile(url: String){
+        Alamofire.request(url).response { response in
+            debugPrint(response)
+            if let data = response.data {
+                self.content.file = data
+                self.delegate?.fileDidLoad!()
+            }else{
+                //TODO error handling hhtp request
+            }
+        }
+    }
+    
     func downloadPicture(){
         Alamofire.request(content.portrait).response { response in
             debugPrint(response)
