@@ -17,6 +17,7 @@ class MessageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         messageLabel.text = content.message
+        doneButton.setTitle(content.button, for: .normal)
 
         // Do any additional setup after loading the view.
     }

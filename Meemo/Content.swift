@@ -27,6 +27,7 @@ class Content:NSObject{
     var duration:Int = 0
     var portrait:String!
     var message:String!
+    var button:String!
 
     
     var dataFields: Set<String>!
@@ -81,6 +82,10 @@ class Content:NSObject{
     
     func updateMessage(value: String){
         self.message = value;
+    }
+    
+    func updateButton(value: String){
+        self.button = value;
     }
     
     func disable(){

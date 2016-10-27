@@ -267,7 +267,7 @@ Now let's rock this day!</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="YEAH LET'S GO"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="" id="R6T-uw-O7O"/>
+                                    <segue destination="2RN-Wt-1mh" kind="show" id="8SE-Ka-eVh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -624,7 +624,7 @@ Now let's rock this day!</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BGd-pg-6NC"/>
-        <segue reference="R6T-uw-O7O"/>
+        <segue reference="8SE-Ka-eVh"/>
         <segue reference="FpV-1e-8I9"/>
     </inferredMetricsTieBreakers>
 </document>
