@@ -26,6 +26,8 @@ class Content:NSObject{
     var picture:Data!
     var duration:Int = 0
     var portrait:String!
+    var message:String!
+
     
     var dataFields: Set<String>!
 
@@ -75,6 +77,10 @@ class Content:NSObject{
     
     func updatePortrait(value: String){
         self.portrait = value;
+    }
+    
+    func updateMessage(value: String){
+        self.message = value;
     }
     
     func disable(){
