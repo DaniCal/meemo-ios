@@ -551,18 +551,30 @@ Now let's rock this day!</string>
                                             <action selector="playDidTouch:" destination="0PI-C6-0dv" eventType="touchUpInside" id="hkO-8X-01j"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oval_background_white" translatesAutoresizingMaskIntoConstraints="NO" id="3ce-ST-cEG">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="1OW-zw-GLy"/>
+                                            <constraint firstAttribute="width" constant="270" id="ZOz-le-T0w"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Ozx-3u-EiL" firstAttribute="top" secondItem="Onx-1W-uo3" secondAttribute="top" constant="29" id="Aby-va-fnJ"/>
+                                    <constraint firstItem="3ce-ST-cEG" firstAttribute="leading" secondItem="Onx-1W-uo3" secondAttribute="leading" id="CQm-WI-qeo"/>
                                     <constraint firstAttribute="trailing" secondItem="JIv-SX-xFT" secondAttribute="trailing" constant="11" id="GNf-cq-sXX"/>
                                     <constraint firstItem="3h6-fT-nYo" firstAttribute="leading" secondItem="mhK-IR-tqN" secondAttribute="trailing" constant="22" id="GjT-Pf-vFb"/>
                                     <constraint firstItem="mhK-IR-tqN" firstAttribute="leading" secondItem="Onx-1W-uo3" secondAttribute="leading" constant="33" id="Kd9-25-1SR"/>
                                     <constraint firstAttribute="width" constant="270" id="RBp-RF-8ca"/>
                                     <constraint firstItem="JIv-SX-xFT" firstAttribute="centerY" secondItem="Onx-1W-uo3" secondAttribute="centerY" id="UKe-Ur-8BJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="3ce-ST-cEG" secondAttribute="trailing" id="V2Y-Ud-KuU"/>
                                     <constraint firstItem="mhK-IR-tqN" firstAttribute="centerY" secondItem="Onx-1W-uo3" secondAttribute="centerY" id="afT-NH-cd3"/>
+                                    <constraint firstItem="3ce-ST-cEG" firstAttribute="top" secondItem="Onx-1W-uo3" secondAttribute="top" id="bVb-cQ-JZ1"/>
                                     <constraint firstItem="bTj-XG-Bbq" firstAttribute="centerY" secondItem="Onx-1W-uo3" secondAttribute="centerY" id="bXQ-Oi-iYQ"/>
+                                    <constraint firstItem="3ce-ST-cEG" firstAttribute="centerX" secondItem="Onx-1W-uo3" secondAttribute="centerX" id="bre-OO-2ef"/>
                                     <constraint firstItem="Ozx-3u-EiL" firstAttribute="leading" secondItem="mhK-IR-tqN" secondAttribute="trailing" constant="22" id="kDJ-xs-06k"/>
+                                    <constraint firstItem="3ce-ST-cEG" firstAttribute="centerY" secondItem="Onx-1W-uo3" secondAttribute="centerY" id="vXP-OQ-m65"/>
+                                    <constraint firstAttribute="bottom" secondItem="3ce-ST-cEG" secondAttribute="bottom" id="xnx-Mf-qRO"/>
                                     <constraint firstAttribute="height" constant="60" id="yGk-De-ec1"/>
                                     <constraint firstItem="bTj-XG-Bbq" firstAttribute="centerX" secondItem="Onx-1W-uo3" secondAttribute="centerX" id="zAC-8Y-8Bn"/>
                                     <constraint firstItem="3h6-fT-nYo" firstAttribute="top" secondItem="Onx-1W-uo3" secondAttribute="top" constant="9" id="zqQ-Ij-MCJ"/>
@@ -579,11 +591,13 @@ Now let's rock this day!</string>
                         <outlet property="boxAuthor" destination="Ozx-3u-EiL" id="0K9-z6-i4W"/>
                         <outlet property="boxImage" destination="JIv-SX-xFT" id="ftK-tl-Dtk"/>
                         <outlet property="boxTitle" destination="3h6-fT-nYo" id="8bl-2S-Vmj"/>
+                        <outlet property="overlayOval" destination="3ce-ST-cEG" id="XiY-XN-C9N"/>
+                        <outlet property="playButton" destination="mhK-IR-tqN" id="wSS-OB-1RH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEC-JO-gju" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3412.8000000000002" y="-526.23688155922048"/>
+            <point key="canvasLocation" x="3412.5" y="-527.11267605633805"/>
         </scene>
     </scenes>
     <resources>

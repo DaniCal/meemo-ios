@@ -14,6 +14,8 @@ import UIKit
 
 
 class JourneyBoxViewController: UIViewController {
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var overlayOval: UIImageView!
 
     @IBOutlet weak var boxImage: UIImageView!
     @IBOutlet weak var boxAuthor: UILabel!
@@ -55,7 +57,17 @@ class JourneyBoxViewController: UIViewController {
     func setContent(content: Content){
         setTitle(title: content.quote)
         setAuthor(author: content.author)
+        if(!content.enabled){
+            disable()
+        }
     }
+    
+    func disable(){
+            playButton.setImage(#imageLiteral(resourceName: "player_heart_full"), for: .normal)
+            overlayOval.alpha = 0.6
+            playButton.isEnabled = false
+    }
+    
     
     @IBAction func playDidTouch(_ sender: AnyObject) {
         delegate?.playDidTouch!()

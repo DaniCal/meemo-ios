@@ -16,6 +16,8 @@ class Content:NSObject{
     let authorKey = "author"
     let durationKey = "duration"
     
+    var enabled = true
+    
     var quote:String!
     var author:String!
     var job:String!
@@ -75,6 +77,7 @@ class Content:NSObject{
         self.portrait = value;
     }
     
-    
-    
+    func disable(){
+        enabled = false
+    }
 }

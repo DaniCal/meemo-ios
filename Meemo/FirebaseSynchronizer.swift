@@ -26,6 +26,7 @@ class FirebaseSynchronizer: NSObject{
     static let portraitKey: String = "portrait"
     static let lengthKey: String = "length"
     static let urlKey: String = "url"
+    static let enabledKey: String = "enabled"
 
 
 
@@ -73,6 +74,11 @@ class FirebaseSynchronizer: NSObject{
                 newContent.updatePortrait(value: portrait)
                 let url = (snapshot.childSnapshot(forPath: dayKey + String(index) + "/" + urlKey).value as? String)!;
                 newContent.updateUrl(value: url)
+                let enabled = (snapshot.childSnapshot(forPath: dayKey + String(index) + "/" + enabledKey).value as? Bool)!;
+                if(!enabled){
+                    newContent.disable()
+                }
+
                 journeyContent.append(newContent)
             }
             
