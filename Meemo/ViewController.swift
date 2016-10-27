@@ -27,32 +27,32 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     var liked: Bool = false
     let rootRef = FIRDatabase.database().reference()
     var player:Player = Player()
-    var contentManager: ContentManager = ContentManager()
+//    var contentManager: ContentManager = ContentManager()
     let testURL = "https://storage.googleapis.com/meemo/tomorrow.mp3"
     
     //ContentManagerDelegate func (protocol definition in ContentManager.swift)
-    func contentDidUpdate(){
-        self.quoteTextView.text = contentManager.content.quote
-        self.authorTextView.text = contentManager.content.author
-        self.player.setDuration(duration: contentManager.content.duration)
-        self.timerTextView.text = player.getDurationString()
-        
-    }
+//    func contentDidUpdate(){
+//        self.quoteTextView.text = contentManager.content.quote
+//        self.authorTextView.text = contentManager.content.author
+//        self.player.setDuration(duration: contentManager.content.duration)
+//        self.timerTextView.text = player.getDurationString()
+//        
+//    }
     
-    func fileDidUpdate(){
-//        self.player.reset()
-//        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
-    }
+//    func fileDidUpdate(){
+////        self.player.reset()
+////        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
+//    }
     
-    func fileDidLoad(){
-        player.setFile(data: self.contentManager.content.file)
-        play()
-    }
+//    func fileDidLoad(){
+//        player.setFile(data: self.contentManager.content.file)
+//        play()
+//    }
     
     
-    func pictureDidLoad(){
-        portraitImageView.image = UIImage(data: self.contentManager.content.picture)
-    }
+//    func pictureDidLoad(){
+//        portraitImageView.image = UIImage(data: self.contentManager.content.picture)
+//    }
     
     //PlayerDelegate func (protocol definition in Player.swift)
     func playerDidFinishPlaying(){
@@ -77,8 +77,15 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.player.delegate = self
-        self.contentManager.delegate = self
+//        self.contentManager.delegate = self
+        self.quoteTextView.text = content.quote
+        self.authorTextView.text = content.author
+        self.player.setDuration(duration: content.duration)
+        self.timerTextView.text = player.getDurationString()
+        downloadPicture()
         start()
+        
+        
         
     }
     
@@ -100,7 +107,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     }
     
     func downloadFile(url: String){
-        Alamofire.request(url).response { response in
+        Alamofire.request(content.url).response { response in
             debugPrint(response)
             if let data = response.data {
                 self.player.setFile(data: data)
@@ -112,8 +119,19 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         }
     }
     
+    func downloadPicture(){
+        Alamofire.request(content.portrait).response { response in
+            debugPrint(response)
+            if let data = response.data {
+                self.portraitImageView.image = UIImage(data: data)
+            }else{
+                //TODO error handling hhtp request
+            }
+        }
+    }
+
+    
     override func viewDidAppear(_ animated: Bool) {
-        contentManager.connectToDB()
 
     }
 
@@ -154,12 +172,12 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     @IBAction func replayDidTouch(_ sender: AnyObject) {
         if(player.isInitialized()){
             self.player.reset()
-            player.setFile(data: self.contentManager.content.file)
+//            player.setFile(data: self.contentManager.content.file)
             play()
         }else{
             playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
             fileLoadingIndicator.startAnimating()
-            self.contentManager.downloadFile()
+//            self.contentManager.downloadFile()
         }
     }
     
@@ -167,7 +185,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         if(!player.isInitialized()){
             playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
             fileLoadingIndicator.startAnimating()
-            self.contentManager.downloadFile()
+//            self.contentManager.downloadFile()
         }else if(self.player.isPlaying()){
             pause()
         }else if(!self.player.isPlaying()){
@@ -175,7 +193,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         }else{
             playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
             fileLoadingIndicator.startAnimating()
-            self.contentManager.downloadFile()
+//            self.contentManager.downloadFile()
         }
     }
 }
