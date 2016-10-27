@@ -27,7 +27,7 @@ class FirebaseSynchronizer: NSObject{
     static let lengthKey: String = "length"
     static let urlKey: String = "url"
     static let messageKey: String = "message"
-
+    static let buttonKey: String = "message"
     static let enabledKey: String = "enabled"
 
 
@@ -78,6 +78,7 @@ class FirebaseSynchronizer: NSObject{
                 newContent.updateUrl(value: url)
                 let message = (snapshot.childSnapshot(forPath: dayKey + String(index) + "/" + messageKey).value as? String)!;
                 newContent.updateMessage(value: message)
+                
                 let enabled = (snapshot.childSnapshot(forPath: dayKey + String(index) + "/" + enabledKey).value as? Bool)!;
                 if(!enabled){
                     newContent.disable()

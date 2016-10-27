@@ -80,6 +80,9 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
             self.player.pause()
             self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
             self.player = Player()
+        }else if(segueName == "showreactionview"){
+            let reactionViewController:ReactionViewController = segue.destination as! ReactionViewController
+            reactionViewController.content = self.content
         }
     }
 

@@ -11,12 +11,23 @@ import Firebase
 
 
 class ReactionViewController: UIViewController {
+    
+    var content: Content = Content()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Initializing test data
+        
+        let segueName:String = segue.identifier!;
+        if(segueName ==  "showMessageScreen"){
+            let messageViewController:MessageViewController = segue.destination as! MessageViewController
+            messageViewController.content = self.content
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

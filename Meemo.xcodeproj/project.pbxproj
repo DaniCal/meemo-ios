@@ -25,6 +25,7 @@
 		82D285D01DAFEC87002F1A7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82D285CF1DAFEC87002F1A7B /* GoogleService-Info.plist */; };
 		82D285D81DBE5E95002F1A7B /* JourneyBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D285D71DBE5E95002F1A7B /* JourneyBoxViewController.swift */; };
 		82D285DA1DBF97D8002F1A7B /* JourneyMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D285D91DBF97D8002F1A7B /* JourneyMainViewController.swift */; };
+		82E0C7381DC2912800695BAD /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0C7371DC2912800695BAD /* MessageViewController.swift */; };
 		82FC88901D9BB3080090D448 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88861D9BB3080090D448 /* OpenSans-Bold.ttf */; };
 		82FC88911D9BB3080090D448 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88871D9BB3080090D448 /* OpenSans-BoldItalic.ttf */; };
 		82FC88921D9BB3080090D448 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88881D9BB3080090D448 /* OpenSans-ExtraBold.ttf */; };
@@ -84,6 +85,7 @@
 		82D285CF1DAFEC87002F1A7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		82D285D71DBE5E95002F1A7B /* JourneyBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyBoxViewController.swift; sourceTree = "<group>"; };
 		82D285D91DBF97D8002F1A7B /* JourneyMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyMainViewController.swift; sourceTree = "<group>"; };
+		82E0C7371DC2912800695BAD /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		82FC88861D9BB3080090D448 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		82FC88871D9BB3080090D448 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		82FC88881D9BB3080090D448 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				820352311DAE56590049C4BE /* JourneyViewController.swift */,
 				82D285D71DBE5E95002F1A7B /* JourneyBoxViewController.swift */,
 				8229844B1DAFC49A00D544B1 /* ReactionViewController.swift */,
+				82E0C7371DC2912800695BAD /* MessageViewController.swift */,
 				82C6E8F51D92C45500FA765C /* ViewController.swift */,
 				82C6E8F71D92C45500FA765C /* Main.storyboard */,
 				82C6E8FA1D92C45500FA765C /* Assets.xcassets */,
@@ -535,6 +538,7 @@
 				8203522B1DA670A40049C4BE /* ContentManager.swift in Sources */,
 				820352291DA652500049C4BE /* Player.swift in Sources */,
 				82C6E8F41D92C45500FA765C /* AppDelegate.swift in Sources */,
+				82E0C7381DC2912800695BAD /* MessageViewController.swift in Sources */,
 				8229844C1DAFC49A00D544B1 /* ReactionViewController.swift in Sources */,
 				8203522E1DA674AB0049C4BE /* FirebaseSynchronizer.swift in Sources */,
 				820352301DA67A000049C4BE /* Content.swift in Sources */,

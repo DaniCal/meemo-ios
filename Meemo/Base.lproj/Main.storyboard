@@ -181,35 +181,35 @@
                                                 <state key="normal" image="emotions_rocket"/>
                                                 <connections>
                                                     <action selector="rockinDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="mL0-hO-KxF"/>
-                                                    <segue destination="Zgf-ni-Vl5" kind="show" id="lZh-dQ-0s0"/>
+                                                    <segue destination="Zgf-ni-Vl5" kind="show" identifier="showMessageScreen" id="lZh-dQ-0s0"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpZ-eF-v1I">
                                                 <state key="normal" image="emotions_smile"/>
                                                 <connections>
                                                     <action selector="downDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="cyT-Yg-L8C"/>
-                                                    <segue destination="Zgf-ni-Vl5" kind="show" id="FpV-1e-8I9"/>
+                                                    <segue destination="Zgf-ni-Vl5" kind="show" identifier="showMessageScreen" id="FpV-1e-8I9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhi-C1-d4G">
                                                 <state key="normal" image="emotions_cool"/>
                                                 <connections>
                                                     <action selector="kickAssDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="wuE-DZ-kGy"/>
-                                                    <segue destination="Zgf-ni-Vl5" kind="show" id="jqW-OF-LWb"/>
+                                                    <segue destination="Zgf-ni-Vl5" kind="show" identifier="showMessageScreen" id="jqW-OF-LWb"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtT-w6-dAP">
                                                 <state key="normal" image="emotions_monkey"/>
                                                 <connections>
                                                     <action selector="notSeriousDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="9zi-gj-xqE"/>
-                                                    <segue destination="Zgf-ni-Vl5" kind="show" id="lKx-hx-rcp"/>
+                                                    <segue destination="Zgf-ni-Vl5" kind="show" identifier="showMessageScreen" id="lKx-hx-rcp"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZB-RJ-G0O">
                                                 <state key="normal" image="emotions_brainwash"/>
                                                 <connections>
                                                     <action selector="brainwashDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="d3E-TQ-RTK"/>
-                                                    <segue destination="Zgf-ni-Vl5" kind="show" id="9li-4E-Xvs"/>
+                                                    <segue destination="Zgf-ni-Vl5" kind="show" identifier="showMessageScreen" id="9li-4E-Xvs"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -232,10 +232,10 @@
             </objects>
             <point key="canvasLocation" x="82.5" y="213.38028169014083"/>
         </scene>
-        <!--View Controller-->
+        <!--Message View Controller-->
         <scene sceneID="ZxK-T4-g6L">
             <objects>
-                <viewController id="Zgf-ni-Vl5" sceneMemberID="viewController">
+                <viewController id="Zgf-ni-Vl5" customClass="MessageViewController" customModule="Meemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="suy-JB-vgA"/>
                         <viewControllerLayoutGuide type="bottom" id="L0t-gv-vob"/>
@@ -267,7 +267,7 @@ Now let's rock this day!</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="YEAH LET'S GO"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="R6T-uw-O7O"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="" id="R6T-uw-O7O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -283,6 +283,10 @@ Now let's rock this day!</string>
                             <constraint firstItem="m1e-EL-N62" firstAttribute="centerX" secondItem="APh-I4-Op0" secondAttribute="centerX" id="w69-Sg-VsR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="doneButton" destination="APh-I4-Op0" id="2gi-G9-Nq1"/>
+                        <outlet property="messageLabel" destination="m1e-EL-N62" id="DIZ-J8-dPT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBd-DI-5Rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -620,7 +624,7 @@ Now let's rock this day!</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BGd-pg-6NC"/>
-        <segue reference="IHV-ED-tMO"/>
-        <segue reference="lZh-dQ-0s0"/>
+        <segue reference="R6T-uw-O7O"/>
+        <segue reference="FpV-1e-8I9"/>
     </inferredMetricsTieBreakers>
 </document>
