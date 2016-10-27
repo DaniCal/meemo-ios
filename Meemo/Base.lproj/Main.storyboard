@@ -106,7 +106,7 @@
                                 </constraints>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="2RN-Wt-1mh" kind="show" id="yvC-Ho-Ulj"/>
+                                    <segue destination="2RN-Wt-1mh" kind="show" identifier="goBack" id="yvC-Ho-Ulj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -619,8 +619,8 @@ Now let's rock this day!</string>
         <image name="thankyou_sticker" width="139" height="139"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R6T-uw-O7O"/>
-        <segue reference="lZh-dQ-0s0"/>
         <segue reference="BGd-pg-6NC"/>
+        <segue reference="IHV-ED-tMO"/>
+        <segue reference="lZh-dQ-0s0"/>
     </inferredMetricsTieBreakers>
 </document>

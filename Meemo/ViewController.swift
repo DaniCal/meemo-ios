@@ -72,6 +72,18 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         timerTextView.text = timeLeft
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Initializing test data
+        
+        let segueName:String = segue.identifier!;
+        if(segueName ==  "goBack"){
+            self.player.pause()
+            self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
+            self.player = Player()
+        }
+    }
+
+    
     //ControllerDelegate func
     
     override func viewDidLoad() {
