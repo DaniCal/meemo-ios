@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JourneyMainViewController: UIViewController,JourneyDelegate{
+class JourneyMainViewController: UIViewController,JourneyDelegate, FirebaseSynchornizeDelegate{
 
     let scrollViewidentifier:String = "scrollView_embed"
     var scrollViewController:JourneyViewController! = nil
@@ -32,6 +32,9 @@ class JourneyMainViewController: UIViewController,JourneyDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        FirebaseSynchronizer.delegate = self
+
+        FirebaseSynchronizer.subscribeToJourney()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,10 +42,12 @@ class JourneyMainViewController: UIViewController,JourneyDelegate{
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let programContent:[Content] = [day1Content, day2Content, day3Content, day4Content, day5Content, day6Content, day7Content]
-        self.scrollViewController.setProgramContent(programContent: programContent)
     }
 
+    func firebaseDidRevceiveJourney(journeyContent: [Content]){
+        self.scrollViewController.setProgramContent(programContent: journeyContent)
+
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //Initializing test data
