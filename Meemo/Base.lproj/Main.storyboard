@@ -270,6 +270,16 @@ Now let's rock this day!</string>
                                     <segue destination="2RN-Wt-1mh" kind="show" id="8SE-Ka-eVh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5G-nT-KlH">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="7iQ-5h-qga"/>
+                                    <constraint firstAttribute="height" constant="39" id="m3Q-wD-uX5"/>
+                                </constraints>
+                                <state key="normal" title="Read more..."/>
+                                <connections>
+                                    <action selector="readMoreDidTouch:" destination="Zgf-ni-Vl5" eventType="touchUpInside" id="rSO-m3-2cx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.41960784313725491" green="0.85098039215686272" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -278,6 +288,8 @@ Now let's rock this day!</string>
                             <constraint firstItem="L0t-gv-vob" firstAttribute="top" secondItem="APh-I4-Op0" secondAttribute="bottom" constant="28" id="IMA-jp-EMN"/>
                             <constraint firstItem="EyV-Pe-jVg" firstAttribute="centerX" secondItem="2tF-Pk-JjW" secondAttribute="centerX" id="LOt-LS-wjp"/>
                             <constraint firstItem="EyV-Pe-jVg" firstAttribute="centerY" secondItem="2tF-Pk-JjW" secondAttribute="centerY" id="Shn-gB-Mr8"/>
+                            <constraint firstItem="M5G-nT-KlH" firstAttribute="top" secondItem="suy-JB-vgA" secondAttribute="bottom" constant="40" id="cAA-La-pzj"/>
+                            <constraint firstItem="M5G-nT-KlH" firstAttribute="centerX" secondItem="2tF-Pk-JjW" secondAttribute="centerX" id="fYa-nt-gmo"/>
                             <constraint firstItem="m1e-EL-N62" firstAttribute="top" secondItem="EyV-Pe-jVg" secondAttribute="bottom" constant="8" symbolic="YES" id="ftb-uD-TF5"/>
                             <constraint firstItem="APh-I4-Op0" firstAttribute="top" secondItem="m1e-EL-N62" secondAttribute="bottom" constant="32" id="rEy-7o-rGP"/>
                             <constraint firstItem="m1e-EL-N62" firstAttribute="centerX" secondItem="APh-I4-Op0" secondAttribute="centerX" id="w69-Sg-VsR"/>

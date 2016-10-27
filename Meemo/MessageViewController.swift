@@ -10,6 +10,14 @@ import UIKit
 
 class MessageViewController: UIViewController {
 
+    @IBAction func readMoreDidTouch(_ sender: AnyObject) {
+        if let url = URL(string: "http://joinmeemo.com") {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }        }
+    }
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var messageLabel: UITextView!
     var content:Content = Content()
