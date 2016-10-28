@@ -27,34 +27,11 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     var liked: Bool = false
     let rootRef = FIRDatabase.database().reference()
     var player:Player = Player()
-//    var contentManager: ContentManager = ContentManager()
-    let testURL = "https://storage.googleapis.com/meemo/tomorrow.mp3"
     
-    //ContentManagerDelegate func (protocol definition in ContentManager.swift)
-//    func contentDidUpdate(){
-//        self.quoteTextView.text = contentManager.content.quote
-//        self.authorTextView.text = contentManager.content.author
-//        self.player.setDuration(duration: contentManager.content.duration)
-//        self.timerTextView.text = player.getDurationString()
-//        
-//    }
+    /*------------------------------------------------------------------------
+    --------------------PlayerDelegate Functions------------------------------
+    ------------------------------------------------------------------------*/
     
-//    func fileDidUpdate(){
-////        self.player.reset()
-////        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
-//    }
-    
-//    func fileDidLoad(){
-//        player.setFile(data: self.contentManager.content.file)
-//        play()
-//    }
-    
-    
-//    func pictureDidLoad(){
-//        portraitImageView.image = UIImage(data: self.contentManager.content.picture)
-//    }
-    
-    //PlayerDelegate func (protocol definition in Player.swift)
     func playerDidFinishPlaying(){
         self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
         FIRAnalytics.logEvent(withName: "finished_play", parameters: nil)
@@ -72,68 +49,129 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         timerTextView.text = timeLeft
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //Initializing test data
-        
-        let segueName:String = segue.identifier!;
-        if(segueName ==  "goBack"){
-            self.player.pause()
-            self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
-            self.player = Player()
-        }else if(segueName == "showreactionview"){
-            let reactionViewController:ReactionViewController = segue.destination as! ReactionViewController
-            reactionViewController.content = self.content
-        }
-    }
 
-    
-    //ControllerDelegate func
+    /*------------------------------------------------------------------------
+     --------------------ViewController Functions------------------------------
+     ------------------------------------------------------------------------*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.player.delegate = self
-//        self.contentManager.delegate = self
+        initUI()
+        downloadPicture()
+        start()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Initializing test data
+        let segueName:String = segue.identifier!;
+        
+        if(segueName ==  "goBack"){
+            //Segue when navigated back to journey
+            reset()
+        }else if(segueName == "showreactionview"){
+            //Segue when showing reaction view after finishing playing
+            let reactionViewController:ReactionViewController = segue.destination as! ReactionViewController
+            reactionViewController.content = self.content
+        }
+    }
+    
+    /*------------------------------------------------------------------------
+     --------------------UI Functions-------------------------------
+     ------------------------------------------------------------------------*/
+    
+    func initUI(){
         self.quoteTextView.text = content.quote
         self.authorTextView.text = content.author
         self.player.setDuration(duration: content.duration)
         self.timerTextView.text = player.getDurationString()
-        downloadPicture()
-        start()
-        
-        
-        
     }
+    
+    func stateLoad(){
+        playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
+        fileLoadingIndicator.startAnimating()
+    }
+    
+    func statePause(){
+        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
+        self.fileLoadingIndicator.stopAnimating()
+    }
+    
+    func statePlay(){
+        self.playButton.setImage(#imageLiteral(resourceName: "player_pause_button"), for: .normal)
+        self.fileLoadingIndicator.stopAnimating()
+    }
+    
+    
+    /*------------------------------------------------------------------------
+     --------------------Player Functions-------------------------------
+     ------------------------------------------------------------------------*/
     
     func start(){
         if(!player.isInitialized()){
-            playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
-            fileLoadingIndicator.startAnimating()
-            downloadFile(url: testURL)
+            //Load file from server and init Player instance
+            self.stateLoad()
+            self.downloadFile()
         }else if(self.player.isPlaying()){
-            pause()
+            self.pause()
         }else if(!self.player.isPlaying()){
-            play()
+            self.play()
         }else{
-            playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
-            fileLoadingIndicator.startAnimating()
-            downloadFile(url: testURL)
+            self.stateLoad()
+            self.downloadFile()
         }
-
     }
     
-    func downloadFile(url: String){
+    func play(){
+        self.playButton.setImage(#imageLiteral(resourceName: "player_pause_button"), for: .normal)
+        self.fileLoadingIndicator.stopAnimating()
+        player.play()
+        
+        let hourOfTheDay = Calendar.current.component(.hour, from: Date())
+        FIRAnalytics.logEvent(withName: "press_play", parameters: ["time": hourOfTheDay as NSObject])
+        
+    }
+    
+    func pause(){
+        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
+        player.pause()
+    }
+    
+    func reset(){
+        self.player.pause()
+        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
+        self.player = Player()
+    }
+    
+
+    
+    /*------------------------------------------------------------------------
+     --------------------Downlaod Functions-------------------------------
+     ------------------------------------------------------------------------*/
+    
+    
+    //Load audio file from server and starts playing
+    func downloadFile(){
         Alamofire.request(content.url).response { response in
             debugPrint(response)
             if let data = response.data {
                 self.player.setFile(data: data)
                 self.play()
-                
             }else{
                 //TODO error handling hhtp request
             }
         }
     }
     
+    //Load picture from server
     func downloadPicture(){
         Alamofire.request(content.portrait).response { response in
             debugPrint(response)
@@ -146,33 +184,13 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     }
 
     
-    override func viewDidAppear(_ animated: Bool) {
 
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
+    /*------------------------------------------------------------------------
+     ---------------------------Actions--------------------------------------
+     ------------------------------------------------------------------------*/
 
     
     //Player interactions
-    
-    func play(){
-        self.playButton.setImage(#imageLiteral(resourceName: "player_pause_button"), for: .normal)
-        self.fileLoadingIndicator.stopAnimating()
-        player.play()
-
-        let hourOfTheDay = Calendar.current.component(.hour, from: Date())
-        FIRAnalytics.logEvent(withName: "press_play", parameters: ["time": hourOfTheDay as NSObject])
-        
-    }
-    
-    func pause(){
-        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
-        player.pause()
-    }
-    
     @IBAction func heartDidTouch(_ sender: AnyObject) {
         if(liked == false){
             heartButton.setImage(#imageLiteral(resourceName: "player_heart_full"), for: .normal)
@@ -186,13 +204,11 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     
     @IBAction func replayDidTouch(_ sender: AnyObject) {
         if(player.isInitialized()){
-            self.player.reset()
-//            player.setFile(data: self.contentManager.content.file)
-            play()
+            self.reset()
+            start()
         }else{
             playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
             fileLoadingIndicator.startAnimating()
-//            self.contentManager.downloadFile()
         }
     }
     
@@ -200,7 +216,6 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         if(!player.isInitialized()){
             playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
             fileLoadingIndicator.startAnimating()
-//            self.contentManager.downloadFile()
         }else if(self.player.isPlaying()){
             pause()
         }else if(!self.player.isPlaying()){
@@ -208,7 +223,6 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         }else{
             playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
             fileLoadingIndicator.startAnimating()
-//            self.contentManager.downloadFile()
         }
     }
 }
