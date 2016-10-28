@@ -16,7 +16,6 @@ import UIKit
 class JourneyBoxViewController: UIViewController {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var overlayOval: UIImageView!
-
     @IBOutlet weak var boxImage: UIImageView!
     @IBOutlet weak var boxAuthor: UILabel!
     @IBOutlet weak var boxTitle: UILabel!
@@ -27,12 +26,9 @@ class JourneyBoxViewController: UIViewController {
     
     var delegate:JourneyBoxDelegate?
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
     }
@@ -41,10 +37,7 @@ class JourneyBoxViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
-    
     func setTitle(title: String){
-
         if(boxTitle != nil){
             boxTitle.text = title
         }
@@ -65,17 +58,14 @@ class JourneyBoxViewController: UIViewController {
         }
     }
     
+    
     func disable(){
             playButton.setImage(#imageLiteral(resourceName: "player_heart_full"), for: .normal)
             overlayOval.alpha = 0.6
             playButton.isEnabled = false
     }
     
-    
     @IBAction func playDidTouch(_ sender: AnyObject) {
         delegate?.playDidTouch!(content: content)
     }
-
-    
-
 }
