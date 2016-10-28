@@ -28,7 +28,7 @@ class Content:NSObject{
     var portrait:String!
     var message:String!
     var button:String!
-
+    var link:String!
     
     var dataFields: Set<String>!
 
@@ -86,6 +86,10 @@ class Content:NSObject{
     
     func updateButton(value: String){
         self.button = value;
+    }
+    
+    func updateLink(value: String){
+        self.link = value
     }
     
     func disable(){

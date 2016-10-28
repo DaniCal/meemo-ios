@@ -28,7 +28,7 @@ class MessageViewController: UIViewController {
     
     //Opens url in Browser
     func openURLLink(){
-        if let url = URL(string: "http://joinmeemo.com") {
+        if let url = URL(string: content.link) {
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             } else {
