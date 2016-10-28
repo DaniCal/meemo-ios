@@ -11,7 +11,7 @@ import Firebase
 
 @objc protocol FirebaseSynchornizeDelegate{
     @objc optional func firebaseDataDidUpdate(key: String, value: String)
-    @objc optional func firebaseDidRevceiveJourney(journeyContent: [Content])
+    @objc optional func firebaseDidReceiveJourney(journeyContent: [Content])
 
 }
 
@@ -88,7 +88,7 @@ class FirebaseSynchronizer: NSObject{
                 journeyContent.append(newContent)
             }
             
-            self.delegate?.firebaseDidRevceiveJourney!(journeyContent: journeyContent)
+            self.delegate?.firebaseDidReceiveJourney!(journeyContent: journeyContent)
            
             
         })
