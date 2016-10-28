@@ -103,10 +103,10 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tz-b6-5Db">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tz-b6-5Db">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="21" id="juY-Ql-znP"/>
-                                    <constraint firstAttribute="height" constant="21" id="kCE-yk-UkD"/>
+                                    <constraint firstAttribute="width" constant="59" id="juY-Ql-znP"/>
+                                    <constraint firstAttribute="height" constant="59" id="kCE-yk-UkD"/>
                                 </constraints>
                                 <state key="normal" image="player_cross"/>
                                 <connections>
@@ -129,9 +129,9 @@
                             <constraint firstItem="cZJ-yi-9GZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FSK-WS-che"/>
                             <constraint firstItem="1nU-al-NDA" firstAttribute="top" secondItem="HLj-R4-MXv" secondAttribute="bottom" constant="57" id="HzY-VC-bVs"/>
                             <constraint firstItem="PRg-E3-Yu3" firstAttribute="top" secondItem="HLj-R4-MXv" secondAttribute="bottom" constant="21" id="LUa-Af-FKE"/>
-                            <constraint firstItem="1tz-b6-5Db" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="OKc-lE-sMG"/>
+                            <constraint firstItem="1tz-b6-5Db" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-8" id="OKc-lE-sMG"/>
                             <constraint firstItem="KsP-Ha-D3c" firstAttribute="top" secondItem="gk7-HE-BrL" secondAttribute="bottom" constant="24" id="Ou7-nJ-eWZ"/>
-                            <constraint firstItem="HLj-R4-MXv" firstAttribute="top" secondItem="1tz-b6-5Db" secondAttribute="bottom" constant="24" id="R35-U7-laj"/>
+                            <constraint firstItem="HLj-R4-MXv" firstAttribute="top" secondItem="1tz-b6-5Db" secondAttribute="bottom" constant="4" id="R35-U7-laj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MwF-yP-qDI" secondAttribute="bottom" constant="23" id="UWg-bj-ZXb"/>
                             <constraint firstItem="MwF-yP-qDI" firstAttribute="top" secondItem="cZJ-yi-9GZ" secondAttribute="bottom" constant="1" id="eBc-KM-EkB"/>
                             <constraint firstItem="c2e-0J-GRV" firstAttribute="width" secondItem="KsP-Ha-D3c" secondAttribute="width" id="ecd-XM-A5T"/>
@@ -139,7 +139,7 @@
                             <constraint firstItem="1nU-al-NDA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fmw-hj-RgG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="B67-K3-zoU" secondAttribute="trailing" constant="24" id="iEI-Yk-u8D"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KsP-Ha-D3c" secondAttribute="bottom" id="jC0-zV-O0l"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1tz-b6-5Db" secondAttribute="trailing" constant="10" id="jUe-TX-KhG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1tz-b6-5Db" secondAttribute="trailing" constant="-16" id="jUe-TX-KhG"/>
                             <constraint firstItem="PRg-E3-Yu3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kh4-ef-bKI"/>
                             <constraint firstItem="KsP-Ha-D3c" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="oTv-aN-y1t"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="B67-K3-zoU" secondAttribute="bottom" constant="25" id="rH7-Tt-G2c"/>
@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-721.875" y="202.81690140845072"/>
+            <point key="canvasLocation" x="-723.1884057971015" y="202.17391304347828"/>
         </scene>
         <!--Reaction View Controller-->
         <scene sceneID="YRe-js-ONW">
@@ -818,7 +818,7 @@ So we decided to give you 5 minutes of postive audio content to help you train y
         <image name="play_icon" width="210" height="211"/>
         <image name="player_bottom_background" width="375" height="139"/>
         <image name="player_button_background" width="173" height="173"/>
-        <image name="player_cross" width="51" height="52"/>
+        <image name="player_cross" width="237" height="237"/>
         <image name="player_heart_empty" width="117" height="106"/>
         <image name="player_image" width="667" height="667"/>
         <image name="player_play_button" width="154" height="154"/>
@@ -833,7 +833,7 @@ So we decided to give you 5 minutes of postive audio content to help you train y
         <image name="welcome_oval" width="104" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kAb-dl-OOc"/>
+        <segue reference="yvC-Ho-Ulj"/>
         <segue reference="z27-K7-31b"/>
         <segue reference="lZh-dQ-0s0"/>
     </inferredMetricsTieBreakers>
