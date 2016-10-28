@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsP-Ha-D3c">
@@ -174,7 +174,7 @@
                         <viewControllerLayoutGuide type="bottom" id="dCk-QO-8GZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kxv-MQ-gVg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-K5-mdf">
@@ -272,7 +272,7 @@
                         <viewControllerLayoutGuide type="bottom" id="L0t-gv-vob"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2tF-Pk-JjW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1e-EL-N62">
@@ -340,7 +340,7 @@ Now let's rock this day!</string>
                         <viewControllerLayoutGuide type="bottom" id="mNL-JI-761"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IWa-lI-zyp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_oval" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-qy-scC">
@@ -378,7 +378,7 @@ So we decided to give you 5 minutes of postive audio content to help you train y
                                 </constraints>
                                 <state key="normal" image="welcome_button"/>
                                 <connections>
-                                    <segue destination="2RN-Wt-1mh" kind="show" id="BdI-Fx-35E"/>
+                                    <segue destination="Tc6-4R-Jkn" kind="show" id="sIj-7z-7us"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -408,75 +408,90 @@ So we decided to give you 5 minutes of postive audio content to help you train y
                         <viewControllerLayoutGuide type="bottom" id="nxV-jo-lQG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kgF-q1-NHI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bef-SU-vwI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVK-Wk-Kgf">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="7lB-ai-T2J"/>
+                                    <constraint firstAttribute="height" constant="56" id="Abb-JT-iYK"/>
+                                    <constraint firstAttribute="width" constant="274" id="aSd-1B-7rt"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="selection_relationships"/>
+                                <connections>
+                                    <segue destination="2RN-Wt-1mh" kind="show" id="69t-hf-YL8"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3F-EN-kWj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ee-aJ-VEY">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="SDO-r0-XAn"/>
+                                    <constraint firstAttribute="width" constant="150" id="0mI-8s-WPA"/>
+                                    <constraint firstAttribute="height" constant="56" id="OqS-PZ-bKU"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVK-Wk-Kgf">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="TbC-XT-Tgg"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ee-aJ-VEY">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="z5T-RM-7ui"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="selection_stress"/>
+                                <connections>
+                                    <segue destination="2RN-Wt-1mh" kind="show" id="QjU-GK-HOl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brC-ao-eIG">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="6gm-DJ-3l8"/>
+                                    <constraint firstAttribute="width" constant="152" id="6vs-nM-EpW"/>
+                                    <constraint firstAttribute="height" constant="56" id="neU-TY-pMQ"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="selection_career"/>
+                                <connections>
+                                    <segue destination="2RN-Wt-1mh" kind="show" id="AQv-6J-MTy"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="What areas of life would you like to improve?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcN-Pe-cvu">
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="310" id="gxC-Yz-UUD"/>
-                                    <constraint firstAttribute="height" constant="87" id="yR5-wo-1w6"/>
+                                    <constraint firstAttribute="height" constant="87" id="5xy-Pg-pkr"/>
+                                    <constraint firstAttribute="width" constant="310" id="d4t-Ni-S50"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Za-rj-Y4z">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="3vD-DQ-VKq"/>
+                                    <constraint firstAttribute="width" constant="143" id="WXp-z8-Im5"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="selection_habits"/>
+                                <connections>
+                                    <segue destination="2RN-Wt-1mh" kind="show" id="Pfy-c2-Xt1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IV5-0s-fO1">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="8mn-Up-5ee"/>
+                                    <constraint firstAttribute="width" constant="213" id="JUN-mp-LZF"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="selection_lifegoals"/>
+                                <connections>
+                                    <segue destination="2RN-Wt-1mh" kind="show" id="kAb-dl-OOc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.42352941176470588" green="0.88235294117647056" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="o3F-EN-kWj" firstAttribute="centerX" secondItem="kgF-q1-NHI" secondAttribute="centerX" id="0kt-JJ-i5w"/>
-                            <constraint firstItem="o3F-EN-kWj" firstAttribute="top" secondItem="aVK-Wk-Kgf" secondAttribute="bottom" id="O1b-2m-wLS"/>
-                            <constraint firstItem="o3F-EN-kWj" firstAttribute="width" secondItem="kgF-q1-NHI" secondAttribute="width" id="OeO-uZ-VYg"/>
-                            <constraint firstItem="bef-SU-vwI" firstAttribute="centerX" secondItem="kgF-q1-NHI" secondAttribute="centerX" id="Qin-VP-9HP"/>
-                            <constraint firstItem="NcN-Pe-cvu" firstAttribute="top" secondItem="4ch-lU-aGZ" secondAttribute="bottom" constant="10" id="Snd-OX-fud"/>
-                            <constraint firstItem="7ee-aJ-VEY" firstAttribute="width" secondItem="kgF-q1-NHI" secondAttribute="width" id="atW-rB-Nw7"/>
-                            <constraint firstItem="7ee-aJ-VEY" firstAttribute="top" secondItem="brC-ao-eIG" secondAttribute="bottom" id="bmq-FC-Xqy"/>
-                            <constraint firstItem="bef-SU-vwI" firstAttribute="top" secondItem="o3F-EN-kWj" secondAttribute="bottom" id="dPv-DY-fZz"/>
-                            <constraint firstItem="nxV-jo-lQG" firstAttribute="top" secondItem="bef-SU-vwI" secondAttribute="bottom" id="dYk-ZH-Qbo"/>
-                            <constraint firstItem="aVK-Wk-Kgf" firstAttribute="centerX" secondItem="kgF-q1-NHI" secondAttribute="centerX" id="edj-ax-kcz"/>
-                            <constraint firstItem="brC-ao-eIG" firstAttribute="width" secondItem="kgF-q1-NHI" secondAttribute="width" id="ef8-3W-dAr"/>
-                            <constraint firstItem="NcN-Pe-cvu" firstAttribute="centerX" secondItem="kgF-q1-NHI" secondAttribute="centerX" id="nyU-PT-YcJ"/>
-                            <constraint firstItem="brC-ao-eIG" firstAttribute="centerX" secondItem="kgF-q1-NHI" secondAttribute="centerX" id="oCi-MH-mR9"/>
-                            <constraint firstItem="aVK-Wk-Kgf" firstAttribute="top" secondItem="7ee-aJ-VEY" secondAttribute="bottom" id="orN-Kd-FfA"/>
-                            <constraint firstItem="aVK-Wk-Kgf" firstAttribute="width" secondItem="kgF-q1-NHI" secondAttribute="width" id="svb-j0-OED"/>
-                            <constraint firstItem="7ee-aJ-VEY" firstAttribute="centerX" secondItem="kgF-q1-NHI" secondAttribute="centerX" id="yTy-du-uEq"/>
-                            <constraint firstItem="bef-SU-vwI" firstAttribute="width" secondItem="kgF-q1-NHI" secondAttribute="width" id="zXO-mh-zPU"/>
+                            <constraint firstItem="7ee-aJ-VEY" firstAttribute="top" secondItem="brC-ao-eIG" secondAttribute="bottom" constant="33" id="1zq-wn-fWw"/>
+                            <constraint firstItem="NcN-Pe-cvu" firstAttribute="centerX" secondItem="kgF-q1-NHI" secondAttribute="centerX" id="By8-zZ-buK"/>
+                            <constraint firstItem="IV5-0s-fO1" firstAttribute="centerX" secondItem="kgF-q1-NHI" secondAttribute="centerX" id="I1E-Ve-Gd4"/>
+                            <constraint firstItem="brC-ao-eIG" firstAttribute="top" secondItem="NcN-Pe-cvu" secondAttribute="bottom" constant="36" id="MOD-aV-XUi"/>
+                            <constraint firstItem="IV5-0s-fO1" firstAttribute="top" secondItem="7Za-rj-Y4z" secondAttribute="bottom" constant="26" id="NhI-cz-IF1"/>
+                            <constraint firstItem="7ee-aJ-VEY" firstAttribute="centerX" secondItem="kgF-q1-NHI" secondAttribute="centerX" id="Qhb-hm-Xf6"/>
+                            <constraint firstItem="7Za-rj-Y4z" firstAttribute="centerX" secondItem="kgF-q1-NHI" secondAttribute="centerX" id="UEa-5R-ns9"/>
+                            <constraint firstItem="aVK-Wk-Kgf" firstAttribute="centerX" secondItem="kgF-q1-NHI" secondAttribute="centerX" id="Utk-DO-Pg8"/>
+                            <constraint firstItem="aVK-Wk-Kgf" firstAttribute="top" secondItem="7ee-aJ-VEY" secondAttribute="bottom" constant="32" id="ZxN-WM-sFv"/>
+                            <constraint firstItem="brC-ao-eIG" firstAttribute="centerX" secondItem="kgF-q1-NHI" secondAttribute="centerX" id="eun-RU-hKy"/>
+                            <constraint firstItem="7Za-rj-Y4z" firstAttribute="top" secondItem="aVK-Wk-Kgf" secondAttribute="bottom" constant="24" id="jkr-98-nec"/>
+                            <constraint firstItem="NcN-Pe-cvu" firstAttribute="top" secondItem="4ch-lU-aGZ" secondAttribute="bottom" constant="10" id="vp2-No-Cdn"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHM-vT-pSo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1119.375" y="-1390.1408450704225"/>
+            <point key="canvasLocation" x="1119.2" y="-1390.2548725637182"/>
         </scene>
         <!--Journey Main View Controller-->
         <scene sceneID="dY4-Zp-PDo">
@@ -487,7 +502,7 @@ So we decided to give you 5 minutes of postive audio content to help you train y
                         <viewControllerLayoutGuide type="bottom" id="6Es-TZ-dyr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yQ0-ki-LBY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5I-iZ-BLW">
@@ -808,12 +823,17 @@ So we decided to give you 5 minutes of postive audio content to help you train y
         <image name="player_image" width="667" height="667"/>
         <image name="player_play_button" width="154" height="154"/>
         <image name="player_replay" width="38" height="46"/>
+        <image name="selection_career" width="390" height="144"/>
+        <image name="selection_habits" width="364" height="144"/>
+        <image name="selection_lifegoals" width="547" height="144"/>
+        <image name="selection_relationships" width="697" height="144"/>
+        <image name="selection_stress" width="388" height="144"/>
         <image name="thankyou_fist" width="411" height="411"/>
         <image name="welcome_button" width="215" height="48"/>
         <image name="welcome_oval" width="104" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BdI-Fx-35E"/>
+        <segue reference="kAb-dl-OOc"/>
         <segue reference="z27-K7-31b"/>
         <segue reference="lZh-dQ-0s0"/>
     </inferredMetricsTieBreakers>
