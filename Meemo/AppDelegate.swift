@@ -17,54 +17,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
 
-
-    override init(){
+    func showWelcomeScreen(){
+        self.window = UIWindow(frame: UIScreen.main.bounds)
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        UserDefaults.standard.set(true, forKey: "launchedBefore")
     }
     
-
+    func initFIRNotification(){
+        
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if(!launchedBefore){
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
-            
-            self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
-            UserDefaults.standard.set(true, forKey: "launchedBefore")
-
+            showWelcomeScreen()
         }
+        
+        
+        //Initialize Firebase Notification
         
         connectToFCM()
         
         if #available(iOS 10.0, *) {
+            //options and settings for iOS 10 devices
             let authOptions : UNAuthorizationOptions = [.alert, .badge, .sound]
             UNUserNotificationCenter.current().requestAuthorization(
                 options: authOptions,
                 completionHandler: {_,_ in })
             
-            
             let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
             application.registerUserNotificationSettings(settings)
-            
+            application.registerForRemoteNotifications()
             // For iOS 10 display notification (sent via APNS)
             UNUserNotificationCenter.current().delegate = self
             // For iOS 10 data message (sent via FCM)
             FIRMessaging.messaging().remoteMessageDelegate = self
             
         } else {
-//            let settings: UIUserNotificationSettings =
-//                UIUserNotificationSettings(forTypes: [.alert, .badge, .sound], categories: nil)
-//            application.registerUserNotificationSettings(settings)
+            //TODO: Other versions than iOS 10
         }
         
-        application.registerForRemoteNotifications()
-
         FIRApp.configure()
         
         
@@ -79,12 +78,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
                 print("Connected to FCM")
             }
         }
-    }
-    
-    func tokenRefreshNotification(){
-        let refreshedToken = FIRInstanceID.instanceID().token()!
-        print("InstanceID token \(refreshedToken)")
-        connectToFCM()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
