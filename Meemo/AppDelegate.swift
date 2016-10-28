@@ -23,7 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if(!launchedBefore){
+            self.window = UIWindow(frame: UIScreen.main.bounds)
             
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
+            
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+
         }
 
         

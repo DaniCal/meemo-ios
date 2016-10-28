@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_button_background" translatesAutoresizingMaskIntoConstraints="NO" id="gk7-HE-BrL">
@@ -165,53 +165,47 @@
                         <viewControllerLayoutGuide type="bottom" id="dCk-QO-8GZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kxv-MQ-gVg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6iP-Dt-9zB">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jWw-qp-df2">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="How do you feel?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-K5-mdf">
-                                                <frame key="frameInset" minX="41" width="151" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-K5-mdf">
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUY-4t-Z2Q">
-                                                <frame key="frameInset" minX="30" minY="24" width="174" height="98"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUY-4t-Z2Q">
                                                 <state key="normal" image="emotions_rocket"/>
                                                 <connections>
                                                     <action selector="rockinDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="mL0-hO-KxF"/>
                                                     <segue destination="Zgf-ni-Vl5" kind="show" identifier="showMessageScreen" id="lZh-dQ-0s0"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpZ-eF-v1I">
-                                                <frame key="frameInset" minX="41" minY="122" width="151" height="98"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpZ-eF-v1I">
                                                 <state key="normal" image="emotions_smile"/>
                                                 <connections>
                                                     <action selector="downDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="cyT-Yg-L8C"/>
                                                     <segue destination="Zgf-ni-Vl5" kind="show" identifier="showMessageScreen" id="FpV-1e-8I9"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhi-C1-d4G">
-                                                <frame key="frameInset" minX="10" minY="220" width="214" height="99"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhi-C1-d4G">
                                                 <state key="normal" image="emotions_cool"/>
                                                 <connections>
                                                     <action selector="kickAssDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="wuE-DZ-kGy"/>
                                                     <segue destination="Zgf-ni-Vl5" kind="show" identifier="showMessageScreen" id="jqW-OF-LWb"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtT-w6-dAP">
-                                                <frame key="frameInset" minY="319" width="233" height="98"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtT-w6-dAP">
                                                 <state key="normal" image="emotions_monkey"/>
                                                 <connections>
                                                     <action selector="notSeriousDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="9zi-gj-xqE"/>
                                                     <segue destination="Zgf-ni-Vl5" kind="show" identifier="showMessageScreen" id="lKx-hx-rcp"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZB-RJ-G0O">
-                                                <frame key="frameInset" minX="22" minY="417" width="190" height="111"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZB-RJ-G0O">
                                                 <state key="normal" image="emotions_brainwash"/>
                                                 <connections>
                                                     <action selector="brainwashDidTouch:" destination="XWc-TA-BCI" eventType="touchUpInside" id="d3E-TQ-RTK"/>
@@ -247,7 +241,7 @@
                         <viewControllerLayoutGuide type="bottom" id="L0t-gv-vob"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2tF-Pk-JjW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thankyou_sticker" translatesAutoresizingMaskIntoConstraints="NO" id="EyV-Pe-jVg">
@@ -310,6 +304,48 @@ Now let's rock this day!</string>
             </objects>
             <point key="canvasLocation" x="766.875" y="208.09859154929578"/>
         </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="S38-t7-j00">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="Gmh-L6-Una" customClass="WelcomeViewController" customModule="Meemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0dQ-xq-ghj"/>
+                        <viewControllerLayoutGuide type="bottom" id="mNL-JI-761"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IWa-lI-zyp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_oval" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-qy-scC">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Vaq-XT-PUx"/>
+                                    <constraint firstAttribute="height" constant="80" id="nOG-Rj-n7o"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukp-fV-4QV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="56p-5p-pg8"/>
+                                    <constraint firstAttribute="width" constant="221" id="qeY-Sh-R5O"/>
+                                </constraints>
+                                <state key="normal" image="welcome_button"/>
+                                <connections>
+                                    <segue destination="2RN-Wt-1mh" kind="show" id="BdI-Fx-35E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.42352941176470588" green="0.88235294117647056" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lW9-qy-scC" firstAttribute="centerX" secondItem="IWa-lI-zyp" secondAttribute="centerX" id="b0T-Ib-lD5"/>
+                            <constraint firstItem="mNL-JI-761" firstAttribute="top" secondItem="Ukp-fV-4QV" secondAttribute="bottom" constant="45" id="hfl-iR-abh"/>
+                            <constraint firstItem="Ukp-fV-4QV" firstAttribute="centerX" secondItem="IWa-lI-zyp" secondAttribute="centerX" id="tIa-yB-PZv"/>
+                            <constraint firstItem="lW9-qy-scC" firstAttribute="top" secondItem="0dQ-xq-ghj" secondAttribute="bottom" constant="51" id="wot-dU-XTp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bbz-ae-bCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71.014492753623188" y="-889.4021739130435"/>
+        </scene>
         <!--Journey Main View Controller-->
         <scene sceneID="dY4-Zp-PDo">
             <objects>
@@ -319,7 +355,7 @@ Now let's rock this day!</string>
                         <viewControllerLayoutGuide type="bottom" id="6Es-TZ-dyr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yQ0-ki-LBY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5I-iZ-BLW">
@@ -462,7 +498,7 @@ Now let's rock this day!</string>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.36862745098039218" green="0.86274509803921573" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.42352941176470588" green="0.88235294117647056" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="IKF-4N-H6L" firstAttribute="top" secondItem="Plh-EE-UwM" secondAttribute="top" constant="-276" id="3jd-RM-eNL"/>
                                     <constraint firstItem="qH9-AU-g4l" firstAttribute="centerX" secondItem="Plh-EE-UwM" secondAttribute="centerX" id="9n8-jo-82r"/>
@@ -639,10 +675,12 @@ Now let's rock this day!</string>
         <image name="player_play_button" width="154" height="154"/>
         <image name="player_replay" width="38" height="46"/>
         <image name="thankyou_sticker" width="139" height="139"/>
+        <image name="welcome_button" width="167" height="18"/>
+        <image name="welcome_oval" width="104" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="BdI-Fx-35E"/>
         <segue reference="BGd-pg-6NC"/>
-        <segue reference="8SE-Ka-eVh"/>
         <segue reference="FpV-1e-8I9"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -15,6 +15,7 @@
 		820352301DA67A000049C4BE /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8203522F1DA67A000049C4BE /* Content.swift */; };
 		820352321DAE56590049C4BE /* JourneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820352311DAE56590049C4BE /* JourneyViewController.swift */; };
 		8229844C1DAFC49A00D544B1 /* ReactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229844B1DAFC49A00D544B1 /* ReactionViewController.swift */; };
+		826948301DC3852300532194 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8269482F1DC3852300532194 /* WelcomeViewController.swift */; };
 		82C6E8F41D92C45500FA765C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E8F31D92C45500FA765C /* AppDelegate.swift */; };
 		82C6E8F61D92C45500FA765C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E8F51D92C45500FA765C /* ViewController.swift */; };
 		82C6E8F91D92C45500FA765C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C6E8F71D92C45500FA765C /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		8203522F1DA67A000049C4BE /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		820352311DAE56590049C4BE /* JourneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyViewController.swift; sourceTree = "<group>"; };
 		8229844B1DAFC49A00D544B1 /* ReactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionViewController.swift; sourceTree = "<group>"; };
+		8269482F1DC3852300532194 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		82C6E8F01D92C45500FA765C /* Meemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C6E8F31D92C45500FA765C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C6E8F51D92C45500FA765C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				82B256271DAE91F60092A5C7 /* Views */,
 				8203522C1DA670AB0049C4BE /* API */,
 				82C6E8F31D92C45500FA765C /* AppDelegate.swift */,
+				8269482F1DC3852300532194 /* WelcomeViewController.swift */,
 				82D285D91DBF97D8002F1A7B /* JourneyMainViewController.swift */,
 				820352311DAE56590049C4BE /* JourneyViewController.swift */,
 				82D285D71DBE5E95002F1A7B /* JourneyBoxViewController.swift */,
@@ -540,6 +543,7 @@
 				82C6E8F41D92C45500FA765C /* AppDelegate.swift in Sources */,
 				82E0C7381DC2912800695BAD /* MessageViewController.swift in Sources */,
 				8229844C1DAFC49A00D544B1 /* ReactionViewController.swift in Sources */,
+				826948301DC3852300532194 /* WelcomeViewController.swift in Sources */,
 				8203522E1DA674AB0049C4BE /* FirebaseSynchronizer.swift in Sources */,
 				820352301DA67A000049C4BE /* Content.swift in Sources */,
 			);
