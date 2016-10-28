@@ -53,14 +53,44 @@ class JourneyBoxViewController: UIViewController {
         self.content = content
         setTitle(title: content.quote)
         setAuthor(author: content.author)
+        setImage(index: content.index)
         if(!content.enabled){
             disable()
         }
     }
     
+    func setImage(index: Int){
+        switch(index){
+        case 1:
+            boxImage.image = #imageLiteral(resourceName: "journey_day1")
+            break
+        case 2:
+            boxImage.image = #imageLiteral(resourceName: "journey_day2")
+            break
+        case 3:
+            boxImage.image = #imageLiteral(resourceName: "journey_day3")
+            break
+        case 4:
+            boxImage.image = #imageLiteral(resourceName: "journey_day4")
+            break
+        case 5:
+            boxImage.image = #imageLiteral(resourceName: "journey_day5")
+            break
+        case 6:
+            boxImage.image = #imageLiteral(resourceName: "journey_day6")
+            break
+        case 7:
+            boxImage.image = #imageLiteral(resourceName: "journey_day7")
+            break
+        default:
+            boxImage.image = #imageLiteral(resourceName: "journey_day0")
+            break
+        }
+    }
+    
     
     func disable(){
-            playButton.setImage(#imageLiteral(resourceName: "player_heart_full"), for: .normal)
+            playButton.setImage(#imageLiteral(resourceName: "journey_lock"), for: .normal)
             overlayOval.alpha = 0.6
             playButton.isEnabled = false
     }

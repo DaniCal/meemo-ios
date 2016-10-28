@@ -87,6 +87,7 @@ class FirebaseSynchronizer: NSObject{
                 if(!enabled){
                     newContent.disable()
                 }
+                newContent.setIndex(value: index)
 
                 journeyContent.append(newContent)
             }

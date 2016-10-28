@@ -29,6 +29,7 @@ class Content:NSObject{
     var message:String!
     var button:String!
     var link:String!
+    var index:Int = 0
     
     var dataFields: Set<String>!
 
@@ -90,6 +91,10 @@ class Content:NSObject{
     
     func updateLink(value: String){
         self.link = value
+    }
+    
+    func setIndex(value: Int){
+        self.index = value
     }
     
     func disable(){
