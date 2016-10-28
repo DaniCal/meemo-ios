@@ -28,6 +28,12 @@ class JourneyBoxViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        boxAuthor.text = ""
+        boxTitle.text = ""
+        boxImage.image = #imageLiteral(resourceName: "journey_day0")
+        playButton.setImage(nil, for: .normal)
+        playButton.isEnabled = false
+        overlayOval.alpha = 0.6
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,6 +62,8 @@ class JourneyBoxViewController: UIViewController {
         setImage(index: content.index)
         if(!content.enabled){
             disable()
+        }else{
+            enable()
         }
     }
     
@@ -93,6 +101,12 @@ class JourneyBoxViewController: UIViewController {
             playButton.setImage(#imageLiteral(resourceName: "journey_lock"), for: .normal)
             overlayOval.alpha = 0.6
             playButton.isEnabled = false
+    }
+    
+    func enable(){
+        playButton.setImage(#imageLiteral(resourceName: "play_icon"), for: .normal)
+        overlayOval.alpha = 0.0
+        playButton.isEnabled = true
     }
     
     @IBAction func playDidTouch(_ sender: AnyObject) {
