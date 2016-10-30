@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsP-Ha-D3c">
@@ -174,7 +174,7 @@
                         <viewControllerLayoutGuide type="bottom" id="dCk-QO-8GZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kxv-MQ-gVg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-K5-mdf">
@@ -244,7 +244,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.41960784313725491" green="0.85098039215686272" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="BUY-4t-Z2Q" firstAttribute="top" secondItem="hNa-K5-mdf" secondAttribute="bottom" constant="8" id="6Ih-D6-a1E"/>
+                            <constraint firstItem="BUY-4t-Z2Q" firstAttribute="top" secondItem="hNa-K5-mdf" secondAttribute="bottom" constant="-11" id="6Ih-D6-a1E"/>
                             <constraint firstItem="BUY-4t-Z2Q" firstAttribute="centerX" secondItem="Kxv-MQ-gVg" secondAttribute="centerX" id="7kt-Ie-IDK"/>
                             <constraint firstItem="hNa-K5-mdf" firstAttribute="centerX" secondItem="Kxv-MQ-gVg" secondAttribute="centerX" id="AJo-3J-LPS"/>
                             <constraint firstItem="YtT-w6-dAP" firstAttribute="top" secondItem="Uhi-C1-d4G" secondAttribute="bottom" constant="2" id="Enq-Q1-n81"/>
@@ -253,7 +253,7 @@
                             <constraint firstItem="vZB-RJ-G0O" firstAttribute="top" secondItem="YtT-w6-dAP" secondAttribute="bottom" constant="3" id="OZo-wc-EQw"/>
                             <constraint firstItem="Uhi-C1-d4G" firstAttribute="top" secondItem="BUY-4t-Z2Q" secondAttribute="bottom" constant="98" id="PtQ-ci-Wlm"/>
                             <constraint firstItem="CpZ-eF-v1I" firstAttribute="centerX" secondItem="Kxv-MQ-gVg" secondAttribute="centerX" id="mvN-T8-YLN"/>
-                            <constraint firstItem="hNa-K5-mdf" firstAttribute="top" secondItem="ICO-BK-3QW" secondAttribute="bottom" constant="-20" id="ps0-y2-9S1"/>
+                            <constraint firstItem="hNa-K5-mdf" firstAttribute="top" secondItem="ICO-BK-3QW" secondAttribute="bottom" constant="-1" id="ps0-y2-9S1"/>
                             <constraint firstItem="CpZ-eF-v1I" firstAttribute="top" secondItem="BUY-4t-Z2Q" secondAttribute="bottom" constant="1" id="r2e-0I-ZCp"/>
                             <constraint firstItem="Uhi-C1-d4G" firstAttribute="centerX" secondItem="Kxv-MQ-gVg" secondAttribute="centerX" id="vyT-Fw-S5H"/>
                         </constraints>
@@ -272,7 +272,7 @@
                         <viewControllerLayoutGuide type="bottom" id="L0t-gv-vob"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2tF-Pk-JjW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1e-EL-N62">
@@ -340,7 +340,7 @@ Now let's rock this day!</string>
                         <viewControllerLayoutGuide type="bottom" id="mNL-JI-761"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IWa-lI-zyp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_oval" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-qy-scC">
@@ -408,7 +408,7 @@ So we decided to give you 5 minutes of postive audio content to help you train y
                         <viewControllerLayoutGuide type="bottom" id="nxV-jo-lQG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kgF-q1-NHI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVK-Wk-Kgf">
@@ -502,7 +502,7 @@ So we decided to give you 5 minutes of postive audio content to help you train y
                         <viewControllerLayoutGuide type="bottom" id="6Es-TZ-dyr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yQ0-ki-LBY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5I-iZ-BLW">
@@ -510,31 +510,38 @@ So we decided to give you 5 minutes of postive audio content to help you train y
                                     <segue destination="kix-iS-fp0" kind="embed" identifier="scrollView_embed" id="5sh-vF-6Te"/>
                                 </connections>
                             </containerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="journey_fader" translatesAutoresizingMaskIntoConstraints="NO" id="ROP-rr-KDF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTn-dv-JVr">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="journey_navbar" translatesAutoresizingMaskIntoConstraints="NO" id="O7k-wk-hlN">
+                                        <frame key="frameInset" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 DAYS OF PERSONAL GROWTH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaO-Nr-tYs">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="EKl-B3-MI2"/>
+                                            <constraint firstAttribute="width" constant="268" id="UJR-1O-c0g"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="K4C-wb-2zs"/>
-                                    <constraint firstAttribute="height" constant="136" id="mNo-1W-ezO"/>
+                                    <constraint firstItem="BaO-Nr-tYs" firstAttribute="centerX" secondItem="pTn-dv-JVr" secondAttribute="centerX" id="eNt-Wr-8mF"/>
+                                    <constraint firstAttribute="height" constant="60" id="k9g-d5-jrW"/>
+                                    <constraint firstItem="BaO-Nr-tYs" firstAttribute="top" secondItem="pTn-dv-JVr" secondAttribute="top" constant="31" id="yC4-be-b6y"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaO-Nr-tYs">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="238" id="PoK-M6-eU9"/>
-                                    <constraint firstAttribute="height" constant="21" id="R0a-h0-WUj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="r5I-iZ-BLW" firstAttribute="centerY" secondItem="yQ0-ki-LBY" secondAttribute="centerY" id="DvZ-ZP-Fib"/>
-                            <constraint firstItem="BaO-Nr-tYs" firstAttribute="centerX" secondItem="yQ0-ki-LBY" secondAttribute="centerX" id="GAc-Ye-D9e"/>
+                            <constraint firstItem="pTn-dv-JVr" firstAttribute="centerX" secondItem="yQ0-ki-LBY" secondAttribute="centerX" id="Gzu-fk-Lpy"/>
                             <constraint firstItem="r5I-iZ-BLW" firstAttribute="width" secondItem="yQ0-ki-LBY" secondAttribute="width" id="Qcj-Le-7bs"/>
-                            <constraint firstItem="BaO-Nr-tYs" firstAttribute="top" secondItem="EtM-aY-G2s" secondAttribute="bottom" constant="27" id="RLj-Fe-qgi"/>
-                            <constraint firstItem="ROP-rr-KDF" firstAttribute="top" secondItem="yQ0-ki-LBY" secondAttribute="top" id="gFW-f6-C6N"/>
+                            <constraint firstItem="pTn-dv-JVr" firstAttribute="width" secondItem="yQ0-ki-LBY" secondAttribute="width" id="V7y-8z-rXl"/>
+                            <constraint firstItem="pTn-dv-JVr" firstAttribute="top" secondItem="yQ0-ki-LBY" secondAttribute="top" id="Xlw-DR-VZu"/>
                             <constraint firstItem="r5I-iZ-BLW" firstAttribute="centerX" secondItem="yQ0-ki-LBY" secondAttribute="centerX" id="owh-Qt-IML"/>
-                            <constraint firstItem="ROP-rr-KDF" firstAttribute="centerX" secondItem="yQ0-ki-LBY" secondAttribute="centerX" id="qBz-UY-J5d"/>
                             <constraint firstItem="r5I-iZ-BLW" firstAttribute="height" secondItem="yQ0-ki-LBY" secondAttribute="height" id="zOh-XF-Ruh"/>
                         </constraints>
                     </view>
@@ -544,7 +551,7 @@ So we decided to give you 5 minutes of postive audio content to help you train y
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cm4-e5-u6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1243.125" y="-527.11267605633805"/>
+            <point key="canvasLocation" x="1244.9275362318842" y="-515.21739130434787"/>
         </scene>
         <!--Journey View Controller-->
         <scene sceneID="ZII-h3-2hH">
@@ -813,7 +820,7 @@ So we decided to give you 5 minutes of postive audio content to help you train y
         <image name="emotions_rocket" width="174" height="98"/>
         <image name="journey_bottom_element" width="1125" height="493"/>
         <image name="journey_day0" width="210" height="211"/>
-        <image name="journey_fader" width="375" height="153"/>
+        <image name="journey_navbar" width="1125" height="267"/>
         <image name="oval_background_white" width="294" height="72"/>
         <image name="play_icon" width="210" height="211"/>
         <image name="player_bottom_background" width="375" height="139"/>
