@@ -24,7 +24,7 @@ import AVFoundation
 class Player: NSObject, AVAudioPlayerDelegate{
     var player: AVAudioPlayer!
     var delegate:PlayerDelegate?
-    var duration:Int!
+    var duration:Int = 0;
     var timer = Timer.init()
 
     
@@ -81,8 +81,8 @@ class Player: NSObject, AVAudioPlayerDelegate{
     
     //Resets the player instance by giving it a nil value
     func reset(){
+        timer.invalidate()
         self.pause()
-        player = nil
     }
     
     

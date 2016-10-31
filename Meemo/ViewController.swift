@@ -135,8 +135,8 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         self.fileLoadingIndicator.stopAnimating()
         player.play()
         
-        let hourOfTheDay = Calendar.current.component(.hour, from: Date())
-        FIRAnalytics.logEvent(withName: "press_play", parameters: [kFIRParameterValue: hourOfTheDay as NSObject])
+       let hourOfTheDay = Calendar.current.component(.hour, from: Date())
+       FIRAnalytics.logEvent(withName: "press_play", parameters: [kFIRParameterValue: hourOfTheDay as NSObject])
         
     }
     
@@ -146,9 +146,11 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     }
     
     func reset(){
-        self.player.pause()
+        self.player.reset()
         self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
         self.player = Player()
+        self.player.setDuration(duration: content.duration)
+        self.player.delegate = self
     }
     
 
@@ -205,7 +207,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     @IBAction func replayDidTouch(_ sender: AnyObject) {
         if(player.isInitialized()){
             self.reset()
-            start()
+            self.start()
         }else{
             playButton.setImage(#imageLiteral(resourceName: "player_empty_button"), for: .normal)
             fileLoadingIndicator.startAnimating()
