@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>232323236283-1v2o1m9nmeit6jterujvk5ooo4t69o6a.apps.googleusercontent.com</string>
+	<string>1081837138644-ht234lrat7cm8a24r5du8p7qn86hm72b.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.232323236283-1v2o1m9nmeit6jterujvk5ooo4t69o6a</string>
+	<string>com.googleusercontent.apps.1081837138644-ht234lrat7cm8a24r5du8p7qn86hm72b</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAyKA-SRzwq1d_DO8UnfeqA7R0U3WRUfx8</string>
+	<string>AIzaSyAu-_MefmR902CA4wXaL-fBtE_cA-UZV_k</string>
 	<key>GCM_SENDER_ID</key>
-	<string>232323236283</string>
+	<string>1081837138644</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>io.superstudio.Meemo</string>
 	<key>PROJECT_ID</key>
-	<string>meemo-testing</string>
+	<string>meemo-external-test</string>
 	<key>STORAGE_BUCKET</key>
-	<string>meemo-testing.appspot.com</string>
+	<string>meemo-external-test.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:232323236283:ios:a7ce88b900bcc7f9</string>
+	<string>1:1081837138644:ios:a7ce88b900bcc7f9</string>
 	<key>DATABASE_URL</key>
-	<string>https://meemo-testing.firebaseio.com</string>
+	<string>https://meemo-external-test.firebaseio.com</string>
 </dict>
 </plist>
