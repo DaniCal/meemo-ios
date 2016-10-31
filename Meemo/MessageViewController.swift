@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MessageViewController: UIViewController {
     
@@ -39,5 +40,7 @@ class MessageViewController: UIViewController {
     
     @IBAction func readMoreDidTouch(_ sender: AnyObject) {
         openURLLink()
+        FIRAnalytics.logEvent(withName: "read_more", parameters: nil)
+
     }
 }

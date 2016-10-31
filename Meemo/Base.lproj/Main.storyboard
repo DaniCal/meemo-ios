@@ -399,10 +399,10 @@ So we decided to give you 5 minutes of postive audio content to help you train y
             </objects>
             <point key="canvasLocation" x="-71.25" y="-889.43661971830988"/>
         </scene>
-        <!--View Controller-->
+        <!--Life Section View Controller-->
         <scene sceneID="pAP-4x-3ee">
             <objects>
-                <viewController id="Tc6-4R-Jkn" sceneMemberID="viewController">
+                <viewController id="Tc6-4R-Jkn" customClass="LifeSectionViewController" customModule="Meemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4ch-lU-aGZ"/>
                         <viewControllerLayoutGuide type="bottom" id="nxV-jo-lQG"/>
@@ -418,6 +418,7 @@ So we decided to give you 5 minutes of postive audio content to help you train y
                                 </constraints>
                                 <state key="normal" title="Button" image="selection_relationships"/>
                                 <connections>
+                                    <action selector="relationDidTouch:" destination="Tc6-4R-Jkn" eventType="touchUpInside" id="TOl-Mv-arz"/>
                                     <segue destination="2RN-Wt-1mh" kind="show" id="69t-hf-YL8"/>
                                 </connections>
                             </button>
@@ -428,6 +429,7 @@ So we decided to give you 5 minutes of postive audio content to help you train y
                                 </constraints>
                                 <state key="normal" title="Button" image="selection_stress"/>
                                 <connections>
+                                    <action selector="stresstDidTouch:" destination="Tc6-4R-Jkn" eventType="touchUpInside" id="S03-Kg-UJW"/>
                                     <segue destination="2RN-Wt-1mh" kind="show" id="QjU-GK-HOl"/>
                                 </connections>
                             </button>
@@ -438,6 +440,7 @@ So we decided to give you 5 minutes of postive audio content to help you train y
                                 </constraints>
                                 <state key="normal" title="Button" image="selection_career"/>
                                 <connections>
+                                    <action selector="careerDidTouch:" destination="Tc6-4R-Jkn" eventType="touchUpInside" id="woN-LW-d7B"/>
                                     <segue destination="2RN-Wt-1mh" kind="show" id="AQv-6J-MTy"/>
                                 </connections>
                             </button>
@@ -458,6 +461,7 @@ So we decided to give you 5 minutes of postive audio content to help you train y
                                 </constraints>
                                 <state key="normal" title="Button" image="selection_habits"/>
                                 <connections>
+                                    <action selector="habitDidTouch:" destination="Tc6-4R-Jkn" eventType="touchUpInside" id="vgn-Rt-ysj"/>
                                     <segue destination="2RN-Wt-1mh" kind="show" id="Pfy-c2-Xt1"/>
                                 </connections>
                             </button>
@@ -468,6 +472,7 @@ So we decided to give you 5 minutes of postive audio content to help you train y
                                 </constraints>
                                 <state key="normal" title="Button" image="selection_lifegoals"/>
                                 <connections>
+                                    <action selector="lifeGoalDidTouch:" destination="Tc6-4R-Jkn" eventType="touchUpInside" id="JcX-8X-OSB"/>
                                     <segue destination="2RN-Wt-1mh" kind="show" id="kAb-dl-OOc"/>
                                 </connections>
                             </button>
@@ -749,7 +754,7 @@ So we decided to give you 5 minutes of postive audio content to help you train y
                                             <constraint firstAttribute="height" constant="21" id="qfb-7N-ICc"/>
                                             <constraint firstAttribute="width" constant="139" id="zHG-SF-nbh"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -840,8 +845,8 @@ So we decided to give you 5 minutes of postive audio content to help you train y
         <image name="welcome_oval" width="104" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yvC-Ho-Ulj"/>
-        <segue reference="z27-K7-31b"/>
+        <segue reference="kAb-dl-OOc"/>
         <segue reference="lZh-dQ-0s0"/>
+        <segue reference="z27-K7-31b"/>
     </inferredMetricsTieBreakers>
 </document>

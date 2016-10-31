@@ -34,23 +34,23 @@ class ReactionViewController: UIViewController {
     }
     
     @IBAction func rockinDidTouch(_ sender: AnyObject) {
-        FIRAnalytics.logEvent(withName: "press_reaction", parameters: ["emotion": "rockin the day" as NSString])
+        FIRAnalytics.logEvent(withName: "emotion", parameters: [kFIRParameterValue: "rockin the day" as NSString])
     }
     
     @IBAction func downDidTouch(_ sender: AnyObject) {
-        FIRAnalytics.logEvent(withName: "press_reaction", parameters: ["emotion": "totally down" as NSString])
+        FIRAnalytics.logEvent(withName: "emotion", parameters: [kFIRParameterValue: "happy as fuck" as NSString])
     }
     
     @IBAction func kickAssDidTouch(_ sender: AnyObject) {
-        FIRAnalytics.logEvent(withName: "press_reaction", parameters: ["emotion": "ready to kick asses" as NSString])
+        FIRAnalytics.logEvent(withName: "emotion", parameters: [kFIRParameterValue: "ready to kick asses" as NSString])
     }
     
     @IBAction func notSeriousDidTouch(_ sender: AnyObject) {
-        FIRAnalytics.logEvent(withName: "press_reaction", parameters: ["emotion": "can't take this serious" as NSString])
+        FIRAnalytics.logEvent(withName: "emotion", parameters: [kFIRParameterValue: "can't take this serious" as NSString])
 
     }
     
     @IBAction func brainwashDidTouch(_ sender: AnyObject) {
-        FIRAnalytics.logEvent(withName: "press_reaction", parameters: ["emotion": "are you trying to brainwash me?g" as NSString])
+        FIRAnalytics.logEvent(withName: "emotion", parameters: [kFIRParameterValue: "are you trying to brainwash me?" as NSString])
     }
 }
