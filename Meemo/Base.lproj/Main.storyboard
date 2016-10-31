@@ -49,11 +49,11 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Les Brown" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nU-al-NDA" userLabel="author">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="9iZ-EG-fN2"/>
+                                    <constraint firstAttribute="height" constant="47" id="9iZ-EG-fN2"/>
                                     <constraint firstAttribute="width" constant="320" id="nZ6-EE-58x"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" scrollEnabled="NO" editable="NO" text="4:55" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwF-yP-qDI" userLabel="timer">
@@ -127,8 +127,8 @@
                             <constraint firstItem="sId-ef-Nox" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="9w7-Hz-ocb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c2e-0J-GRV" secondAttribute="bottom" constant="28" id="FKR-0g-flj"/>
                             <constraint firstItem="cZJ-yi-9GZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FSK-WS-che"/>
-                            <constraint firstItem="1nU-al-NDA" firstAttribute="top" secondItem="HLj-R4-MXv" secondAttribute="bottom" constant="57" id="HzY-VC-bVs"/>
-                            <constraint firstItem="PRg-E3-Yu3" firstAttribute="top" secondItem="HLj-R4-MXv" secondAttribute="bottom" constant="21" id="LUa-Af-FKE"/>
+                            <constraint firstItem="1nU-al-NDA" firstAttribute="top" secondItem="HLj-R4-MXv" secondAttribute="bottom" constant="51" id="HzY-VC-bVs"/>
+                            <constraint firstItem="PRg-E3-Yu3" firstAttribute="top" secondItem="HLj-R4-MXv" secondAttribute="bottom" constant="15" id="LUa-Af-FKE"/>
                             <constraint firstItem="1tz-b6-5Db" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-8" id="OKc-lE-sMG"/>
                             <constraint firstItem="KsP-Ha-D3c" firstAttribute="top" secondItem="gk7-HE-BrL" secondAttribute="bottom" constant="24" id="Ou7-nJ-eWZ"/>
                             <constraint firstItem="HLj-R4-MXv" firstAttribute="top" secondItem="1tz-b6-5Db" secondAttribute="bottom" constant="4" id="R35-U7-laj"/>
@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-723.1884057971015" y="202.17391304347828"/>
+            <point key="canvasLocation" x="-723.75" y="201.7605633802817"/>
         </scene>
         <!--Reaction View Controller-->
         <scene sceneID="YRe-js-ONW">
@@ -845,8 +845,8 @@ So we decided to give you 5 minutes of postive audio content to help you train y
         <image name="welcome_oval" width="104" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kAb-dl-OOc"/>
-        <segue reference="lZh-dQ-0s0"/>
+        <segue reference="yvC-Ho-Ulj"/>
         <segue reference="z27-K7-31b"/>
+        <segue reference="lZh-dQ-0s0"/>
     </inferredMetricsTieBreakers>
 </document>
