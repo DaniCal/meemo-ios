@@ -1,0 +1,42 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Alamofire' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Alamofire
+
+end
+
+target 'Mixpanel' do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for Mixpanel
+
+end
+
+target 'Pods-Meemo' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Pods-Meemo
+
+end
+
+target 'Pods-MeemoTests' do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for Pods-MeemoTests
+
+end
+
+target 'Pods-MeemoUITests' do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for Pods-MeemoUITests
+
+end

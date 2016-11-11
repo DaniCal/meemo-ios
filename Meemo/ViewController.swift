@@ -136,7 +136,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         player.play()
         
        let hourOfTheDay = Calendar.current.component(.hour, from: Date())
-       FIRAnalytics.logEvent(withName: "press_play", parameters: [kFIRParameterValue: hourOfTheDay as NSObject])
+       FIRAnalytics.logEvent(withName: String("press_play_" + String(hourOfTheDay)), parameters: nil)
         
     }
     

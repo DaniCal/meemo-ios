@@ -15,9 +15,10 @@
 		820352301DA67A000049C4BE /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8203522F1DA67A000049C4BE /* Content.swift */; };
 		820352321DAE56590049C4BE /* JourneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820352311DAE56590049C4BE /* JourneyViewController.swift */; };
 		820CC7761DC79EE300EC44F3 /* LifeSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820CC7751DC79EE300EC44F3 /* LifeSectionViewController.swift */; };
-		820CC7781DC7B9AE00EC44F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 820CC7771DC7B9AE00EC44F3 /* GoogleService-Info.plist */; };
 		8229844C1DAFC49A00D544B1 /* ReactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229844B1DAFC49A00D544B1 /* ReactionViewController.swift */; };
 		826948301DC3852300532194 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8269482F1DC3852300532194 /* WelcomeViewController.swift */; };
+		826C92AE1DCCFBC500861FEC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 826C92AD1DCCFBC500861FEC /* GoogleService-Info.plist */; };
+		82B1F79E1DD6043500C0759F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1F79D1DD6043500C0759F /* HomeViewController.swift */; };
 		82C6E8F41D92C45500FA765C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E8F31D92C45500FA765C /* AppDelegate.swift */; };
 		82C6E8F61D92C45500FA765C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E8F51D92C45500FA765C /* ViewController.swift */; };
 		82C6E8F91D92C45500FA765C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C6E8F71D92C45500FA765C /* Main.storyboard */; };
@@ -71,10 +72,12 @@
 		8203522F1DA67A000049C4BE /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		820352311DAE56590049C4BE /* JourneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyViewController.swift; sourceTree = "<group>"; };
 		820CC7751DC79EE300EC44F3 /* LifeSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeSectionViewController.swift; sourceTree = "<group>"; };
-		820CC7771DC7B9AE00EC44F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8229844B1DAFC49A00D544B1 /* ReactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionViewController.swift; sourceTree = "<group>"; };
 		8269482F1DC3852300532194 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		826948311DC3925700532194 /* Meemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Meemo.entitlements; sourceTree = "<group>"; };
+		826C92AD1DCCFBC500861FEC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		826C92AF1DCCFF1700861FEC /* Mixpanel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mixpanel-Bridging-Header.h"; sourceTree = "<group>"; };
+		82B1F79D1DD6043500C0759F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		82C6E8F01D92C45500FA765C /* Meemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C6E8F31D92C45500FA765C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C6E8F51D92C45500FA765C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -178,11 +181,12 @@
 		82C6E8F21D92C45500FA765C /* Meemo */ = {
 			isa = PBXGroup;
 			children = (
-				820CC7771DC7B9AE00EC44F3 /* GoogleService-Info.plist */,
+				826C92AD1DCCFBC500861FEC /* GoogleService-Info.plist */,
 				826948311DC3925700532194 /* Meemo.entitlements */,
 				82B256271DAE91F60092A5C7 /* Views */,
 				8203522C1DA670AB0049C4BE /* API */,
 				82C6E8F31D92C45500FA765C /* AppDelegate.swift */,
+				826C92AF1DCCFF1700861FEC /* Mixpanel-Bridging-Header.h */,
 				8269482F1DC3852300532194 /* WelcomeViewController.swift */,
 				820CC7751DC79EE300EC44F3 /* LifeSectionViewController.swift */,
 				82D285D91DBF97D8002F1A7B /* JourneyMainViewController.swift */,
@@ -195,6 +199,7 @@
 				82C6E8FA1D92C45500FA765C /* Assets.xcassets */,
 				82C6E8FC1D92C45500FA765C /* LaunchScreen.storyboard */,
 				82C6E8FF1D92C45500FA765C /* Info.plist */,
+				82B1F79D1DD6043500C0759F /* HomeViewController.swift */,
 			);
 			path = Meemo;
 			sourceTree = "<group>";
@@ -396,7 +401,7 @@
 				82FC88951D9BB3080090D448 /* OpenSans-Light.ttf in Resources */,
 				82FC88971D9BB3080090D448 /* OpenSans-Regular.ttf in Resources */,
 				82FC88931D9BB3080090D448 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
-				820CC7781DC7B9AE00EC44F3 /* GoogleService-Info.plist in Resources */,
+				826C92AE1DCCFBC500861FEC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +554,7 @@
 				820CC7761DC79EE300EC44F3 /* LifeSectionViewController.swift in Sources */,
 				82D285DA1DBF97D8002F1A7B /* JourneyMainViewController.swift in Sources */,
 				820352321DAE56590049C4BE /* JourneyViewController.swift in Sources */,
+				82B1F79E1DD6043500C0759F /* HomeViewController.swift in Sources */,
 				8203522B1DA670A40049C4BE /* ContentManager.swift in Sources */,
 				820352291DA652500049C4BE /* Player.swift in Sources */,
 				82C6E8F41D92C45500FA765C /* AppDelegate.swift in Sources */,
@@ -651,12 +657,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -694,10 +702,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -714,6 +724,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.superstudio.Meemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/daniellohse/Documents/Development/Meemo/meemo-ios/Meemo/Mixpanel-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -731,6 +742,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.superstudio.Meemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/daniellohse/Documents/Development/Meemo/meemo-ios/Meemo/Mixpanel-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -11,21 +11,21 @@ import Firebase
 
 class LifeSectionViewController: UIViewController {
     @IBAction func stresstDidTouch(_ sender: AnyObject) {
-        FIRAnalytics.logEvent(withName: "life_section", parameters: [kFIRParameterValue: "stress" as NSString])
+        FIRAnalytics.logEvent(withName: "life_section_stress", parameters: nil)
     }
     
     @IBAction func lifeGoalDidTouch(_ sender: AnyObject) {
-        FIRAnalytics.logEvent(withName: "life_section", parameters: [kFIRParameterValue: "life_goal" as NSString])
+        FIRAnalytics.logEvent(withName: "life_section_life_goal", parameters: nil)
     }
     @IBAction func habitDidTouch(_ sender: AnyObject) {
-        FIRAnalytics.logEvent(withName: "life_section", parameters: [kFIRParameterValue: "habit" as NSString])
+        FIRAnalytics.logEvent(withName: "life_section_habit", parameters: nil)
     }
     @IBAction func relationDidTouch(_ sender: AnyObject) {
-        FIRAnalytics.logEvent(withName: "life_section", parameters: [kFIRParameterValue: "relationship" as NSString])
+        FIRAnalytics.logEvent(withName: "life_section_relationship", parameters: nil)
     }
 
     @IBAction func careerDidTouch(_ sender: AnyObject) {
-        FIRAnalytics.logEvent(withName: "life_section", parameters: [kFIRParameterValue: "careerg" as NSString])
+        FIRAnalytics.logEvent(withName: "life_section_career", parameters: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

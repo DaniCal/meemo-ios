@@ -8,6 +8,7 @@ pod 'Alamofire', '~> 4.0'
 pod 'Firebase/Core'
 pod 'Firebase/Messaging'
 pod 'Firebase/Database'
+pod 'Mixpanel'
 
   # Pods for Meemo
 

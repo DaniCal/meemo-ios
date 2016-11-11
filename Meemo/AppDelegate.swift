@@ -11,6 +11,7 @@ import Firebase
 import FirebaseInstanceID
 import FirebaseMessaging
 import UserNotifications
+import Mixpanel
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
@@ -65,6 +66,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         }
         
         FIRApp.configure()
+        
+        
+        let token = "4741221112f36c0d43215a2b51e12e1e"
+        
+        
+        let mixpanel = Mixpanel.sharedInstance(withToken: token)
+        mixpanel.track("App launched")
+        
+        
         
         
         return true
