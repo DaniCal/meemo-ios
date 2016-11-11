@@ -354,17 +354,17 @@
                         <viewControllerLayoutGuide type="bottom" id="g0I-YJ-FMv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KI2-0K-ETc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9D-4u-nTh">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="540" id="Fp6-Qg-OHV"/>
-                                    <constraint firstAttribute="height" constant="667" id="JY0-kL-d0l"/>
+                                    <constraint firstAttribute="height" constant="548" id="JY0-kL-d0l"/>
                                 </constraints>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="9oc-gl-aVA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SD-nE-XxJ">
@@ -390,7 +390,7 @@
                                             </constraints>
                                             <state key="focused" image="home_pushup_pic"/>
                                             <connections>
-                                                <segue destination="YcT-PW-lkE" kind="popoverPresentation" popoverAnchorView="Jsh-xQ-J1v" id="Qmh-YR-VLA">
+                                                <segue destination="tmH-M4-XZa" kind="popoverPresentation" popoverAnchorView="Jsh-xQ-J1v" id="LRx-hM-XPg">
                                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                                 </segue>
                                             </connections>
@@ -444,10 +444,10 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="programCell" rowHeight="104" id="00j-Jf-iAj" customClass="ProgramTableViewCell" customModule="Meemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="378" width="375" height="104"/>
+                                        <rect key="frame" x="0.0" y="378" width="320" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="00j-Jf-iAj" id="nIx-V3-uBR">
-                                            <frame key="frameInset" width="375" height="103"/>
+                                            <frame key="frameInset" width="320" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The 10 Life Hacks you always wanted" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0j-Po-P4L">
@@ -497,7 +497,7 @@
                         <constraints>
                             <constraint firstItem="n9D-4u-nTh" firstAttribute="centerX" secondItem="KI2-0K-ETc" secondAttribute="centerX" id="9gg-0X-OlY"/>
                             <constraint firstItem="n9D-4u-nTh" firstAttribute="leading" secondItem="KI2-0K-ETc" secondAttribute="leading" id="HZN-Q9-GB1"/>
-                            <constraint firstItem="n9D-4u-nTh" firstAttribute="top" secondItem="sWX-hO-MXQ" secondAttribute="bottom" constant="-64" id="TEy-GP-yvI"/>
+                            <constraint firstItem="n9D-4u-nTh" firstAttribute="top" secondItem="sWX-hO-MXQ" secondAttribute="bottom" id="TEy-GP-yvI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FWv-ST-4mF"/>
@@ -507,41 +507,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cc3-o6-0Zm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2272.8000000000002" y="726.38680659670172"/>
+            <point key="canvasLocation" x="2272.5" y="725.70422535211264"/>
         </scene>
         <!--Session View Controller-->
-        <scene sceneID="80p-4a-ucG">
+        <scene sceneID="Jgl-Dx-QsK">
             <objects>
-                <viewController id="YcT-PW-lkE" customClass="SessionViewController" customModule="Meemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tmH-M4-XZa" customClass="SessionViewController" customModule="Meemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="K7M-E3-TNG"/>
-                        <viewControllerLayoutGuide type="bottom" id="Acx-7r-eHm"/>
+                        <viewControllerLayoutGuide type="top" id="zy7-6L-81o"/>
+                        <viewControllerLayoutGuide type="bottom" id="3YR-yT-cQi"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Duy-mc-cbc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="GhF-41-faM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="session_background" translatesAutoresizingMaskIntoConstraints="NO" id="IQl-YW-Diw">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="548" id="Ikj-OI-93t"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A63-Kt-gHO">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="34" id="59A-UZ-14h"/>
-                                    <constraint firstAttribute="height" constant="30" id="TqH-WU-Pg6"/>
+                                    <constraint firstAttribute="width" constant="30" id="SEz-oC-b4H"/>
+                                    <constraint firstAttribute="height" constant="30" id="ZKl-80-7iB"/>
                                 </constraints>
-                                <state key="normal" title="Back"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="crossDidTouch:" destination="YcT-PW-lkE" eventType="touchUpInside" id="kLE-Fu-HWR"/>
+                                    <action selector="crossDidTouch:" destination="tmH-M4-XZa" eventType="touchUpInside" id="XIG-hF-fqF"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="A63-Kt-gHO" firstAttribute="top" secondItem="K7M-E3-TNG" secondAttribute="bottom" constant="74" id="aA6-TE-Ix3"/>
-                            <constraint firstItem="A63-Kt-gHO" firstAttribute="leading" secondItem="Duy-mc-cbc" secondAttribute="leadingMargin" constant="154" id="oK3-hK-5XS"/>
+                            <constraint firstItem="IQl-YW-Diw" firstAttribute="top" secondItem="zy7-6L-81o" secondAttribute="bottom" id="0Iz-qI-cFR"/>
+                            <constraint firstItem="IQl-YW-Diw" firstAttribute="width" secondItem="GhF-41-faM" secondAttribute="width" id="9AG-O6-UI2"/>
+                            <constraint firstItem="IQl-YW-Diw" firstAttribute="centerX" secondItem="GhF-41-faM" secondAttribute="centerX" id="FUy-g2-35t"/>
+                            <constraint firstItem="A63-Kt-gHO" firstAttribute="top" secondItem="zy7-6L-81o" secondAttribute="bottom" constant="8" id="LeR-WQ-K0O"/>
+                            <constraint firstItem="A63-Kt-gHO" firstAttribute="trailing" secondItem="GhF-41-faM" secondAttribute="trailingMargin" id="SlZ-Bk-Ygr"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d3Z-39-tMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pnQ-ou-fza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3062" y="726"/>
+            <point key="canvasLocation" x="3234.375" y="727.81690140845069"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="S38-t7-j00">
@@ -552,7 +563,7 @@
                         <viewControllerLayoutGuide type="bottom" id="mNL-JI-761"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IWa-lI-zyp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_oval" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-qy-scC">
@@ -620,7 +631,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
                         <viewControllerLayoutGuide type="bottom" id="nxV-jo-lQG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kgF-q1-NHI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVK-Wk-Kgf">
@@ -1036,7 +1047,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sc1-5P-z1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Wql-fc-i6f" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BDl-WT-O0w">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TX-x6-2Bf">
@@ -1140,13 +1151,14 @@ So we decided to give you 5 minutes of positive audio content to help you train 
         <image name="selection_lifegoals" width="547" height="144"/>
         <image name="selection_relationships" width="697" height="144"/>
         <image name="selection_stress" width="388" height="144"/>
+        <image name="session_background" width="1125" height="2229"/>
         <image name="thankyou_fist" width="411" height="411"/>
         <image name="welcome_button" width="215" height="48"/>
         <image name="welcome_oval" width="104" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lZh-dQ-0s0"/>
-        <segue reference="8SE-Ka-eVh"/>
         <segue reference="fcI-vi-RWl"/>
+        <segue reference="yvC-Ho-Ulj"/>
+        <segue reference="lZh-dQ-0s0"/>
     </inferredMetricsTieBreakers>
 </document>
