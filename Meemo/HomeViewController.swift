@@ -19,8 +19,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         
 
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.navigationController?.setNavigationBarHidden(true, animated: true)
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.navigationController?.setNavigationBarHidden(true, animated: true)
 
         // Do any additional setup after loading the view.
     }

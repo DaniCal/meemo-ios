@@ -20,7 +20,7 @@
 		826C92AE1DCCFBC500861FEC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 826C92AD1DCCFBC500861FEC /* GoogleService-Info.plist */; };
 		82B1F79E1DD6043500C0759F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1F79D1DD6043500C0759F /* HomeViewController.swift */; };
 		82B1F7A01DD6156100C0759F /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1F79F1DD6156100C0759F /* ProgramTableViewCell.swift */; };
-		82B1F7A41DD62C9A00C0759F /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1F7A31DD62C9A00C0759F /* NavigationViewController.swift */; };
+		82B1F7A61DD634C400C0759F /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1F7A51DD634C400C0759F /* SessionViewController.swift */; };
 		82C6E8F41D92C45500FA765C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E8F31D92C45500FA765C /* AppDelegate.swift */; };
 		82C6E8F61D92C45500FA765C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E8F51D92C45500FA765C /* ViewController.swift */; };
 		82C6E8F91D92C45500FA765C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C6E8F71D92C45500FA765C /* Main.storyboard */; };
@@ -81,7 +81,7 @@
 		826C92AF1DCCFF1700861FEC /* Mixpanel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mixpanel-Bridging-Header.h"; sourceTree = "<group>"; };
 		82B1F79D1DD6043500C0759F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		82B1F79F1DD6156100C0759F /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
-		82B1F7A31DD62C9A00C0759F /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		82B1F7A51DD634C400C0759F /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		82C6E8F01D92C45500FA765C /* Meemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C6E8F31D92C45500FA765C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C6E8F51D92C45500FA765C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -199,8 +199,8 @@
 				8229844B1DAFC49A00D544B1 /* ReactionViewController.swift */,
 				82E0C7371DC2912800695BAD /* MessageViewController.swift */,
 				82C6E8F51D92C45500FA765C /* ViewController.swift */,
-				82B1F7A31DD62C9A00C0759F /* NavigationViewController.swift */,
 				82C6E8F71D92C45500FA765C /* Main.storyboard */,
+				82B1F7A51DD634C400C0759F /* SessionViewController.swift */,
 				82C6E8FA1D92C45500FA765C /* Assets.xcassets */,
 				82C6E8FC1D92C45500FA765C /* LaunchScreen.storyboard */,
 				82C6E8FF1D92C45500FA765C /* Info.plist */,
@@ -560,10 +560,10 @@
 				820CC7761DC79EE300EC44F3 /* LifeSectionViewController.swift in Sources */,
 				82D285DA1DBF97D8002F1A7B /* JourneyMainViewController.swift in Sources */,
 				820352321DAE56590049C4BE /* JourneyViewController.swift in Sources */,
+				82B1F7A61DD634C400C0759F /* SessionViewController.swift in Sources */,
 				82B1F79E1DD6043500C0759F /* HomeViewController.swift in Sources */,
 				8203522B1DA670A40049C4BE /* ContentManager.swift in Sources */,
 				820352291DA652500049C4BE /* Player.swift in Sources */,
-				82B1F7A41DD62C9A00C0759F /* NavigationViewController.swift in Sources */,
 				82B1F7A01DD6156100C0759F /* ProgramTableViewCell.swift in Sources */,
 				82C6E8F41D92C45500FA765C /* AppDelegate.swift in Sources */,
 				82E0C7381DC2912800695BAD /* MessageViewController.swift in Sources */,

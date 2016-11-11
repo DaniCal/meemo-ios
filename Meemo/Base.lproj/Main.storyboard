@@ -328,10 +328,10 @@
             </objects>
             <point key="canvasLocation" x="765.60000000000002" y="207.34632683658174"/>
         </scene>
-        <!--Navigation View Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="sEv-MN-WZ3">
             <objects>
-                <navigationController id="z5E-TS-Xpa" customClass="NavigationViewController" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="z5E-TS-Xpa" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="VRb-aL-ALR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -354,7 +354,7 @@
                         <viewControllerLayoutGuide type="bottom" id="g0I-YJ-FMv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KI2-0K-ETc">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9D-4u-nTh">
@@ -390,7 +390,9 @@
                                             </constraints>
                                             <state key="focused" image="home_pushup_pic"/>
                                             <connections>
-                                                <segue destination="OLs-xh-anb" kind="showDetail" action="showViewController:sender:" id="Vhu-IK-lOz"/>
+                                                <segue destination="YcT-PW-lkE" kind="popoverPresentation" popoverAnchorView="Jsh-xQ-J1v" id="Qmh-YR-VLA">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                </segue>
                                             </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_pushup_pic" translatesAutoresizingMaskIntoConstraints="NO" id="C6J-e4-4Nw"/>
@@ -506,6 +508,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cc3-o6-0Zm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2272.8000000000002" y="726.38680659670172"/>
+        </scene>
+        <!--Session View Controller-->
+        <scene sceneID="80p-4a-ucG">
+            <objects>
+                <viewController id="YcT-PW-lkE" customClass="SessionViewController" customModule="Meemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K7M-E3-TNG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Acx-7r-eHm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Duy-mc-cbc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A63-Kt-gHO">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="59A-UZ-14h"/>
+                                    <constraint firstAttribute="height" constant="30" id="TqH-WU-Pg6"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="crossDidTouch:" destination="YcT-PW-lkE" eventType="touchUpInside" id="kLE-Fu-HWR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A63-Kt-gHO" firstAttribute="top" secondItem="K7M-E3-TNG" secondAttribute="bottom" constant="74" id="aA6-TE-Ix3"/>
+                            <constraint firstItem="A63-Kt-gHO" firstAttribute="leading" secondItem="Duy-mc-cbc" secondAttribute="leadingMargin" constant="154" id="oK3-hK-5XS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3Z-39-tMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3062" y="726"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="S38-t7-j00">
@@ -993,24 +1029,6 @@ So we decided to give you 5 minutes of positive audio content to help you train 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEC-JO-gju" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3412.5" y="-527.11267605633805"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="gAS-Ud-FBW">
-            <objects>
-                <viewController id="OLs-xh-anb" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="x7h-HP-mui"/>
-                        <viewControllerLayoutGuide type="bottom" id="1TF-78-aeH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ybJ-dK-AIm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ggr-iE-uJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3242" y="728"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3eB-tr-c7J">
