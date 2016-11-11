@@ -328,64 +328,6 @@
             </objects>
             <point key="canvasLocation" x="765.60000000000002" y="207.34632683658174"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="wTF-Df-Jua">
-            <objects>
-                <viewController id="p7E-hD-Bqj" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="l7P-fK-Rp6"/>
-                        <viewControllerLayoutGuide type="bottom" id="AjQ-KP-2uF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CNX-Ch-3pH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a30-G8-2sg">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="Abk-VA-7dz"/>
-                                    <constraint firstAttribute="height" constant="75" id="fwc-3J-maT"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The 10 Life Hacks you always wanted" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIg-7J-EQg">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="9bI-tU-rZ1"/>
-                                    <constraint firstAttribute="width" constant="249" id="zOY-cm-eT7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amazing life hacks to be more productive and effective in your day." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4b-id-d4s">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="5NH-I7-gPW"/>
-                                    <constraint firstAttribute="width" constant="249" id="HlQ-WH-pEY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="v4b-id-d4s" firstAttribute="top" secondItem="kIg-7J-EQg" secondAttribute="bottom" id="AoZ-QP-Ucp"/>
-                            <constraint firstItem="AjQ-KP-2uF" firstAttribute="top" secondItem="a30-G8-2sg" secondAttribute="bottom" constant="15" id="FSI-rG-XpH"/>
-                            <constraint firstItem="a30-G8-2sg" firstAttribute="leading" secondItem="CNX-Ch-3pH" secondAttribute="leading" constant="15" id="Pl4-lA-syM"/>
-                            <constraint firstItem="v4b-id-d4s" firstAttribute="leading" secondItem="a30-G8-2sg" secondAttribute="trailing" constant="12" id="TLh-Hx-mem"/>
-                            <constraint firstItem="a30-G8-2sg" firstAttribute="top" secondItem="CNX-Ch-3pH" secondAttribute="top" constant="15" id="Yb3-2w-iGU"/>
-                            <constraint firstItem="kIg-7J-EQg" firstAttribute="top" secondItem="l7P-fK-Rp6" secondAttribute="bottom" constant="15" id="pq5-IB-PYn"/>
-                            <constraint firstItem="kIg-7J-EQg" firstAttribute="leading" secondItem="a30-G8-2sg" secondAttribute="trailing" constant="12" id="sT1-D9-9LG"/>
-                        </constraints>
-                    </view>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="105"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ne-zf-t2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3147" y="671"/>
-        </scene>
         <!--Home View Controller-->
         <scene sceneID="0lm-Wi-rTE">
             <objects>
@@ -398,19 +340,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9D-4u-nTh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9D-4u-nTh">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="540" id="Fp6-Qg-OHV"/>
                                     <constraint firstAttribute="height" constant="590" id="JY0-kL-d0l"/>
                                 </constraints>
-                                <containerView key="tableFooterView" opaque="NO" contentMode="scaleToFill" id="yoR-2g-UYM">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="322"/>
+                                <containerView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" id="yoR-2g-UYM">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                     <connections>
                                         <segue destination="Wql-fc-i6f" kind="embed" id="xMU-fm-NOw"/>
                                     </connections>
                                 </containerView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="programCell" rowHeight="104" id="00j-Jf-iAj" customClass="ProgramTableViewCell" customModule="Meemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="378" width="320" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="00j-Jf-iAj" id="nIx-V3-uBR">
+                                            <frame key="frameInset" width="320" height="103"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The 10 Life Hacks you always wanted" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0j-Po-P4L">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="1dP-Im-18z"/>
+                                                        <constraint firstAttribute="width" constant="208" id="VRW-C4-8ZC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_program_pic" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-pV-wWa">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="75" id="JdA-dW-cas"/>
+                                                        <constraint firstAttribute="width" constant="75" id="lBM-SB-iF9"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amazing life hacks to be more productive and effective in your day." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNF-i5-loG">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="YZt-uS-4dW"/>
+                                                        <constraint firstAttribute="width" constant="208" id="mmm-U5-f7L"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dNF-i5-loG" firstAttribute="leading" secondItem="HuZ-pV-wWa" secondAttribute="trailing" constant="8" id="44o-YH-Rx3"/>
+                                                <constraint firstItem="u0j-Po-P4L" firstAttribute="top" secondItem="nIx-V3-uBR" secondAttribute="topMargin" constant="6" id="MIx-6F-RlF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="HuZ-pV-wWa" secondAttribute="bottom" constant="6" id="N1j-16-zOs"/>
+                                                <constraint firstItem="dNF-i5-loG" firstAttribute="top" secondItem="u0j-Po-P4L" secondAttribute="bottom" id="WwU-V0-Q7a"/>
+                                                <constraint firstItem="u0j-Po-P4L" firstAttribute="leading" secondItem="HuZ-pV-wWa" secondAttribute="trailing" constant="8" id="eMr-FR-l8O"/>
+                                                <constraint firstItem="HuZ-pV-wWa" firstAttribute="top" secondItem="nIx-V3-uBR" secondAttribute="topMargin" constant="6" id="rxB-B9-Mlf"/>
+                                                <constraint firstItem="HuZ-pV-wWa" firstAttribute="leading" secondItem="nIx-V3-uBR" secondAttribute="leadingMargin" constant="6" id="ugh-wG-L3b"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="NVQ-4O-TvX" id="j9N-ND-26R"/>
+                                    <outlet property="delegate" destination="NVQ-4O-TvX" id="5eT-4f-OCC"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -420,6 +411,9 @@
                             <constraint firstItem="n9D-4u-nTh" firstAttribute="top" secondItem="sWX-hO-MXQ" secondAttribute="bottom" constant="-20" id="TEy-GP-yvI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="n9D-4u-nTh" id="LCc-j1-ceT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cc3-o6-0Zm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -918,7 +912,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sc1-5P-z1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Wql-fc-i6f" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BDl-WT-O0w">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="322"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TX-x6-2Bf">
@@ -980,20 +974,20 @@ So we decided to give you 5 minutes of positive audio content to help you train 
                             <constraint firstItem="7vH-k0-Q8X" firstAttribute="baseline" secondItem="07t-co-U9f" secondAttribute="baseline" id="TR9-yP-hEZ"/>
                             <constraint firstItem="07t-co-U9f" firstAttribute="top" secondItem="Qpg-Y6-eQX" secondAttribute="bottom" constant="19" id="hds-p1-BiN"/>
                             <constraint firstItem="Qpg-Y6-eQX" firstAttribute="leading" secondItem="BDl-WT-O0w" secondAttribute="leadingMargin" constant="4" id="jLM-75-ak8"/>
-                            <constraint firstItem="6TX-x6-2Bf" firstAttribute="top" secondItem="BDl-WT-O0w" secondAttribute="topMargin" constant="30" id="kJd-fZ-ShZ"/>
+                            <constraint firstItem="6TX-x6-2Bf" firstAttribute="top" secondItem="BDl-WT-O0w" secondAttribute="topMargin" constant="58" id="kJd-fZ-ShZ"/>
                             <constraint firstItem="07t-co-U9f" firstAttribute="width" secondItem="UYR-Hj-XHX" secondAttribute="width" id="lt0-7n-Tu7"/>
                             <constraint firstItem="UYR-Hj-XHX" firstAttribute="width" secondItem="BDl-WT-O0w" secondAttribute="width" id="nU8-23-LeJ"/>
                             <constraint firstItem="DQh-Xe-Xh9" firstAttribute="leading" secondItem="BDl-WT-O0w" secondAttribute="leadingMargin" id="u2G-Nd-YX2"/>
                             <constraint firstItem="7vH-k0-Q8X" firstAttribute="centerX" secondItem="BDl-WT-O0w" secondAttribute="centerX" id="v1b-ww-FID"/>
                             <constraint firstItem="6TX-x6-2Bf" firstAttribute="leading" secondItem="BDl-WT-O0w" secondAttribute="leadingMargin" constant="4" id="vaw-FP-Whz"/>
                             <constraint firstItem="UYR-Hj-XHX" firstAttribute="top" secondItem="Qpg-Y6-eQX" secondAttribute="bottom" constant="19" id="wQf-ax-6bh"/>
-                            <constraint firstItem="6TX-x6-2Bf" firstAttribute="top" secondItem="BDl-WT-O0w" secondAttribute="topMargin" constant="30" id="x4W-0C-DD0"/>
+                            <constraint firstItem="6TX-x6-2Bf" firstAttribute="top" secondItem="BDl-WT-O0w" secondAttribute="topMargin" constant="58" id="x4W-0C-DD0"/>
                             <constraint firstItem="Qpg-Y6-eQX" firstAttribute="top" secondItem="6TX-x6-2Bf" secondAttribute="bottom" constant="5" id="zdP-K0-tmE"/>
                         </constraints>
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="3043.125" y="333.80281690140845"/>
+            <point key="canvasLocation" x="3229" y="189"/>
         </scene>
     </scenes>
     <resources>
@@ -1002,6 +996,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
         <image name="emotions_happy" width="490" height="295"/>
         <image name="emotions_monkey" width="233" height="98"/>
         <image name="emotions_rocket" width="174" height="98"/>
+        <image name="home_program_pic" width="280" height="280"/>
         <image name="home_pushup_flag" width="646" height="93"/>
         <image name="home_pushup_pic" width="1125" height="703"/>
         <image name="journey_bottom_element" width="1125" height="493"/>
