@@ -17,6 +17,7 @@ import Mixpanel
 class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
+    var navigationController: UINavigationController?
 
     func showWelcomeScreen(){
         self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -32,6 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     
     func initFIRNotification(){
         
+    }
+    
+    func attachNavigationController(){
+        //self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.navigationController = window?.rootViewController as? UINavigationController
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -75,7 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         mixpanel.track("App launched")
         
         
-        
+        attachNavigationController()
         
         return true
     }

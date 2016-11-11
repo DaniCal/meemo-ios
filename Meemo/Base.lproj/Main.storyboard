@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NVQ-4O-TvX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="z5E-TS-Xpa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -328,6 +328,23 @@
             </objects>
             <point key="canvasLocation" x="765.60000000000002" y="207.34632683658174"/>
         </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="sEv-MN-WZ3">
+            <objects>
+                <navigationController id="z5E-TS-Xpa" customClass="NavigationViewController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="VRb-aL-ALR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.9137254901960784" green="0.97647058823529409" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NVQ-4O-TvX" kind="relationship" relationship="rootViewController" id="Pui-0h-xst"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tls-Pf-Cwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1465" y="728"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="0lm-Wi-rTE">
             <objects>
@@ -337,28 +354,98 @@
                         <viewControllerLayoutGuide type="bottom" id="g0I-YJ-FMv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KI2-0K-ETc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9D-4u-nTh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9D-4u-nTh">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="540" id="Fp6-Qg-OHV"/>
-                                    <constraint firstAttribute="height" constant="590" id="JY0-kL-d0l"/>
+                                    <constraint firstAttribute="height" constant="667" id="JY0-kL-d0l"/>
                                 </constraints>
-                                <containerView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" id="yoR-2g-UYM">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                    <connections>
-                                        <segue destination="Wql-fc-i6f" kind="embed" id="xMU-fm-NOw"/>
-                                    </connections>
-                                </containerView>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="9oc-gl-aVA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SD-nE-XxJ">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="29" id="Im1-jg-vwu"/>
+                                                <constraint firstAttribute="width" constant="110" id="phG-mZ-ESN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqQ-gz-JdD">
+                                            <color key="backgroundColor" red="0.36862745099999999" green="0.86274509799999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.36862745099999999" green="0.86274509799999999" blue="0.83921568629999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="2" id="7bp-cg-d8s"/>
+                                                <constraint firstAttribute="width" constant="64" id="jZW-xL-y90"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsh-xQ-J1v">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="vJ4-ut-KDE"/>
+                                            </constraints>
+                                            <state key="focused" image="home_pushup_pic"/>
+                                            <connections>
+                                                <segue destination="OLs-xh-anb" kind="showDetail" action="showViewController:sender:" id="Vhu-IK-lOz"/>
+                                            </connections>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_pushup_pic" translatesAutoresizingMaskIntoConstraints="NO" id="C6J-e4-4Nw"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_pushup_flag" translatesAutoresizingMaskIntoConstraints="NO" id="xlK-Ue-Qv9">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="39" id="bQH-UJ-Wbx"/>
+                                                <constraint firstAttribute="width" constant="176" id="tyL-u1-Lni"/>
+                                            </constraints>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCM-a9-bAc">
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" red="0.36862745099999999" green="0.86274509799999999" blue="0.83921568629999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="2" id="pw5-Jp-DKj"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tJ-qZ-7H0">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="106" id="X4L-0L-I9X"/>
+                                                <constraint firstAttribute="height" constant="21" id="qPV-X6-LMB"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="1tJ-qZ-7H0" firstAttribute="leading" secondItem="9oc-gl-aVA" secondAttribute="leading" constant="23" id="0QE-c7-LMr"/>
+                                        <constraint firstItem="xlK-Ue-Qv9" firstAttribute="top" secondItem="gqQ-gz-JdD" secondAttribute="bottom" constant="159" id="0oW-UI-jHe"/>
+                                        <constraint firstItem="C6J-e4-4Nw" firstAttribute="centerX" secondItem="9oc-gl-aVA" secondAttribute="centerX" id="6RW-GX-FFc"/>
+                                        <constraint firstAttribute="bottom" secondItem="1tJ-qZ-7H0" secondAttribute="bottom" id="Ffb-hd-5Qt"/>
+                                        <constraint firstItem="NCM-a9-bAc" firstAttribute="width" secondItem="C6J-e4-4Nw" secondAttribute="width" id="GCK-LL-t3f"/>
+                                        <constraint firstItem="NCM-a9-bAc" firstAttribute="baseline" secondItem="C6J-e4-4Nw" secondAttribute="baseline" id="GLJ-Iw-Vh3"/>
+                                        <constraint firstItem="C6J-e4-4Nw" firstAttribute="width" secondItem="Jsh-xQ-J1v" secondAttribute="width" id="M2w-e5-Cvr"/>
+                                        <constraint firstItem="C6J-e4-4Nw" firstAttribute="height" secondItem="Jsh-xQ-J1v" secondAttribute="height" id="NLa-qC-8Wb"/>
+                                        <constraint firstItem="1tJ-qZ-7H0" firstAttribute="top" secondItem="C6J-e4-4Nw" secondAttribute="bottom" constant="9" id="T21-ac-G2B"/>
+                                        <constraint firstItem="gqQ-gz-JdD" firstAttribute="top" secondItem="0SD-nE-XxJ" secondAttribute="bottom" constant="8" id="U5q-Mu-wXO"/>
+                                        <constraint firstItem="NCM-a9-bAc" firstAttribute="centerX" secondItem="9oc-gl-aVA" secondAttribute="centerX" id="UdA-Fu-Uov"/>
+                                        <constraint firstItem="xlK-Ue-Qv9" firstAttribute="leading" secondItem="9oc-gl-aVA" secondAttribute="leading" id="UdU-kU-ZGJ"/>
+                                        <constraint firstItem="0SD-nE-XxJ" firstAttribute="leading" secondItem="9oc-gl-aVA" secondAttribute="leading" constant="23" id="Ulk-lp-HaX"/>
+                                        <constraint firstItem="Jsh-xQ-J1v" firstAttribute="top" secondItem="gqQ-gz-JdD" secondAttribute="bottom" constant="26" id="fEM-SO-LZW"/>
+                                        <constraint firstItem="Jsh-xQ-J1v" firstAttribute="centerX" secondItem="9oc-gl-aVA" secondAttribute="centerX" id="mQ9-cZ-2nS"/>
+                                        <constraint firstItem="gqQ-gz-JdD" firstAttribute="leading" secondItem="9oc-gl-aVA" secondAttribute="leading" constant="23" id="wzE-gv-eF6"/>
+                                        <constraint firstItem="Jsh-xQ-J1v" firstAttribute="width" secondItem="9oc-gl-aVA" secondAttribute="width" id="xvA-JZ-w6t"/>
+                                        <constraint firstItem="0SD-nE-XxJ" firstAttribute="top" secondItem="9oc-gl-aVA" secondAttribute="top" constant="55" id="zrA-1p-e69"/>
+                                        <constraint firstItem="C6J-e4-4Nw" firstAttribute="top" secondItem="Jsh-xQ-J1v" secondAttribute="top" id="zzQ-6X-zSc"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="programCell" rowHeight="104" id="00j-Jf-iAj" customClass="ProgramTableViewCell" customModule="Meemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="378" width="320" height="104"/>
+                                        <rect key="frame" x="0.0" y="378" width="375" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="00j-Jf-iAj" id="nIx-V3-uBR">
-                                            <frame key="frameInset" width="320" height="103"/>
+                                            <frame key="frameInset" width="375" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The 10 Life Hacks you always wanted" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0j-Po-P4L">
@@ -381,7 +468,7 @@
                                                         <constraint firstAttribute="height" constant="31" id="YZt-uS-4dW"/>
                                                         <constraint firstAttribute="width" constant="208" id="mmm-U5-f7L"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -408,16 +495,17 @@
                         <constraints>
                             <constraint firstItem="n9D-4u-nTh" firstAttribute="centerX" secondItem="KI2-0K-ETc" secondAttribute="centerX" id="9gg-0X-OlY"/>
                             <constraint firstItem="n9D-4u-nTh" firstAttribute="leading" secondItem="KI2-0K-ETc" secondAttribute="leading" id="HZN-Q9-GB1"/>
-                            <constraint firstItem="n9D-4u-nTh" firstAttribute="top" secondItem="sWX-hO-MXQ" secondAttribute="bottom" constant="-20" id="TEy-GP-yvI"/>
+                            <constraint firstItem="n9D-4u-nTh" firstAttribute="top" secondItem="sWX-hO-MXQ" secondAttribute="bottom" constant="-64" id="TEy-GP-yvI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="FWv-ST-4mF"/>
                     <connections>
                         <outlet property="tableView" destination="n9D-4u-nTh" id="LCc-j1-ceT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cc3-o6-0Zm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2240.625" y="335.91549295774649"/>
+            <point key="canvasLocation" x="2272.8000000000002" y="726.38680659670172"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="S38-t7-j00">
@@ -428,7 +516,7 @@
                         <viewControllerLayoutGuide type="bottom" id="mNL-JI-761"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IWa-lI-zyp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_oval" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-qy-scC">
@@ -496,7 +584,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
                         <viewControllerLayoutGuide type="bottom" id="nxV-jo-lQG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kgF-q1-NHI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVK-Wk-Kgf">
@@ -907,12 +995,30 @@ So we decided to give you 5 minutes of positive audio content to help you train 
             <point key="canvasLocation" x="3412.5" y="-527.11267605633805"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="gAS-Ud-FBW">
+            <objects>
+                <viewController id="OLs-xh-anb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x7h-HP-mui"/>
+                        <viewControllerLayoutGuide type="bottom" id="1TF-78-aeH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ybJ-dK-AIm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggr-iE-uJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3242" y="728"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="3eB-tr-c7J">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sc1-5P-z1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Wql-fc-i6f" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BDl-WT-O0w">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TX-x6-2Bf">
@@ -954,8 +1060,8 @@ So we decided to give you 5 minutes of positive audio content to help you train 
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQh-Xe-Xh9">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="gJA-j3-8jR"/>
-                                    <constraint firstAttribute="width" constant="106" id="iId-yP-HYC"/>
+                                    <constraint firstAttribute="width" constant="106" id="LgX-eF-CJ9"/>
+                                    <constraint firstAttribute="height" constant="21" id="TWQ-4R-2h7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -964,20 +1070,20 @@ So we decided to give you 5 minutes of positive audio content to help you train 
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DQh-Xe-Xh9" firstAttribute="top" secondItem="7vH-k0-Q8X" secondAttribute="bottom" constant="8" id="1ZH-ax-NBR"/>
                             <constraint firstItem="O9a-7u-sTB" firstAttribute="top" secondItem="Qpg-Y6-eQX" secondAttribute="bottom" constant="151" id="6Yh-vg-2ha"/>
+                            <constraint firstItem="DQh-Xe-Xh9" firstAttribute="leading" secondItem="BDl-WT-O0w" secondAttribute="leadingMargin" id="Eoo-gp-G93"/>
                             <constraint firstItem="07t-co-U9f" firstAttribute="height" secondItem="UYR-Hj-XHX" secondAttribute="height" id="FVa-EA-jvY"/>
                             <constraint firstItem="UYR-Hj-XHX" firstAttribute="centerX" secondItem="BDl-WT-O0w" secondAttribute="centerX" id="GWY-XW-PUu"/>
                             <constraint firstItem="O9a-7u-sTB" firstAttribute="leading" secondItem="BDl-WT-O0w" secondAttribute="leading" id="O6k-6A-37s"/>
                             <constraint firstItem="7vH-k0-Q8X" firstAttribute="width" secondItem="BDl-WT-O0w" secondAttribute="width" id="PG0-Nn-D1F"/>
                             <constraint firstItem="07t-co-U9f" firstAttribute="centerX" secondItem="BDl-WT-O0w" secondAttribute="centerX" id="Sd1-YY-8an"/>
                             <constraint firstItem="7vH-k0-Q8X" firstAttribute="baseline" secondItem="07t-co-U9f" secondAttribute="baseline" id="TR9-yP-hEZ"/>
+                            <constraint firstItem="DQh-Xe-Xh9" firstAttribute="bottom" secondItem="BDl-WT-O0w" secondAttribute="bottomMargin" id="eMn-xk-te5"/>
                             <constraint firstItem="07t-co-U9f" firstAttribute="top" secondItem="Qpg-Y6-eQX" secondAttribute="bottom" constant="19" id="hds-p1-BiN"/>
                             <constraint firstItem="Qpg-Y6-eQX" firstAttribute="leading" secondItem="BDl-WT-O0w" secondAttribute="leadingMargin" constant="4" id="jLM-75-ak8"/>
                             <constraint firstItem="6TX-x6-2Bf" firstAttribute="top" secondItem="BDl-WT-O0w" secondAttribute="topMargin" constant="58" id="kJd-fZ-ShZ"/>
                             <constraint firstItem="07t-co-U9f" firstAttribute="width" secondItem="UYR-Hj-XHX" secondAttribute="width" id="lt0-7n-Tu7"/>
                             <constraint firstItem="UYR-Hj-XHX" firstAttribute="width" secondItem="BDl-WT-O0w" secondAttribute="width" id="nU8-23-LeJ"/>
-                            <constraint firstItem="DQh-Xe-Xh9" firstAttribute="leading" secondItem="BDl-WT-O0w" secondAttribute="leadingMargin" id="u2G-Nd-YX2"/>
                             <constraint firstItem="7vH-k0-Q8X" firstAttribute="centerX" secondItem="BDl-WT-O0w" secondAttribute="centerX" id="v1b-ww-FID"/>
                             <constraint firstItem="6TX-x6-2Bf" firstAttribute="leading" secondItem="BDl-WT-O0w" secondAttribute="leadingMargin" constant="4" id="vaw-FP-Whz"/>
                             <constraint firstItem="UYR-Hj-XHX" firstAttribute="top" secondItem="Qpg-Y6-eQX" secondAttribute="bottom" constant="19" id="wQf-ax-6bh"/>
@@ -987,7 +1093,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="3229" y="189"/>
+            <point key="canvasLocation" x="4050" y="26"/>
         </scene>
     </scenes>
     <resources>

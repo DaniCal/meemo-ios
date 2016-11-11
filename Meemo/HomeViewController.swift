@@ -10,12 +10,17 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet var navItem: UINavigationItem!
     @IBOutlet weak var tableView: UITableView!
     
     var titles = ["First", "Second", "Third"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.navigationController?.setNavigationBarHidden(true, animated: true)
 
         // Do any additional setup after loading the view.
     }
