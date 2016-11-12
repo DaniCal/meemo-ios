@@ -776,6 +776,7 @@
                     </view>
                     <connections>
                         <outlet property="label" destination="2Ph-5n-2Kd" id="sdk-Lf-IJk"/>
+                        <outlet property="readMoreButton" destination="gPa-2N-8TT" id="r8s-Pc-BjS"/>
                         <outlet property="scrollView" destination="cC6-CL-BwS" id="eJI-gW-Xp2"/>
                     </connections>
                 </viewController>
