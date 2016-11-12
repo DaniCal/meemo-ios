@@ -332,7 +332,7 @@
         <scene sceneID="sEv-MN-WZ3">
             <objects>
                 <navigationController navigationBarHidden="YES" id="z5E-TS-Xpa" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="VRb-aL-ALR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="VRb-aL-ALR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.9137254901960784" green="0.97647058823529409" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
@@ -446,11 +446,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="programCell" rowHeight="104" id="00j-Jf-iAj" customClass="ProgramTableViewCell" customModule="Meemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="378" width="320" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="00j-Jf-iAj" id="nIx-V3-uBR">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="00j-Jf-iAj" id="nIx-V3-uBR">
                                             <frame key="frameInset" width="320" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The 10 Life Hacks you always wanted" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0j-Po-P4L">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The 10 Life Hacks you always wanted" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0j-Po-P4L">
                                                     <frame key="frameInset" width="1000" height="1000"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="1dP-Im-18z"/>
@@ -460,14 +460,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="home_program_pic" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-pV-wWa">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="home_program_pic" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-pV-wWa">
                                                     <frame key="frameInset" width="1000" height="1000"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="75" id="JdA-dW-cas"/>
                                                         <constraint firstAttribute="width" constant="75" id="lBM-SB-iF9"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Amazing life hacks to be more productive and effective in your day." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNF-i5-loG">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Amazing life hacks to be more productive and effective in your day." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNF-i5-loG">
                                                     <frame key="frameInset" width="1000" height="1000"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="31" id="YZt-uS-4dW"/>
@@ -587,16 +587,6 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="session_play_button"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPa-2N-8TT">
-                                        <rect key="frame" x="25" y="513" width="93" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="93" id="NNJ-Zb-YfP"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="PYV-S6-0Oh"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="93" id="qbM-1F-w3D"/>
-                                            <constraint firstAttribute="height" constant="30" id="wJa-nK-M9S"/>
-                                        </constraints>
-                                        <state key="normal" title="Read More"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWS-tj-Wfd">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="wve-jo-qdw"/>
@@ -627,6 +617,16 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPa-2N-8TT">
+                                        <rect key="frame" x="25" y="509" width="120" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="NNJ-Zb-YfP"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="PYV-S6-0Oh"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="93" id="qbM-1F-w3D"/>
+                                            <constraint firstAttribute="height" constant="28" id="wJa-nK-M9S"/>
+                                        </constraints>
+                                        <state key="normal" title="Read More" image="session_read_more"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -637,7 +637,7 @@
                                     <constraint firstItem="vbz-qv-7WG" firstAttribute="centerX" secondItem="cC6-CL-BwS" secondAttribute="centerX" id="6tV-Ku-Xyn"/>
                                     <constraint firstItem="vbz-qv-7WG" firstAttribute="top" secondItem="6na-0N-KMd" secondAttribute="bottom" constant="20" id="7Ph-Jk-kcE"/>
                                     <constraint firstItem="2Ph-5n-2Kd" firstAttribute="top" secondItem="HGM-YK-Zsi" secondAttribute="bottom" constant="40" id="7ng-FR-iJ2"/>
-                                    <constraint firstItem="gPa-2N-8TT" firstAttribute="top" secondItem="vbz-qv-7WG" secondAttribute="bottom" constant="20" id="80D-Sm-K1g"/>
+                                    <constraint firstItem="gPa-2N-8TT" firstAttribute="top" secondItem="vbz-qv-7WG" secondAttribute="bottom" constant="16" id="80D-Sm-K1g"/>
                                     <constraint firstItem="4Do-PR-Sjq" firstAttribute="top" secondItem="Hvb-Sm-M4C" secondAttribute="bottom" id="9mo-Jh-QV7"/>
                                     <constraint firstItem="ZZ7-zh-uLV" firstAttribute="width" secondItem="cC6-CL-BwS" secondAttribute="width" id="F28-bj-Gw6"/>
                                     <constraint firstItem="gPa-2N-8TT" firstAttribute="leading" secondItem="cC6-CL-BwS" secondAttribute="leading" constant="25" id="GYQ-Ap-MKZ"/>
@@ -1283,6 +1283,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
         <image name="selection_stress" width="388" height="144"/>
         <image name="session_background" width="1125" height="2229"/>
         <image name="session_play_button" width="748" height="139"/>
+        <image name="session_read_more" width="387" height="91"/>
         <image name="thankyou_fist" width="411" height="411"/>
         <image name="welcome_button" width="215" height="48"/>
         <image name="welcome_oval" width="104" height="104"/>
