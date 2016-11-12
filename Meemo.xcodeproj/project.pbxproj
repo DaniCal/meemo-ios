@@ -32,6 +32,8 @@
 		82D285DA1DBF97D8002F1A7B /* JourneyMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D285D91DBF97D8002F1A7B /* JourneyMainViewController.swift */; };
 		82E0C7381DC2912800695BAD /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0C7371DC2912800695BAD /* MessageViewController.swift */; };
 		82EC82D81DD68B6E00BC71C7 /* TestScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC82D71DD68B6E00BC71C7 /* TestScrollViewController.swift */; };
+		82EC82DA1DD7942400BC71C7 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC82D91DD7942400BC71C7 /* ProgramViewController.swift */; };
+		82EC82DC1DD7950800BC71C7 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC82DB1DD7950800BC71C7 /* SessionTableViewCell.swift */; };
 		82FC88901D9BB3080090D448 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88861D9BB3080090D448 /* OpenSans-Bold.ttf */; };
 		82FC88911D9BB3080090D448 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88871D9BB3080090D448 /* OpenSans-BoldItalic.ttf */; };
 		82FC88921D9BB3080090D448 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88881D9BB3080090D448 /* OpenSans-ExtraBold.ttf */; };
@@ -100,6 +102,8 @@
 		82D285D91DBF97D8002F1A7B /* JourneyMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyMainViewController.swift; sourceTree = "<group>"; };
 		82E0C7371DC2912800695BAD /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		82EC82D71DD68B6E00BC71C7 /* TestScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestScrollViewController.swift; sourceTree = "<group>"; };
+		82EC82D91DD7942400BC71C7 /* ProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
+		82EC82DB1DD7950800BC71C7 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
 		82FC88861D9BB3080090D448 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		82FC88871D9BB3080090D448 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		82FC88881D9BB3080090D448 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 				82E0C7371DC2912800695BAD /* MessageViewController.swift */,
 				82C6E8F51D92C45500FA765C /* ViewController.swift */,
 				82C6E8F71D92C45500FA765C /* Main.storyboard */,
+				82EC82D91DD7942400BC71C7 /* ProgramViewController.swift */,
+				82EC82DB1DD7950800BC71C7 /* SessionTableViewCell.swift */,
 				82EC82D71DD68B6E00BC71C7 /* TestScrollViewController.swift */,
 				82B1F7A51DD634C400C0759F /* SessionViewController.swift */,
 				82C6E8FA1D92C45500FA765C /* Assets.xcassets */,
@@ -569,12 +575,14 @@
 				8203522B1DA670A40049C4BE /* ContentManager.swift in Sources */,
 				820352291DA652500049C4BE /* Player.swift in Sources */,
 				82B1F7A01DD6156100C0759F /* ProgramTableViewCell.swift in Sources */,
+				82EC82DC1DD7950800BC71C7 /* SessionTableViewCell.swift in Sources */,
 				82C6E8F41D92C45500FA765C /* AppDelegate.swift in Sources */,
 				82E0C7381DC2912800695BAD /* MessageViewController.swift in Sources */,
 				8229844C1DAFC49A00D544B1 /* ReactionViewController.swift in Sources */,
 				826948301DC3852300532194 /* WelcomeViewController.swift in Sources */,
 				8203522E1DA674AB0049C4BE /* FirebaseSynchronizer.swift in Sources */,
 				820352301DA67A000049C4BE /* Content.swift in Sources */,
+				82EC82DA1DD7942400BC71C7 /* ProgramViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
