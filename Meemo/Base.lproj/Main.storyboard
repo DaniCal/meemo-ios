@@ -484,6 +484,11 @@
                                                 <constraint firstItem="HuZ-pV-wWa" firstAttribute="leading" secondItem="nIx-V3-uBR" secondAttribute="leadingMargin" constant="6" id="ugh-wG-L3b"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="dNF-i5-loG" id="2A2-WB-RVF"/>
+                                            <outlet property="picture" destination="HuZ-pV-wWa" id="kdq-Px-Rhh"/>
+                                            <outlet property="titleLabel" destination="u0j-Po-P4L" id="dCs-T6-xTf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

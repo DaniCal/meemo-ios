@@ -10,8 +10,12 @@ import UIKit
 
 class ProgramTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var picture: UIImageView!
 
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         // Initialization code
     }
@@ -21,5 +25,14 @@ class ProgramTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setTitle(_ title: String){
+        titleLabel.text = title
+    }
+    
+    func setSubtitle(_ subtitle: String){
+        descriptionLabel.text = subtitle
+    }
+
 
 }
