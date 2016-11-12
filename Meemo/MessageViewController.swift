@@ -17,8 +17,8 @@ class MessageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        messageLabel.text = content.message
-        doneButton.setTitle(content.button, for: .normal)
+//        messageLabel.text = content.message
+//        doneButton.setTitle(content.button, for: .normal)
         // Do any additional setup after loading the view.
     }
 
@@ -29,13 +29,13 @@ class MessageViewController: UIViewController {
     
     //Opens url in Browser
     func openURLLink(){
-        if let url = URL(string: content.link) {
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
-        }
+//        if let url = URL(string: content.link) {
+//            if #available(iOS 10.0, *) {
+//                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//            } else {
+//                UIApplication.shared.openURL(url)
+//            }
+//        }
     }
     
     @IBAction func readMoreDidTouch(_ sender: AnyObject) {

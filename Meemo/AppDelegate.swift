@@ -14,10 +14,11 @@ import UserNotifications
 import Mixpanel
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseSynchornizeDelegate{
 
     var window: UIWindow?
     var navigationController: UINavigationController?
+    var content:Content!
 
     func showWelcomeScreen(){
         self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -31,6 +32,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         UserDefaults.standard.set(true, forKey: "launchedBefore")
     }
     
+    func showNavigationController(){
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "NavigationController")
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+
+    }
+    
     func initFIRNotification(){
         
     }
@@ -39,6 +51,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         //self.window = UIWindow(frame: UIScreen.main.bounds)
         self.navigationController = window?.rootViewController as? UINavigationController
     }
+    
+    
+    func firebaseDidLoadContent(content:Content){
+        self.content = content
+        showNavigationController()
+    }
+
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -82,6 +101,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
         
         attachNavigationController()
+        FirebaseSynchronizer.delegate = self
+        if(content == nil){
+            FirebaseSynchronizer.subscribeToContent()
+        }
+        
         
         return true
     }

@@ -89,9 +89,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
      ------------------------------------------------------------------------*/
     
     func initUI(){
-        self.quoteTextView.text = content.quote
-        self.authorTextView.text = content.author
-        self.player.setDuration(duration: content.duration)
+        
         self.timerTextView.text = player.getDurationString()
     }
     
@@ -149,7 +147,7 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
         self.player.reset()
         self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
         self.player = Player()
-        self.player.setDuration(duration: content.duration)
+        //self.player.setDuration(duration: content.duration)
         self.player.delegate = self
     }
     
@@ -162,27 +160,27 @@ class ViewController: UIViewController, PlayerDelegate, ContentManagerDelegate {
     
     //Load audio file from server and starts playing
     func downloadFile(){
-        Alamofire.request(content.url).response { response in
-            debugPrint(response)
-            if let data = response.data {
-                self.player.setFile(data: data)
-                self.play()
-            }else{
-                //TODO error handling hhtp request
-            }
-        }
+//        Alamofire.request(content.url).response { response in
+//            debugPrint(response)
+//            if let data = response.data {
+//                self.player.setFile(data: data)
+//                self.play()
+//            }else{
+//                //TODO error handling hhtp request
+//            }
+//        }
     }
     
     //Load picture from server
     func downloadPicture(){
-        Alamofire.request(content.portrait).response { response in
-            debugPrint(response)
-            if let data = response.data {
-                self.portraitImageView.image = UIImage(data: data)
-            }else{
-                //TODO error handling hhtp request
-            }
-        }
+//        Alamofire.request(content.portrait).response { response in
+//            debugPrint(response)
+//            if let data = response.data {
+//                self.portraitImageView.image = UIImage(data: data)
+//            }else{
+//                //TODO error handling hhtp request
+//            }
+//        }
     }
 
     

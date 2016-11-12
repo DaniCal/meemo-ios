@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="z5E-TS-Xpa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rKh-9z-SZ8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -331,8 +331,8 @@
         <!--Navigation Controller-->
         <scene sceneID="sEv-MN-WZ3">
             <objects>
-                <navigationController id="z5E-TS-Xpa" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="VRb-aL-ALR">
+                <navigationController storyboardIdentifier="NavigationController" id="z5E-TS-Xpa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" backIndicatorImage="nav_back_icon" id="VRb-aL-ALR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -692,9 +692,6 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5xc-NB-QgG">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="504" id="bKh-9E-aDj"/>
-                                </constraints>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="gI2-Mf-ERu">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="317"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -822,6 +819,7 @@
                             <constraint firstAttribute="trailing" secondItem="5xc-NB-QgG" secondAttribute="trailing" id="ByV-Pi-TC7"/>
                             <constraint firstItem="5xc-NB-QgG" firstAttribute="top" secondItem="n7J-KR-luO" secondAttribute="bottom" id="CUV-xA-a6u"/>
                             <constraint firstItem="5xc-NB-QgG" firstAttribute="width" secondItem="2Nz-mE-26B" secondAttribute="width" id="T9o-7X-rhf"/>
+                            <constraint firstItem="WUU-jg-h98" firstAttribute="top" secondItem="5xc-NB-QgG" secondAttribute="bottom" id="TEK-xI-3Js"/>
                         </constraints>
                     </view>
                     <connections>
@@ -834,6 +832,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6J9-fe-KL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1470" y="1491.5492957746478"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bnQ-47-xKm">
+            <objects>
+                <viewController id="rKh-9z-SZ8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="57L-vr-mLT"/>
+                        <viewControllerLayoutGuide type="bottom" id="CXX-gm-PEA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gce-bF-6t4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yme-fX-IUr">
+                                <frame key="frameInset" minX="40" minY="225" width="240" height="118"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="welcome_oval" translatesAutoresizingMaskIntoConstraints="NO" id="cId-zC-B3E">
+                                        <frame key="frameInset" minX="80" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="bW4-yA-XfI"/>
+                                            <constraint firstAttribute="width" constant="80" id="e26-ZY-VvF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Meemo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zs6-Hj-m3z">
+                                        <frame key="frameInset" minX="53" minY="80" width="135" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="135" id="KZf-TX-JWm"/>
+                                            <constraint firstAttribute="height" constant="38" id="mSc-Sj-m8Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="32"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="cId-zC-B3E" firstAttribute="centerX" secondItem="yme-fX-IUr" secondAttribute="centerX" id="01N-FI-QDk"/>
+                                    <constraint firstItem="Zs6-Hj-m3z" firstAttribute="top" secondItem="cId-zC-B3E" secondAttribute="bottom" id="LbR-wK-zUF"/>
+                                    <constraint firstItem="Zs6-Hj-m3z" firstAttribute="centerX" secondItem="yme-fX-IUr" secondAttribute="centerX" id="O8a-Dv-1gs"/>
+                                    <constraint firstItem="cId-zC-B3E" firstAttribute="top" secondItem="yme-fX-IUr" secondAttribute="top" id="bhw-ps-J9X"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.42352941176470588" green="0.88235294117647056" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yme-fX-IUr" firstAttribute="centerY" secondItem="Gce-bF-6t4" secondAttribute="centerY" id="QD4-3x-A9B"/>
+                            <constraint firstItem="yme-fX-IUr" firstAttribute="centerX" secondItem="Gce-bF-6t4" secondAttribute="centerX" id="iMS-jJ-KdB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5o-ei-j0k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-789.375" y="-807.04225352112678"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="S38-t7-j00">
@@ -901,7 +952,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bbz-ae-bCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71.25" y="-889.43661971830988"/>
+            <point key="canvasLocation" x="47" y="-817"/>
         </scene>
         <!--Life Section View Controller-->
         <scene sceneID="pAP-4x-3ee">
@@ -1422,6 +1473,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
         <image name="journey_bottom_element" width="1125" height="493"/>
         <image name="journey_day0" width="210" height="211"/>
         <image name="journey_navbar" width="1125" height="267"/>
+        <image name="nav_back_icon" width="34" height="60"/>
         <image name="oval_background_white" width="294" height="72"/>
         <image name="play_icon" width="210" height="211"/>
         <image name="player_bottom_background" width="375" height="139"/>
@@ -1447,7 +1499,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
         <image name="welcome_oval" width="104" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="USb-fX-jxw"/>
+        <segue reference="bWp-qU-ZtJ"/>
         <segue reference="lZh-dQ-0s0"/>
         <segue reference="yvC-Ho-Ulj"/>
         <segue reference="fcI-vi-RWl"/>

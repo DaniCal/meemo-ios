@@ -20,7 +20,6 @@ class JourneyMainViewController: UIViewController,JourneyDelegate, FirebaseSynch
     override func viewDidLoad() {
         super.viewDidLoad()
         FirebaseSynchronizer.delegate = self
-        FirebaseSynchronizer.subscribeToJourney()
     }
 
     override func didReceiveMemoryWarning() {

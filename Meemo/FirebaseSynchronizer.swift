@@ -12,6 +12,7 @@ import Firebase
 @objc protocol FirebaseSynchornizeDelegate{
     @objc optional func firebaseDataDidUpdate(key: String, value: String)
     @objc optional func firebaseDidReceiveJourney(journeyContent: [Content])
+    @objc optional func firebaseDidLoadContent(content: Content)
 
 }
 
@@ -19,83 +20,82 @@ import Firebase
 class FirebaseSynchronizer: NSObject{
     static var delegate:FirebaseSynchornizeDelegate?
     static let rootRef = FIRDatabase.database().reference()
-
-    static let journeyKey: String = "journey"
-    static let titleKey: String = "title"
-    static let authorKey: String = "author"
-    static let portraitKey: String = "portrait"
-    static let lengthKey: String = "length"
-    static let urlKey: String = "url"
-    static let messageKey: String = "message"
-    static let buttonKey: String = "button"
-    static let linkKey: String = "link"
-    static let enabledKey: String = "enabled"
-
-
-
-
-
-    
     
     override init(){
         super.init()
         
     }
     
-    static func initSubscription(dataFields: Set<String>){
-        for field in dataFields{
-            subscribeToString(key: field)
+    
+    
+    static func subscribeToContent(){
+        let conditionRef = rootRef.child("content")
+        conditionRef.observe(.value, with: { (snapshot: FIRDataSnapshot) in
+            let content = Content()
+            
+            let dailyPushUpShot =  snapshot.childSnapshot(forPath: "daily")
+            content.dailyPushUp = parseDailyPushup(dailyPushUpShot: dailyPushUpShot)
+            
+            let programs = snapshot.childSnapshot(forPath: "programs")
+            let enumerator = programs.children
+            
+            while let program = enumerator.nextObject() as? FIRDataSnapshot {
+                content.programs.append(parseProgram(programShot: program))
+            }
+            
+            self.delegate?.firebaseDidLoadContent!(content: content)
+            
+        })
+    }
+    
+    
+    static func parseDailyPushup(dailyPushUpShot: FIRDataSnapshot)->DailyPushUp{
+        
+        let dailyPushUp = DailyPushUp()
+        
+        dailyPushUp.author = (dailyPushUpShot.childSnapshot(forPath: "author").value as? String)!
+        dailyPushUp.biography = (dailyPushUpShot.childSnapshot(forPath: "biography").value as? String)!
+        dailyPushUp.desc = (dailyPushUpShot.childSnapshot(forPath: "description").value as? String)!
+        dailyPushUp.file = (dailyPushUpShot.childSnapshot(forPath: "file").value as? String)!
+        dailyPushUp.pictureOverview = (dailyPushUpShot.childSnapshot(forPath: "pictureOverview").value as? String)!
+        dailyPushUp.picturePlayer = (dailyPushUpShot.childSnapshot(forPath: "picturePlayer").value as? String)!
+        dailyPushUp.readMore = (dailyPushUpShot.childSnapshot(forPath: "readMore").value as? String)!
+        dailyPushUp.time = (dailyPushUpShot.childSnapshot(forPath: "time").value as? String)!
+        dailyPushUp.title = (dailyPushUpShot.childSnapshot(forPath: "title").value as? String)!
+        
+        return dailyPushUp
+    }
+    
+    
+    static func parseProgram(programShot: FIRDataSnapshot)-> Program{
+        
+        let program = Program()
+        
+        program.title = (programShot.childSnapshot(forPath: "title").value as? String)!
+        program.teaser = (programShot.childSnapshot(forPath: "teaser").value as? String)!
+        program.subtitle = (programShot.childSnapshot(forPath: "subtitle").value as? String)!
+        
+        let sessions = programShot.childSnapshot(forPath: "sessions")
+        
+        let enumerator = sessions.children
+        while let sessionShot = enumerator.nextObject() as? FIRDataSnapshot {
+            program.sessions.append(parseSession(sessionShot: sessionShot))
         }
+        return program
     }
     
-    static func subscribeToString(key: String){
-        let conditionRef = rootRef.child(key)
-        conditionRef.observe(.value, with: { (snapshot: FIRDataSnapshot) in
-            let value:String = (snapshot.value as? String)!
-            if(snapshot.value != nil){
-                self.delegate?.firebaseDataDidUpdate!(key: key, value: value)
-                
-            }
-        })
-    }
     
-    static func subscribeToJourney(){
-        let conditionRef = rootRef.child(self.journeyKey)
-        conditionRef.observe(.value, with: { (snapshot: FIRDataSnapshot) in
-            
-            var journeyContent: [Content] = []
-            for index in 1...7 {
-                let newContent = Content()
-                let dayKey:String = "day"
-                let title = (snapshot.childSnapshot(forPath: dayKey + String(index) + "/" + titleKey).value as? String)!;
-                newContent.updateQuote(value: title)
-                let author = (snapshot.childSnapshot(forPath: dayKey + String(index) + "/" + authorKey).value as? String)!;
-                newContent.updateAuthor(value: author)
-                let length = (snapshot.childSnapshot(forPath: dayKey + String(index) + "/" + lengthKey).value as? String)!;
-                newContent.updateDuration(value: length)
-                let portrait = (snapshot.childSnapshot(forPath: dayKey + String(index) + "/" + portraitKey).value as? String)!;
-                newContent.updatePortrait(value: portrait)
-                let url = (snapshot.childSnapshot(forPath: dayKey + String(index) + "/" + urlKey).value as? String)!;
-                newContent.updateUrl(value: url)
-                let message = (snapshot.childSnapshot(forPath: dayKey + String(index) + "/" + messageKey).value as? String)!;
-                newContent.updateMessage(value: message)
-                let button = (snapshot.childSnapshot(forPath: dayKey + String(index) + "/" + buttonKey).value as? String)!;
-                newContent.updateButton(value: button)
-                let link = (snapshot.childSnapshot(forPath: dayKey + String(index) + "/" + linkKey).value as? String)!;
-                newContent.updateLink(value: link)
-                let enabled = (snapshot.childSnapshot(forPath: dayKey + String(index) + "/" + enabledKey).value as? Bool)!;
-                if(!enabled){
-                    newContent.disable()
-                }
-                newContent.setIndex(value: index)
-
-                journeyContent.append(newContent)
-            }
-            
-            self.delegate?.firebaseDidReceiveJourney!(journeyContent: journeyContent)
-           
-            
-        })
+    static func parseSession(sessionShot: FIRDataSnapshot)->Session{
+        
+        let session = Session()
+        
+        session.author = (sessionShot.childSnapshot(forPath: "author").value as? String)!
+        session.biography = (sessionShot.childSnapshot(forPath: "biography").value as? String)!
+        session.desc = (sessionShot.childSnapshot(forPath: "description").value as? String)!
+        session.file = (sessionShot.childSnapshot(forPath: "file").value as? String)!
+        session.readMore = (sessionShot.childSnapshot(forPath: "readMore").value as? String)!
+        session.time = (sessionShot.childSnapshot(forPath: "time").value as? String)!
+        session.title = (sessionShot.childSnapshot(forPath: "title").value as? String)!
+        return session
     }
-    
 }

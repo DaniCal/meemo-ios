@@ -57,14 +57,14 @@ class JourneyBoxViewController: UIViewController {
     
     func setContent(content: Content){
         self.content = content
-        setTitle(title: content.quote)
-        setAuthor(author: content.author)
-        setImage(index: content.index)
-        if(!content.enabled){
-            disable()
-        }else{
-            enable()
-        }
+//        setTitle(title: content.quote)
+//        setAuthor(author: content.author)
+//        setImage(index: content.index)
+//        if(!content.enabled){
+//            disable()
+//        }else{
+//            enable()
+//        }
     }
     
     func setImage(index: Int){

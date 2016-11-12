@@ -34,6 +34,9 @@
 		82EC82D81DD68B6E00BC71C7 /* TestScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC82D71DD68B6E00BC71C7 /* TestScrollViewController.swift */; };
 		82EC82DA1DD7942400BC71C7 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC82D91DD7942400BC71C7 /* ProgramViewController.swift */; };
 		82EC82DC1DD7950800BC71C7 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC82DB1DD7950800BC71C7 /* SessionTableViewCell.swift */; };
+		82EC82DE1DD7C5BE00BC71C7 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC82DD1DD7C5BE00BC71C7 /* Session.swift */; };
+		82EC82E01DD7C5CA00BC71C7 /* DailyPushUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC82DF1DD7C5CA00BC71C7 /* DailyPushUp.swift */; };
+		82EC82E21DD7C6C700BC71C7 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC82E11DD7C6C700BC71C7 /* Program.swift */; };
 		82FC88901D9BB3080090D448 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88861D9BB3080090D448 /* OpenSans-Bold.ttf */; };
 		82FC88911D9BB3080090D448 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88871D9BB3080090D448 /* OpenSans-BoldItalic.ttf */; };
 		82FC88921D9BB3080090D448 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82FC88881D9BB3080090D448 /* OpenSans-ExtraBold.ttf */; };
@@ -104,6 +107,9 @@
 		82EC82D71DD68B6E00BC71C7 /* TestScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestScrollViewController.swift; sourceTree = "<group>"; };
 		82EC82D91DD7942400BC71C7 /* ProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
 		82EC82DB1DD7950800BC71C7 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
+		82EC82DD1DD7C5BE00BC71C7 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		82EC82DF1DD7C5CA00BC71C7 /* DailyPushUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyPushUp.swift; sourceTree = "<group>"; };
+		82EC82E11DD7C6C700BC71C7 /* Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		82FC88861D9BB3080090D448 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		82FC88871D9BB3080090D448 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		82FC88881D9BB3080090D448 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -154,6 +160,9 @@
 				820352281DA652500049C4BE /* Player.swift */,
 				8203522D1DA674AB0049C4BE /* FirebaseSynchronizer.swift */,
 				8203522F1DA67A000049C4BE /* Content.swift */,
+				82EC82E11DD7C6C700BC71C7 /* Program.swift */,
+				82EC82DD1DD7C5BE00BC71C7 /* Session.swift */,
+				82EC82DF1DD7C5CA00BC71C7 /* DailyPushUp.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -564,10 +573,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82EC82DE1DD7C5BE00BC71C7 /* Session.swift in Sources */,
+				82EC82E01DD7C5CA00BC71C7 /* DailyPushUp.swift in Sources */,
 				82C6E8F61D92C45500FA765C /* ViewController.swift in Sources */,
 				82D285D81DBE5E95002F1A7B /* JourneyBoxViewController.swift in Sources */,
 				82EC82D81DD68B6E00BC71C7 /* TestScrollViewController.swift in Sources */,
 				820CC7761DC79EE300EC44F3 /* LifeSectionViewController.swift in Sources */,
+				82EC82E21DD7C6C700BC71C7 /* Program.swift in Sources */,
 				82D285DA1DBF97D8002F1A7B /* JourneyMainViewController.swift in Sources */,
 				820352321DAE56590049C4BE /* JourneyViewController.swift in Sources */,
 				82B1F7A61DD634C400C0759F /* SessionViewController.swift in Sources */,
