@@ -10,6 +10,12 @@ import UIKit
 
 class TestScrollViewController: UIViewController {
 
+    @IBAction func crossDidTouch(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: {() -> Void in
+            
+        })        
+    }
+    @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var readMoreButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var label: UILabel!
@@ -17,8 +23,12 @@ class TestScrollViewController: UIViewController {
         super.viewDidLoad()
 
         
-        label.text = "asdasd  asdasd as asd asd asd asd asd asd asd asd asd asd asd aas asd asd asd asd asd asd asd asd asd asd asd aas asd asd asd asd asd asd asd asd asd asd asd aas asd asd asd asd asd asd asd asd asd asd asd aas asd asd asd asd asd asd asd asd asd asd asd aas asd asd asd asd asd asd asd asd asd asd asd aas asd asd asd asd asd asd asd asd asd asd asd aas asd asd asd asd asd asd asd asd asd asd asd aas asd asd asd asd asd asd asd asd asd asd asd aas asd asd asd asd asd asd asd asd asd asd asd a"
+        label.text = "The most successful people share one secret. They constantly train their mind. Your mindset is a powerful thing and with regular food for thought you can stimulate it to make you perform better, faster and more efficient. Enjoy this daily mental push-up and get inspired by the world’s thought leaders."
         
+        
+        authorLabel.text = "The most successful people share one secret. They constantly train their mind. Your mindset is a powerful thing and with regular food for thought you can stimulate it to make you perform better, faster and more efficient. Enjoy this daily mental push-up and get inspired by the world’s thought leaders."
+        
+        authorLabel.sizeToFit()
         label.sizeToFit()
         scrollView.contentSize.height = 1000
         // Do any additional setup after loading the view.
