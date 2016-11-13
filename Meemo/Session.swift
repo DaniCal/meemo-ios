@@ -17,4 +17,5 @@ class Session:NSObject{
     var time:String = ""
     var title:String = ""
     var listen:Bool = false
+    var fileData:Data!
 }

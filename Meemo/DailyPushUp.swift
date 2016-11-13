@@ -22,4 +22,5 @@ class DailyPushUp:NSObject{
     var time:String = ""
     var title:String = ""
     var program:Program = Program()
+    var fileData:Data!
 }

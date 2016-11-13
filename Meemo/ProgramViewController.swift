@@ -54,6 +54,7 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
         {
             destination.session = program.sessions[blogIndex]
             destination.program = program
+            
         }
     }
 

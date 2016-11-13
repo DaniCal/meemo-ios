@@ -9,27 +9,171 @@
 import UIKit
 import Alamofire
 
-class TestScrollViewController: UIViewController {
+class TestScrollViewController: UIViewController, PlayerDelegate{
+    @IBOutlet weak var loaderAnimation: UIActivityIndicatorView!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var listenButton: UIButton!
+    
 
     @IBOutlet weak var biographyLabel: UILabel!
     @IBOutlet weak var playerPicture: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var readMoreButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var session:Session!
     var program:Program!
     var dailyPushUp:DailyPushUp!
+    var pushUp = false
+
+    var player:Player = Player()
+
+    /*------------------------------------------------------------------------
+        --------------------PlayerDelegate Functions------------------------------
+    ------------------------------------------------------------------------*/
+    
+    func playerDidFinishPlaying(){
+//        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
+//        FIRAnalytics.logEvent(withName: "finished_play", parameters: nil)
+//        timerTextView.text = ""
+//        performSegue(withIdentifier: "showreactionview", sender: self)
+    }
+    
+    func playerErrorDidOccur(){
+    }
+    
+    func playerFileErrorDidOccur(){
+    }
+    
+    func playerUpdateTime(timeLeft: String){
+        self.timeLabel.text = timeLeft
+    }
+
+    
+    /*------------------------------------------------------------------------
+     --------------------UI Functions-------------------------------
+     ------------------------------------------------------------------------*/
+    
+    func initUI(){
+        player.setDuration(duration: Int(self.session.time)!)
+        self.timeLabel.text = player.getDurationString()
+    }
+    
+    func stateLoad(){
+        listenButton.setImage(#imageLiteral(resourceName: "session_listen_empty"), for: .normal)
+        loaderAnimation.startAnimating()
+    }
+    
+    func statePause(){
+        self.listenButton.setImage(#imageLiteral(resourceName: "session_listen_empty"), for: .normal)
+        self.loaderAnimation.stopAnimating()
+    }
+    
+    func statePlay(){
+        self.listenButton.setImage(#imageLiteral(resourceName: "session_pause_button"), for: .normal)
+        self.loaderAnimation.stopAnimating()
+    }
+    
 
     
     @IBAction func crossDidTouch(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: {() -> Void in
-            
-        })        
+            self.reset()
+        })
     }
-    @IBOutlet weak var readMoreButton: UIButton!
-    @IBOutlet weak var scrollView: UIScrollView!
+    
+    /*------------------------------------------------------------------------
+     --------------------Player Functions-------------------------------
+     ------------------------------------------------------------------------*/
+    
+    func start(){
+        if(!player.isInitialized()){
+            //Load file from server and init Player instance
+            self.stateLoad()
+            if(!pushUp){
+                if(self.session.fileData == nil){
+                    self.downloadFile()
+                }else{
+                    play(data: self.session.fileData)
+                }
+            }else{
+                if(self.dailyPushUp.fileData == nil){
+                    self.downloadFile()
+                }else{
+                    play(data: self.dailyPushUp.fileData)
+                }
+            }
+            
+            
+        }else if(self.player.isPlaying()){
+            self.pause()
+        }else if(!self.player.isPlaying()){
+            //self.play()
+        }else{
+            self.stateLoad()
+            if(self.session.fileData == nil){
+                self.downloadFile()
+            }else{
+                play(data: self.session.fileData)
+            }
+        }
+    }
+    
+    func play(data:Data){
+        self.session.fileData = data
+        self.player.setFile(data: data)
+        self.listenButton.setImage(#imageLiteral(resourceName: "session_pause_button"), for: .normal)
+        self.loaderAnimation.stopAnimating()
+        player.play()
+
+//        let hourOfTheDay = Calendar.current.component(.hour, from: Date())
+//        FIRAnalytics.logEvent(withName: String("press_play_" + String(hourOfTheDay)), parameters: nil)
+        
+    }
+    
+    func continuePlaying(){
+        self.listenButton.setImage(#imageLiteral(resourceName: "session_pause_button"), for: .normal)
+        self.loaderAnimation.stopAnimating()
+        player.play()
+    }
+    
+    func pause(){
+        self.listenButton.setImage(#imageLiteral(resourceName: "session_play_button"), for: .normal)
+        player.pause()
+    }
+    
+    func reset(){
+        self.player.reset()
+        self.listenButton.setImage(#imageLiteral(resourceName: "session_play_button"), for: .normal)
+        self.player = Player()
+//        //self.player.setDuration(duration: content.duration)
+        self.player.delegate = self
+    }
+
+    /*------------------------------------------------------------------------
+     --------------------Downlaod Functions-------------------------------
+     ------------------------------------------------------------------------*/
+    
+    func downloadFile(){
+        Alamofire.request(session.file).response { response in
+            debugPrint(response)
+            if let data = response.data {
+                if(self.pushUp){
+                    self.dailyPushUp.fileData = data
+                }else{
+                    self.session.fileData = data
+                }
+                
+                
+                self.play(data:data)
+            }else{
+                //TODO error handling hhtp request
+            }
+        }
+    }
+
     
     func loadPlayerPicture(){
         Alamofire.request(self.program.picturePlayer).response { response in
@@ -42,6 +186,23 @@ class TestScrollViewController: UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func listenDidTouch(_ sender: AnyObject) {
+                if(!player.isInitialized()){
+                    listenButton.setImage(#imageLiteral(resourceName: "session_listen_empty"), for: .normal)
+                    loaderAnimation.startAnimating()
+                    start()
+                }else if(self.player.isPlaying()){
+                    pause()
+                }else if(!self.player.isPlaying()){
+                    continuePlaying()
+                }else{
+                    listenButton.setImage(#imageLiteral(resourceName: "session_listen_empty"), for: .normal)
+                    loaderAnimation.startAnimating()
+                }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +227,9 @@ class TestScrollViewController: UIViewController {
             
         }
         
-        
+        self.player.delegate = self
+        initUI()
+//        start()
 //        
 //        
 //        

@@ -593,16 +593,16 @@
                                             <constraint firstAttribute="height" constant="41" id="JDz-l7-jzJ"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="session_play_button"/>
+                                        <connections>
+                                            <action selector="listenDidTouch:" destination="NHb-4M-Gz3" eventType="touchUpInside" id="B14-dX-GET"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWS-tj-Wfd">
+                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWS-tj-Wfd">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="wve-jo-qdw"/>
                                             <constraint firstAttribute="height" constant="30" id="zVv-1f-sDa"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="21"/>
-                                        <state key="normal" title="X">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                        <state key="normal" backgroundImage="session_x_button"/>
                                         <connections>
                                             <action selector="crossDidTouch:" destination="NHb-4M-Gz3" eventType="touchUpInside" id="Wzl-wC-fZl"/>
                                         </connections>
@@ -634,6 +634,13 @@
                                         </constraints>
                                         <state key="normal" title="Read More" image="session_read_more"/>
                                     </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="28S-gF-vsd">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="vfu-6a-Gqr"/>
+                                            <constraint firstAttribute="width" constant="20" id="yBs-Fy-kZC"/>
+                                        </constraints>
+                                        <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -646,6 +653,8 @@
                                     <constraint firstItem="2Ph-5n-2Kd" firstAttribute="top" secondItem="HGM-YK-Zsi" secondAttribute="bottom" constant="40" id="7ng-FR-iJ2"/>
                                     <constraint firstItem="gPa-2N-8TT" firstAttribute="top" secondItem="vbz-qv-7WG" secondAttribute="bottom" constant="16" id="80D-Sm-K1g"/>
                                     <constraint firstItem="4Do-PR-Sjq" firstAttribute="top" secondItem="Hvb-Sm-M4C" secondAttribute="bottom" id="9mo-Jh-QV7"/>
+                                    <constraint firstItem="28S-gF-vsd" firstAttribute="centerX" secondItem="cC6-CL-BwS" secondAttribute="centerX" id="C3L-rS-Kzr"/>
+                                    <constraint firstItem="HGM-YK-Zsi" firstAttribute="top" secondItem="28S-gF-vsd" secondAttribute="bottom" constant="-30" id="DbB-Ge-G4w"/>
                                     <constraint firstItem="ZZ7-zh-uLV" firstAttribute="width" secondItem="cC6-CL-BwS" secondAttribute="width" id="F28-bj-Gw6"/>
                                     <constraint firstItem="gPa-2N-8TT" firstAttribute="leading" secondItem="cC6-CL-BwS" secondAttribute="leading" constant="25" id="GYQ-Ap-MKZ"/>
                                     <constraint firstItem="ZZ7-zh-uLV" firstAttribute="top" secondItem="cC6-CL-BwS" secondAttribute="top" id="I5x-AB-aiJ"/>
@@ -680,6 +689,8 @@
                         <outlet property="authorLabel" destination="Hvb-Sm-M4C" id="0rS-7V-phh"/>
                         <outlet property="biographyLabel" destination="vbz-qv-7WG" id="7Ni-v6-QZW"/>
                         <outlet property="descriptionLabel" destination="2Ph-5n-2Kd" id="P8Z-9H-Y5h"/>
+                        <outlet property="listenButton" destination="HGM-YK-Zsi" id="ZRD-0i-EU6"/>
+                        <outlet property="loaderAnimation" destination="28S-gF-vsd" id="l6P-Ds-C7e"/>
                         <outlet property="playerPicture" destination="ZZ7-zh-uLV" id="JuF-QP-i2T"/>
                         <outlet property="readMoreButton" destination="gPa-2N-8TT" id="r8s-Pc-BjS"/>
                         <outlet property="scrollView" destination="cC6-CL-BwS" id="eJI-gW-Xp2"/>
@@ -779,17 +790,19 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sessionCell" rowHeight="85" id="N2G-cZ-qaw" customClass="SessionTableViewCell" customModule="Meemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="345" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N2G-cZ-qaw" id="NF9-g5-TP4">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="N2G-cZ-qaw" id="NF9-g5-TP4">
                                             <frame key="frameInset" width="375" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="program_play_button" translatesAutoresizingMaskIntoConstraints="NO" id="5zy-Iv-JG2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="program_play_button" translatesAutoresizingMaskIntoConstraints="NO" id="5zy-Iv-JG2">
+                                                    <frame key="frameInset" width="1000" height="1000"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="52" id="5N3-h2-WYm"/>
                                                         <constraint firstAttribute="height" constant="52" id="EDa-Nj-HeV"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How I established the best morning routine" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0j-sQ-aY9">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="How I established the best morning routine" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0j-sQ-aY9">
+                                                    <frame key="frameInset" width="1000" height="1000"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="196" id="P3Y-yA-Uud"/>
                                                         <constraint firstAttribute="height" constant="35" id="tYQ-an-qKo"/>
@@ -798,7 +811,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edwin vand er Saar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va0-ow-x0y">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Edwin vand er Saar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va0-ow-x0y">
+                                                    <frame key="frameInset" width="1000" height="1000"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="IYn-qD-fPm"/>
                                                         <constraint firstAttribute="width" constant="196" id="PPF-ZQ-q0b"/>
@@ -1513,6 +1527,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
         <image name="selection_stress" width="388" height="144"/>
         <image name="session_play_button" width="748" height="139"/>
         <image name="session_read_more" width="387" height="91"/>
+        <image name="session_x_button" width="55" height="55"/>
         <image name="thankyou_fist" width="411" height="411"/>
         <image name="welcome_button" width="215" height="48"/>
         <image name="welcome_oval" width="104" height="104"/>

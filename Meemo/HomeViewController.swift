@@ -72,6 +72,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             //TODO: Refactor!
             content.dailyPushUp.program.picturePlayer = content.dailyPushUp.picturePlayer
             destination.program = content.dailyPushUp.program
+            destination.dailyPushUp = content.dailyPushUp
+            destination.pushUp = true
         }
     }
     
