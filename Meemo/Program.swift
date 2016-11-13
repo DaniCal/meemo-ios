@@ -14,4 +14,7 @@ class Program:NSObject{
     var teaser:String = ""
     var subtitle:String = ""
     var sessions:[Session] = []
+    var descr:String = ""
+    var pictureSquare:String = ""
+    var pictureOverview:String = ""
 }

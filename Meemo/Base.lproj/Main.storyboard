@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsP-Ha-D3c">
@@ -174,7 +174,7 @@
                         <viewControllerLayoutGuide type="bottom" id="dCk-QO-8GZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kxv-MQ-gVg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-K5-mdf">
@@ -272,7 +272,7 @@
                         <viewControllerLayoutGuide type="bottom" id="L0t-gv-vob"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2tF-Pk-JjW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="You invest into yourself to gain whatever you want to gain from life" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1e-EL-N62">
@@ -354,13 +354,13 @@
                         <viewControllerLayoutGuide type="bottom" id="g0I-YJ-FMv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KI2-0K-ETc">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9D-4u-nTh">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="9oc-gl-aVA">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SD-nE-XxJ">
@@ -440,10 +440,10 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="programCell" rowHeight="104" id="00j-Jf-iAj" customClass="ProgramTableViewCell" customModule="Meemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="378" width="320" height="104"/>
+                                        <rect key="frame" x="0.0" y="378" width="375" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="00j-Jf-iAj" id="nIx-V3-uBR">
-                                            <frame key="frameInset" width="320" height="103"/>
+                                            <frame key="frameInset" width="375" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The 10 Life Hacks you always wanted" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0j-Po-P4L">
@@ -673,10 +673,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="authorLabel" destination="vbz-qv-7WG" id="qBl-TA-voF"/>
-                        <outlet property="label" destination="2Ph-5n-2Kd" id="sdk-Lf-IJk"/>
+                        <outlet property="authorLabel" destination="Hvb-Sm-M4C" id="0rS-7V-phh"/>
+                        <outlet property="biographyLabel" destination="vbz-qv-7WG" id="7Ni-v6-QZW"/>
+                        <outlet property="descriptionLabel" destination="2Ph-5n-2Kd" id="P8Z-9H-Y5h"/>
                         <outlet property="readMoreButton" destination="gPa-2N-8TT" id="r8s-Pc-BjS"/>
                         <outlet property="scrollView" destination="cC6-CL-BwS" id="eJI-gW-Xp2"/>
+                        <outlet property="timeLabel" destination="Hh7-ip-T0n" id="Klp-7Q-0Iy"/>
+                        <outlet property="titleLabel" destination="4Do-PR-Sjq" id="VET-JQ-73c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egF-l4-qCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -692,13 +695,13 @@
                         <viewControllerLayoutGuide type="bottom" id="WUU-jg-h98"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Nz-mE-26B">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5xc-NB-QgG">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="gI2-Mf-ERu">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="317"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="317"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="program_background_pic" translatesAutoresizingMaskIntoConstraints="NO" id="fZ6-tE-jHs">
@@ -769,10 +772,10 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sessionCell" rowHeight="85" id="N2G-cZ-qaw" customClass="SessionTableViewCell" customModule="Meemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="345" width="320" height="85"/>
+                                        <rect key="frame" x="0.0" y="345" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N2G-cZ-qaw" id="NF9-g5-TP4">
-                                            <frame key="frameInset" width="320" height="84"/>
+                                            <frame key="frameInset" width="375" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="program_play_button" translatesAutoresizingMaskIntoConstraints="NO" id="5zy-Iv-JG2">
@@ -810,6 +813,11 @@
                                                 <constraint firstItem="a0j-sQ-aY9" firstAttribute="leading" secondItem="5zy-Iv-JG2" secondAttribute="trailing" constant="19" id="tAK-OG-Zir"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="authorLabel" destination="va0-ow-x0y" id="yef-hp-C7A"/>
+                                            <outlet property="picture" destination="5zy-Iv-JG2" id="AgT-BK-6jY"/>
+                                            <outlet property="titleLabel" destination="a0j-sQ-aY9" id="XNu-T9-4U0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -828,7 +836,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="decriptionLabel" destination="HJo-CK-qaC" id="KAS-RO-Bks"/>
+                        <outlet property="numberSessionsLabel" destination="31q-Ih-YfH" id="2PA-k6-fBt"/>
                         <outlet property="tableView" destination="5xc-NB-QgG" id="VZw-gK-jqO"/>
+                        <outlet property="titleLabel" destination="L6F-5g-p1j" id="7wD-6e-nFd"/>
                         <segue destination="NHb-4M-Gz3" kind="popoverPresentation" identifier="goToPlayer" popoverAnchorView="Qxw-5a-w53" id="USb-fX-jxw">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
@@ -847,7 +858,7 @@
                         <viewControllerLayoutGuide type="bottom" id="CXX-gm-PEA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Gce-bF-6t4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yme-fX-IUr">
@@ -900,7 +911,7 @@
                         <viewControllerLayoutGuide type="bottom" id="mNL-JI-761"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IWa-lI-zyp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_oval" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-qy-scC">
@@ -968,7 +979,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
                         <viewControllerLayoutGuide type="bottom" id="nxV-jo-lQG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kgF-q1-NHI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVK-Wk-Kgf">
@@ -1067,7 +1078,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
                         <viewControllerLayoutGuide type="bottom" id="6Es-TZ-dyr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yQ0-ki-LBY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5I-iZ-BLW">
@@ -1387,7 +1398,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
                         <viewControllerLayoutGuide type="bottom" id="vYm-Yy-qBL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BDl-WT-O0w">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TX-x6-2Bf">
@@ -1504,7 +1515,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
         <image name="welcome_oval" width="104" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bWp-qU-ZtJ"/>
+        <segue reference="USb-fX-jxw"/>
         <segue reference="lZh-dQ-0s0"/>
         <segue reference="yvC-Ho-Ulj"/>
         <segue reference="fcI-vi-RWl"/>

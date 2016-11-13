@@ -13,6 +13,8 @@ class SessionViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
 
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    var session:Session!
 
     
     var desc:String = "The most successful people share one secret. They constantly train their mind. Your mindset is a powerful thing and with regular food for thought you can stimulate it to make you perform better, faster and more efficient. Enjoy this daily mental push-up and get inspired by  successful people share one secret. They constantly train their mind. Your mindset is a powerful thing and with regular food for thought you can stimulate it to make you perform better, faster and more efficient. Enjoy this daily mental push-up and get inspired by the worlds thought lead the worlds thought leaders."
@@ -42,6 +44,13 @@ class SessionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if(session != nil){
+            descriptionLabel.text = session.desc
+            descriptionLabel.sizeToFit()
+        }
+        
         
         descriptionLabel.text = desc
         descriptionLabel.sizeToFit()

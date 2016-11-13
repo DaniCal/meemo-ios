@@ -10,13 +10,30 @@ import UIKit
 
 class ProgramViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
+    @IBOutlet weak var numberSessionsLabel: UILabel!
+    @IBOutlet weak var decriptionLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    var content:Content!
+    
+    let segueIdentifier = "goToPlayer"
+    var program:Program!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        self.content = appDelegate.content
+        titleLabel.text = program.title
+        decriptionLabel.text = program.descr
+        numberSessionsLabel.text = String(program.sessions.count) + " Episodes"
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == segueIdentifier,
+            let destination = segue.destination as? TestScrollViewController,
+            let blogIndex = tableView.indexPathForSelectedRow?.row
+        {
+            destination.session = program.sessions[blogIndex]
+        }
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -25,17 +42,20 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return content.programs.count
+        return program.sessions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "sessionCell", for: indexPath) as! SessionTableViewCell
+        cell.setTitle(program.sessions[indexPath.row].title)
+        cell.setAuthor(program.sessions[indexPath.row].author)
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "goToPlayer" , sender: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
 

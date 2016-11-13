@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     var content:Content!
 
+    let segueIdentifier = "goToProgram"
     
     var titles = ["First", "Second", "Third"]
     
@@ -34,7 +35,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == segueIdentifier,
+            let destination = segue.destination as? ProgramViewController,
+            let blogIndex = tableView.indexPathForSelectedRow?.row
+        {
+            destination.program = content.programs[blogIndex]
+        }
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return content.programs.count
     }
@@ -49,6 +59,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "goToProgram" , sender: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 

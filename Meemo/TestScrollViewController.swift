@@ -9,28 +9,54 @@
 import UIKit
 
 class TestScrollViewController: UIViewController {
+    @IBOutlet weak var timeLabel: UILabel!
 
+    @IBOutlet weak var biographyLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    var session:Session!
+
+    
     @IBAction func crossDidTouch(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: {() -> Void in
             
         })        
     }
-    @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var readMoreButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        label.text = "The most successful people share one secret. They constantly train their mind. Your mindset is a powerful thing and with regular food for thought you can stimulate it to make you perform better, faster and more efficient. Enjoy this daily mental push-up and get inspired by the world’s thought leaders."
+        if(session != nil){
+            authorLabel.text = session.author
+            titleLabel.text = session.title
+            timeLabel.text = session.time
+            
+            descriptionLabel.text = session.desc
+            descriptionLabel.sizeToFit()
+            
+            biographyLabel.text = session.biography
+            biographyLabel.sizeToFit()
+            
+            
+            
+        }
         
         
-        authorLabel.text = "The most successful people share one secret. They constantly train their mind. Your mindset is a powerful thing and with regular food for thought you can stimulate it to make you perform better, faster and more efficient. Enjoy this daily mental push-up and get inspired by the world’s thought leaders."
-        
-        authorLabel.sizeToFit()
-        label.sizeToFit()
-        scrollView.contentSize.height = 1000
+//        
+//        
+//        
+//        label.text = "The most successful people share one secret. They constantly train their mind. Your mindset is a powerful thing and with regular food for thought you can stimulate it to make you perform better, faster and more efficient. Enjoy this daily mental push-up and get inspired by the world’s thought leaders."
+//        
+//        
+//        authorLabel.text = "The most successful people share one secret. They constantly train their mind. Your mindset is a powerful thing and with regular food for thought you can stimulate it to make you perform better, faster and more efficient. Enjoy this daily mental push-up and get inspired by the world’s thought leaders."
+//        
+//        authorLabel.sizeToFit()
+//        label.sizeToFit()
+//        scrollView.contentSize.height = 1000
         // Do any additional setup after loading the view.
     }
 
