@@ -15,8 +15,11 @@ class DailyPushUp:NSObject{
     var desc:String = ""
     var file:String = ""
     var pictureOverview:String = ""
+    var pictureOverviewData:Data!
     var picturePlayer:String = ""
+    var picturePlayerData:Data!
     var readMore:String = ""
     var time:String = ""
     var title:String = ""
+    var program:Program = Program()
 }

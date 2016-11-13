@@ -77,6 +77,7 @@ class FirebaseSynchronizer: NSObject{
         program.descr = (programShot.childSnapshot(forPath: "description").value as? String)!
         program.pictureOverview = (programShot.childSnapshot(forPath: "pictureOverview").value as? String)!
         program.pictureSquare = (programShot.childSnapshot(forPath: "pictureSquare").value as? String)!
+        program.picturePlayer = (programShot.childSnapshot(forPath: "picturePlayer").value as? String)!
         
         let sessions = programShot.childSnapshot(forPath: "sessions")
         

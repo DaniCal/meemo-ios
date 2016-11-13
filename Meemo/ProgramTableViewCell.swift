@@ -33,6 +33,10 @@ class ProgramTableViewCell: UITableViewCell {
     func setSubtitle(_ subtitle: String){
         descriptionLabel.text = subtitle
     }
+    
+    func setImageData(data: Data){
+        picture.image = UIImage(data: data)
+    }
 
 
 }

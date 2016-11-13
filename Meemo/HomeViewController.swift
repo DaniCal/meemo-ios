@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var navItem: UINavigationItem!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var pushUpPicture: UIImageView!
+
     var content:Content!
 
     let programSegueIdentifier = "goToProgram"
@@ -23,7 +27,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.content = appDelegate.content
+        if(content.dailyPushUp.pictureOverviewData == nil){
+            loadPushupPicture()
+        }else{
+            self.pushUpPicture.image = UIImage(data: content.dailyPushUp.pictureOverviewData)
+  
+        }
         
+        //loadPushupPicture()
 
 //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
 //        appDelegate.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -57,9 +68,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             session.file = content.dailyPushUp.file
             session.readMore = content.dailyPushUp.readMore
             destination.session = session
+            
+            //TODO: Refactor!
+            content.dailyPushUp.program.picturePlayer = content.dailyPushUp.picturePlayer
+            destination.program = content.dailyPushUp.program
         }
-        
-
     }
     
     
@@ -71,7 +84,37 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "programCell", for: indexPath) as! ProgramTableViewCell
         cell.setTitle(content.programs[indexPath.row].title)
         cell.setSubtitle(content.programs[indexPath.row].subtitle)
+        if(content.programs[indexPath.row].pictureSquareData == nil){
+            loadProgramSquare(cell: cell, url: content.programs[indexPath.row].pictureSquare)
+        }else{
+            cell.setImageData(data: content.programs[indexPath.row].pictureSquareData)
+        }
+        
+        
         return cell
+    }
+    
+    func loadProgramSquare(cell: ProgramTableViewCell, url:String){
+        Alamofire.request(url).response { response in
+            debugPrint(response)
+            if let data = response.data {
+                cell.setImageData(data: data)
+            }else{
+                //TODO error handling hhtp request
+            }
+        }
+        
+    }
+    
+    func loadPushupPicture(){
+        Alamofire.request(content.dailyPushUp.pictureOverview).response { response in
+            debugPrint(response)
+            if let data = response.data {
+                self.pushUpPicture.image = UIImage(data: data)
+            }else{
+                //TODO error handling hhtp request
+            }
+        }
     }
     
     

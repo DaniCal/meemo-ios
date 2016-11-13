@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import Alamofire
 
 class TestScrollViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
 
     @IBOutlet weak var biographyLabel: UILabel!
+    @IBOutlet weak var playerPicture: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var session:Session!
+    var program:Program!
     var dailyPushUp:DailyPushUp!
 
     
@@ -27,6 +30,19 @@ class TestScrollViewController: UIViewController {
     }
     @IBOutlet weak var readMoreButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    func loadPlayerPicture(){
+        Alamofire.request(self.program.picturePlayer).response { response in
+            debugPrint(response)
+            if let data = response.data {
+                self.program.picturePlayerData = data
+                self.playerPicture.image = UIImage(data: data)
+            }else{
+                //TODO error handling hhtp request
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,7 +58,11 @@ class TestScrollViewController: UIViewController {
             biographyLabel.text = session.biography
             biographyLabel.sizeToFit()
             
-            
+            if(program.picturePlayerData == nil){
+                loadPlayerPicture()
+            }else{
+                self.playerPicture.image = UIImage(data: program.picturePlayerData)
+            }
             
         }
         

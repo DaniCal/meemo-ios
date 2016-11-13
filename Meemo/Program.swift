@@ -16,5 +16,9 @@ class Program:NSObject{
     var sessions:[Session] = []
     var descr:String = ""
     var pictureSquare:String = ""
+    var pictureSquareData:Data!
     var pictureOverview:String = ""
+    var PictureOverviewData:Data!
+    var picturePlayer:String = ""
+    var picturePlayerData:Data!
 }

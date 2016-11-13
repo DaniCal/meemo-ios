@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProgramViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
+    @IBOutlet weak var overviewPicture: UIImageView!
     @IBOutlet weak var numberSessionsLabel: UILabel!
     @IBOutlet weak var decriptionLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -23,7 +25,27 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
         titleLabel.text = program.title
         decriptionLabel.text = program.descr
         numberSessionsLabel.text = String(program.sessions.count) + " Episodes"
+        if(program.PictureOverviewData == nil){
+            loadOverviewPicture()
+        }else{
+            self.overviewPicture.image = UIImage(data: program.PictureOverviewData)
+        }
+        
     }
+    
+    
+    func loadOverviewPicture(){
+        Alamofire.request(program.pictureOverview).response { response in
+            debugPrint(response)
+            if let data = response.data {
+                self.program.PictureOverviewData = data
+                self.overviewPicture.image = UIImage(data: data)
+            }else{
+                //TODO error handling hhtp request
+            }
+        }
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if  segue.identifier == segueIdentifier,
@@ -31,6 +53,7 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
             let blogIndex = tableView.indexPathForSelectedRow?.row
         {
             destination.session = program.sessions[blogIndex]
+            destination.program = program
         }
     }
 
