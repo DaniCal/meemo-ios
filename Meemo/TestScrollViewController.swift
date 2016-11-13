@@ -17,6 +17,7 @@ class TestScrollViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var session:Session!
+    var dailyPushUp:DailyPushUp!
 
     
     @IBAction func crossDidTouch(_ sender: AnyObject) {

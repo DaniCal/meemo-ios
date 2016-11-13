@@ -386,7 +386,7 @@
                                             </constraints>
                                             <state key="focused" image="home_pushup_pic"/>
                                             <connections>
-                                                <segue destination="NHb-4M-Gz3" kind="popoverPresentation" popoverAnchorView="Jsh-xQ-J1v" id="bWp-qU-ZtJ">
+                                                <segue destination="NHb-4M-Gz3" kind="popoverPresentation" identifier="goToPushUp" popoverAnchorView="Jsh-xQ-J1v" id="sOo-hT-H3o">
                                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                                 </segue>
                                             </connections>
@@ -1515,7 +1515,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
         <image name="welcome_oval" width="104" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="USb-fX-jxw"/>
+        <segue reference="sOo-hT-H3o"/>
         <segue reference="lZh-dQ-0s0"/>
         <segue reference="yvC-Ho-Ulj"/>
         <segue reference="fcI-vi-RWl"/>

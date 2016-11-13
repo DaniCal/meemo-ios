@@ -14,7 +14,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     var content:Content!
 
-    let segueIdentifier = "goToProgram"
+    let programSegueIdentifier = "goToProgram"
+    let pushupSegueIdentifier = "goToPushUp"
     
     var titles = ["First", "Second", "Third"]
     
@@ -36,12 +37,29 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if  segue.identifier == segueIdentifier,
+        if  segue.identifier == programSegueIdentifier,
             let destination = segue.destination as? ProgramViewController,
             let blogIndex = tableView.indexPathForSelectedRow?.row
         {
             destination.program = content.programs[blogIndex]
         }
+        
+        
+        if  segue.identifier == pushupSegueIdentifier,
+            let destination = segue.destination as? TestScrollViewController
+        {
+            let session = Session()
+            session.title = content.dailyPushUp.title
+            session.author = content.dailyPushUp.author
+            session.desc = content.dailyPushUp.desc
+            session.biography = content.dailyPushUp.biography
+            session.time = content.dailyPushUp.time
+            session.file = content.dailyPushUp.file
+            session.readMore = content.dailyPushUp.readMore
+            destination.session = session
+        }
+        
+
     }
     
     
