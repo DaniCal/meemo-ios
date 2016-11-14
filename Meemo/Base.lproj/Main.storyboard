@@ -331,7 +331,7 @@
         <!--Navigation Controller-->
         <scene sceneID="sEv-MN-WZ3">
             <objects>
-                <navigationController storyboardIdentifier="NavigationController" hidesBarsOnSwipe="YES" id="z5E-TS-Xpa" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" id="z5E-TS-Xpa" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="nav_back_icon" id="VRb-aL-ALR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1522,7 +1522,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
         <image name="journey_bottom_element" width="1125" height="493"/>
         <image name="journey_day0" width="210" height="211"/>
         <image name="journey_navbar" width="1125" height="267"/>
-        <image name="nav_back_icon" width="34" height="60"/>
+        <image name="nav_back_icon" width="22" height="22"/>
         <image name="oval_background_white" width="294" height="72"/>
         <image name="play_icon" width="210" height="211"/>
         <image name="player_bottom_background" width="375" height="139"/>
@@ -1541,7 +1541,7 @@ So we decided to give you 5 minutes of positive audio content to help you train 
         <image name="selection_stress" width="388" height="144"/>
         <image name="session_play_button" width="855" height="157"/>
         <image name="session_read_more" width="387" height="91"/>
-        <image name="session_x_button" width="55" height="55"/>
+        <image name="session_x_button" width="100" height="100"/>
         <image name="thankyou_fist" width="411" height="411"/>
         <image name="welcome_button" width="215" height="48"/>
         <image name="welcome_oval" width="104" height="104"/>

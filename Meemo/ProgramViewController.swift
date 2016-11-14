@@ -180,7 +180,7 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
         self.navigationController?.setNavigationBarHidden(false, animated: true)
 
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        //self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
@@ -204,7 +204,9 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     func backDidTouch(){
         
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         if(showPlayer){
@@ -259,6 +261,13 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "sessionCell", for: indexPath) as! SessionTableViewCell
         cell.setTitle(program.sessions[indexPath.row].title)
         cell.setAuthor(program.sessions[indexPath.row].author)
+        
+        let playedBefore = UserDefaults.standard.bool(forKey: program.title + "_" + program.sessions[indexPath.row].title)
+
+        if(playedBefore){
+            cell.picture.image = UIImage(named: "program_played")
+        }
+        
         return cell
     }
     

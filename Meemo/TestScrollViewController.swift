@@ -35,6 +35,12 @@ class TestScrollViewController: UIViewController, PlayerDelegate{
     ------------------------------------------------------------------------*/
     
     func playerDidFinishPlaying(){
+        
+        UserDefaults.standard.set(true, forKey: program.title + "_" + session.title)
+        listenButton.setImage(#imageLiteral(resourceName: "session_play_button"), for: .normal)
+        self.timeLabel.text = player.getDurationString()
+
+        
 //        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
 //        FIRAnalytics.logEvent(withName: "finished_play", parameters: nil)
 //        timerTextView.text = ""
