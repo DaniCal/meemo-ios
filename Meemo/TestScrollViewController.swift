@@ -11,6 +11,9 @@ import Mixpanel
 import Alamofire
 
 class TestScrollViewController: UIViewController, PlayerDelegate{
+    @IBAction func readMoreDidTouch(_ sender: AnyObject) {
+        openURLLink()
+    }
     @IBOutlet weak var loaderAnimation: UIActivityIndicatorView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var listenButton: UIButton!
@@ -37,7 +40,7 @@ class TestScrollViewController: UIViewController, PlayerDelegate{
     func playerDidFinishPlaying(){
         
         UserDefaults.standard.set(true, forKey: program.title + "_" + session.title)
-        listenButton.setImage(#imageLiteral(resourceName: "program_teaser_button"), for: .normal)
+        listenButton.setImage(#imageLiteral(resourceName: "session_play_button"), for: .normal)
         self.timeLabel.text = player.getDurationString()
         Mixpanel.sharedInstance().track("session_finished", properties: ["name" : session.title])
 
@@ -161,6 +164,16 @@ class TestScrollViewController: UIViewController, PlayerDelegate{
         self.player = Player()
 //        //self.player.setDuration(duration: content.duration)
         self.player.delegate = self
+    }
+    
+    func openURLLink(){
+                if let url = URL(string: self.session.readMore) {
+                    if #available(iOS 10.0, *) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    } else {
+                        UIApplication.shared.openURL(url)
+                    }
+                }
     }
 
     /*------------------------------------------------------------------------
