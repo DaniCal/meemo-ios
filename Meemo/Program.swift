@@ -12,6 +12,7 @@ class Program:NSObject{
     
     var title:String = ""
     var teaser:String = ""
+    var teaserData:Data!
     var subtitle:String = ""
     var sessions:[Session] = []
     var descr:String = ""

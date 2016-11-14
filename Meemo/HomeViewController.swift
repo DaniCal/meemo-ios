@@ -34,10 +34,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
   
         }
         
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        self.navigationController?.navigationBar.isTranslucent = true
+        
         //loadPushupPicture()
 
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        appDelegate.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        
+//        let delegate = UIApplication.shared.delegate as! AppDelegate
+//        
+//        delegate.navigationController?.setNavigationBarHidden(true, animated: true)
+
 
         // Do any additional setup after loading the view.
     }
@@ -45,6 +57,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

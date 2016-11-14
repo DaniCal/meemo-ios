@@ -165,8 +165,6 @@ class TestScrollViewController: UIViewController, PlayerDelegate{
                 }else{
                     self.session.fileData = data
                 }
-                
-                
                 self.play(data:data)
             }else{
                 //TODO error handling hhtp request
