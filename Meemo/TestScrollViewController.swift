@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Mixpanel
 import Alamofire
 
 class TestScrollViewController: UIViewController, PlayerDelegate{
@@ -27,7 +28,6 @@ class TestScrollViewController: UIViewController, PlayerDelegate{
     var program:Program!
     var dailyPushUp:DailyPushUp!
     var pushUp = false
-
     var player:Player = Player()
 
     /*------------------------------------------------------------------------
@@ -37,8 +37,9 @@ class TestScrollViewController: UIViewController, PlayerDelegate{
     func playerDidFinishPlaying(){
         
         UserDefaults.standard.set(true, forKey: program.title + "_" + session.title)
-        listenButton.setImage(#imageLiteral(resourceName: "session_play_button"), for: .normal)
+        listenButton.setImage(#imageLiteral(resourceName: "program_teaser_button"), for: .normal)
         self.timeLabel.text = player.getDurationString()
+        Mixpanel.sharedInstance().track("session_finished", properties: ["name" : session.title])
 
         
 //        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
@@ -99,12 +100,16 @@ class TestScrollViewController: UIViewController, PlayerDelegate{
             //Load file from server and init Player instance
             self.stateLoad()
             if(!pushUp){
+                Mixpanel.sharedInstance().track("play", properties: ["name" : session.title])
+                Mixpanel.sharedInstance().track("play_session")
                 if(self.session.fileData == nil){
                     self.downloadFile()
                 }else{
                     play(data: self.session.fileData)
                 }
             }else{
+                Mixpanel.sharedInstance().track("play", properties: ["name" : session.title])
+                Mixpanel.sharedInstance().track("play_pushup")
                 if(self.dailyPushUp.fileData == nil){
                     self.downloadFile()
                 }else{
@@ -210,7 +215,6 @@ class TestScrollViewController: UIViewController, PlayerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         if(session != nil){
             authorLabel.text = session.author

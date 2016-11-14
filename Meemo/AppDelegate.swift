@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseSynchornizeDelega
     var window: UIWindow?
     var navigationController: UINavigationController?
     var content:Content!
+    var mixpanel:Mixpanel!
 
     func showWelcomeScreen(){
         self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -96,10 +97,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseSynchornizeDelega
         FIRApp.configure()
         
         
-        let token = "4741221112f36c0d43215a2b51e12e1e"
-        
-        
-        let mixpanel = Mixpanel.sharedInstance(withToken: token)
+        let testToken = "4741221112f36c0d43215a2b51e12e1e"
+        mixpanel = Mixpanel.sharedInstance(withToken: testToken)
         mixpanel.track("App launched")
         
         

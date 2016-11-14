@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Mixpanel
 
 class ProgramViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PlayerDelegate  {
 
@@ -48,6 +49,10 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
 
     
     func playerDidFinishPlaying(){
+        Mixpanel.sharedInstance().track("teaser_finished", properties: ["name" : program.title])
+        teaserButton.setImage(#imageLiteral(resourceName: "session_play_button"), for: .normal)
+        
+        
         //        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
         //        FIRAnalytics.logEvent(withName: "finished_play", parameters: nil)
         //        timerTextView.text = ""
@@ -113,6 +118,7 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func play(data:Data){
+        Mixpanel.sharedInstance().track("play_teaser", properties: ["Program Name" : program.title])
         self.program.teaserData = data
         self.player.setFile(data: data)
         self.teaserButton.setImage(#imageLiteral(resourceName: "program_teaser_button_pause"), for: .normal)
