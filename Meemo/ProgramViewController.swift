@@ -12,6 +12,8 @@ import Mixpanel
 
 class ProgramViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PlayerDelegate  {
 
+    @IBOutlet weak var headerContainer: UIView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBAction func teaserDidTouch(_ sender: AnyObject) {
         if(!player.isInitialized()){
             teaserButton.setImage(#imageLiteral(resourceName: "session_listen_empty"), for: .normal)
@@ -33,7 +35,7 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var teaserButton: UIButton!
     @IBOutlet weak var overviewPicture: UIImageView!
     @IBOutlet weak var numberSessionsLabel: UILabel!
-    @IBOutlet weak var decriptionLabel: UILabel!
+//    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
@@ -168,7 +170,12 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = program.title
-        decriptionLabel.text = program.descr
+        descriptionLabel.text = program.descr
+        descriptionLabel.sizeToFit()
+        var newSize = CGSize()
+        newSize.width = headerContainer.frame.width
+        newSize.height = self.descriptionLabel.frame.origin.y + self.descriptionLabel.frame.height + 8
+        headerContainer.frame.size = newSize
         numberSessionsLabel.text = String(program.sessions.count) + " Episodes"
         if(program.PictureOverviewData == nil){
             loadOverviewPicture()
@@ -212,6 +219,13 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
+        var newSize = CGSize()
+        newSize.width = headerContainer.frame.width
+        newSize.height = self.descriptionLabel.frame.origin.y + self.descriptionLabel.frame.height + 8
+        headerContainer.frame.size = newSize
+        
+//        scrollView.contentSize.height = readMoreButton.frame.origin.y + readMoreButton.frame.height + 20
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {

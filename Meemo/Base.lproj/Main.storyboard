@@ -11,7 +11,7 @@
         <scene sceneID="sEv-MN-WZ3">
             <objects>
                 <navigationController storyboardIdentifier="NavigationController" id="z5E-TS-Xpa" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="nav_back_icon" id="VRb-aL-ALR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="nav_back_icon" id="VRb-aL-ALR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,7 +101,7 @@
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstItem="1tJ-qZ-7H0" firstAttribute="leading" secondItem="9oc-gl-aVA" secondAttribute="leading" constant="23" id="0QE-c7-LMr"/>
+                                        <constraint firstItem="1tJ-qZ-7H0" firstAttribute="leading" secondItem="9oc-gl-aVA" secondAttribute="leading" constant="15" id="0QE-c7-LMr"/>
                                         <constraint firstItem="xlK-Ue-Qv9" firstAttribute="top" secondItem="gqQ-gz-JdD" secondAttribute="bottom" constant="159" id="0oW-UI-jHe"/>
                                         <constraint firstItem="C6J-e4-4Nw" firstAttribute="width" secondItem="9oc-gl-aVA" secondAttribute="width" id="5zI-Fs-diC"/>
                                         <constraint firstItem="C6J-e4-4Nw" firstAttribute="centerX" secondItem="9oc-gl-aVA" secondAttribute="centerX" id="6RW-GX-FFc"/>
@@ -126,11 +126,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="programCell" rowHeight="104" id="00j-Jf-iAj" customClass="ProgramTableViewCell" customModule="Meemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="442" width="320" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="00j-Jf-iAj" id="nIx-V3-uBR">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="00j-Jf-iAj" id="nIx-V3-uBR">
                                             <frame key="frameInset" width="320" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The 10 Life Hacks you always wanted" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0j-Po-P4L">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The 10 Life Hacks you always wanted" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0j-Po-P4L">
                                                     <frame key="frameInset" minX="52" width="155" height="103"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="1dP-Im-18z"/>
@@ -140,14 +140,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-pV-wWa">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-pV-wWa">
                                                     <frame key="frameInset" width="44" height="95"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="75" id="JdA-dW-cas"/>
                                                         <constraint firstAttribute="width" constant="75" id="lBM-SB-iF9"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Amazing life hacks to be more productive and effective in your day." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNF-i5-loG">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Amazing life hacks to be more productive and effective in your day." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNF-i5-loG">
                                                     <frame key="frameInset" width="207" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="31" id="YZt-uS-4dW"/>
@@ -403,7 +403,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5xc-NB-QgG">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="gI2-Mf-ERu">
-                                    <rect key="frame" x="0.0" y="64" width="320" height="317"/>
+                                    <rect key="frame" x="0.0" y="64" width="320" height="296"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fZ6-tE-jHs">
@@ -447,16 +447,6 @@
                                                 <action selector="teaserDidTouch:" destination="oSf-wB-dnP" eventType="touchUpInside" id="Hxs-1D-yuA"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJo-CK-qaC">
-                                            <frame key="frameInset" minX="19" minY="240" width="283" height="77"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="283" id="SBJ-4n-NaK"/>
-                                            </constraints>
-                                            <string key="text">Life Hacks are short-cuts that make your life more simple. People use Life Hacks to become more efficient, productive or successful in life. Learn from these 5 Entpreneurs what their main hacks are.</string>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="D6c-gF-KgM">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="NB7-uB-600"/>
@@ -464,42 +454,52 @@
                                             </constraints>
                                             <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </activityIndicatorView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJo-CK-qaC">
+                                            <frame key="frameInset" minX="19" minY="250" width="283" height="47"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="283" id="LsH-xn-yxV"/>
+                                            </constraints>
+                                            <string key="text">Life Hacks are short-cuts that make your life more simple. People use Life Hacks to become more efficient, productive or successful in life. Learn from these 5 Entpreneurs what their main hacks are.</string>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="fZ6-tE-jHs" firstAttribute="top" secondItem="gI2-Mf-ERu" secondAttribute="top" id="1uL-Gj-KSH"/>
+                                        <constraint firstItem="HJo-CK-qaC" firstAttribute="centerX" secondItem="gI2-Mf-ERu" secondAttribute="centerX" id="2O0-O5-DDQ"/>
                                         <constraint firstItem="L6F-5g-p1j" firstAttribute="top" secondItem="gI2-Mf-ERu" secondAttribute="top" constant="56" id="7Xt-qN-gu7"/>
                                         <constraint firstItem="L6F-5g-p1j" firstAttribute="centerX" secondItem="gI2-Mf-ERu" secondAttribute="centerX" constant="5" id="FZh-0o-9Ee"/>
+                                        <constraint firstItem="HJo-CK-qaC" firstAttribute="top" secondItem="Qxw-5a-w53" secondAttribute="bottom" constant="14" id="PDS-1B-Wfc"/>
                                         <constraint firstItem="LOV-wl-98B" firstAttribute="leading" secondItem="gI2-Mf-ERu" secondAttribute="leading" constant="18" id="Pw7-VJ-Ump"/>
-                                        <constraint firstItem="HJo-CK-qaC" firstAttribute="top" secondItem="Qxw-5a-w53" secondAttribute="bottom" constant="8" id="RRT-Rq-DyO"/>
                                         <constraint firstItem="D6c-gF-KgM" firstAttribute="centerX" secondItem="gI2-Mf-ERu" secondAttribute="centerX" id="RWW-kD-Cl5"/>
                                         <constraint firstItem="LOV-wl-98B" firstAttribute="top" secondItem="L6F-5g-p1j" secondAttribute="bottom" constant="8" id="SBx-WC-dKI"/>
                                         <constraint firstItem="fZ6-tE-jHs" firstAttribute="width" secondItem="gI2-Mf-ERu" secondAttribute="width" id="ece-yl-PFN"/>
-                                        <constraint firstItem="HJo-CK-qaC" firstAttribute="centerX" secondItem="gI2-Mf-ERu" secondAttribute="centerX" constant="0.5" id="eee-yT-6cD"/>
-                                        <constraint firstItem="Qxw-5a-w53" firstAttribute="top" secondItem="fZ6-tE-jHs" secondAttribute="bottom" constant="-28" id="gGm-IT-xXC"/>
+                                        <constraint firstItem="Qxw-5a-w53" firstAttribute="top" secondItem="fZ6-tE-jHs" secondAttribute="bottom" constant="-24" id="gGm-IT-xXC"/>
                                         <constraint firstItem="31q-Ih-YfH" firstAttribute="top" secondItem="LOV-wl-98B" secondAttribute="bottom" constant="10" id="pSr-TW-ZKk"/>
                                         <constraint firstItem="Qxw-5a-w53" firstAttribute="centerX" secondItem="gI2-Mf-ERu" secondAttribute="centerX" id="r15-tA-1j8"/>
                                         <constraint firstItem="fZ6-tE-jHs" firstAttribute="centerX" secondItem="gI2-Mf-ERu" secondAttribute="centerX" id="t2Z-63-R2W"/>
                                         <constraint firstItem="31q-Ih-YfH" firstAttribute="leading" secondItem="gI2-Mf-ERu" secondAttribute="leading" constant="18" id="twT-nk-jQ0"/>
-                                        <constraint firstItem="D6c-gF-KgM" firstAttribute="top" secondItem="Qxw-5a-w53" secondAttribute="bottom" constant="-32" id="wO9-oR-XOg"/>
+                                        <constraint firstItem="D6c-gF-KgM" firstAttribute="top" secondItem="Qxw-5a-w53" secondAttribute="bottom" constant="-36" id="wO9-oR-XOg"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sessionCell" rowHeight="85" id="N2G-cZ-qaw" customClass="SessionTableViewCell" customModule="Meemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="409" width="320" height="85"/>
+                                        <rect key="frame" x="0.0" y="388" width="320" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="N2G-cZ-qaw" id="NF9-g5-TP4">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N2G-cZ-qaw" id="NF9-g5-TP4">
                                             <frame key="frameInset" width="320" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="program_play_button" translatesAutoresizingMaskIntoConstraints="NO" id="5zy-Iv-JG2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="program_play_button" translatesAutoresizingMaskIntoConstraints="NO" id="5zy-Iv-JG2">
                                                     <frame key="frameInset" width="1000" height="1000"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="52" id="5N3-h2-WYm"/>
                                                         <constraint firstAttribute="height" constant="52" id="EDa-Nj-HeV"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="How I established the best morning routine" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0j-sQ-aY9">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How I established the best morning routine" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0j-sQ-aY9">
                                                     <frame key="frameInset" width="1000" height="1000"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="196" id="P3Y-yA-Uud"/>
@@ -509,7 +509,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Edwin vand er Saar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va0-ow-x0y">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Edwin vand er Saar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va0-ow-x0y">
                                                     <frame key="frameInset" width="118" height="26"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="IYn-qD-fPm"/>
@@ -553,7 +553,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="decriptionLabel" destination="HJo-CK-qaC" id="KAS-RO-Bks"/>
+                        <outlet property="descriptionLabel" destination="HJo-CK-qaC" id="xza-ih-Ctg"/>
+                        <outlet property="headerContainer" destination="gI2-Mf-ERu" id="ZTc-Va-kBn"/>
                         <outlet property="loaderAnimation" destination="D6c-gF-KgM" id="1a7-x8-4mr"/>
                         <outlet property="numberSessionsLabel" destination="31q-Ih-YfH" id="2PA-k6-fBt"/>
                         <outlet property="overviewPicture" destination="fZ6-tE-jHs" id="7Pd-WT-DHx"/>
@@ -567,7 +568,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6J9-fe-KL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606.875" y="1587.6760563380283"/>
+            <point key="canvasLocation" x="1605.5999999999999" y="1586.3568215892055"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bnQ-47-xKm">
@@ -581,51 +582,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uU9-fa-72s">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZE0-Wi-BXa">
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yme-fX-IUr">
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_oval" translatesAutoresizingMaskIntoConstraints="NO" id="cId-zC-B3E">
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="PHh-QJ-ZYb"/>
-                                                    <constraint firstAttribute="width" constant="80" id="WId-L9-ATq"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meemo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zs6-Hj-m3z">
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="38" id="7JO-rz-SHX"/>
-                                                    <constraint firstAttribute="width" constant="135" id="uUT-An-maU"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="32"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_circle" translatesAutoresizingMaskIntoConstraints="NO" id="cId-zC-B3E">
                                         <constraints>
-                                            <constraint firstItem="Zs6-Hj-m3z" firstAttribute="top" secondItem="cId-zC-B3E" secondAttribute="bottom" id="6jx-xb-1lc"/>
-                                            <constraint firstItem="Zs6-Hj-m3z" firstAttribute="centerX" secondItem="yme-fX-IUr" secondAttribute="centerX" id="YEB-2x-K7C"/>
-                                            <constraint firstItem="cId-zC-B3E" firstAttribute="top" secondItem="yme-fX-IUr" secondAttribute="top" id="a2E-ho-6Hv"/>
-                                            <constraint firstItem="cId-zC-B3E" firstAttribute="centerX" secondItem="yme-fX-IUr" secondAttribute="centerX" id="a9d-Eb-u6b"/>
+                                            <constraint firstAttribute="width" constant="80" id="RlH-dY-jS5"/>
+                                            <constraint firstAttribute="height" constant="80" id="egk-7j-ErD"/>
                                         </constraints>
-                                    </view>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_meemo" translatesAutoresizingMaskIntoConstraints="NO" id="Gs5-sQ-o8Z">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="171" id="6yx-JU-pNh"/>
+                                            <constraint firstAttribute="height" constant="70" id="GcN-Wt-Z31"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="118" id="rqK-am-2zM"/>
-                                    <constraint firstAttribute="width" constant="240" id="s4z-AS-Zl5"/>
+                                    <constraint firstAttribute="height" constant="150" id="34m-OV-fb0"/>
+                                    <constraint firstAttribute="width" constant="240" id="488-pv-0OR"/>
+                                    <constraint firstItem="cId-zC-B3E" firstAttribute="centerX" secondItem="ZE0-Wi-BXa" secondAttribute="centerX" id="UXf-Wp-70d"/>
+                                    <constraint firstItem="Gs5-sQ-o8Z" firstAttribute="centerX" secondItem="ZE0-Wi-BXa" secondAttribute="centerX" id="VPK-c7-dTu"/>
+                                    <constraint firstItem="Gs5-sQ-o8Z" firstAttribute="top" secondItem="cId-zC-B3E" secondAttribute="bottom" id="sfw-il-3U2"/>
+                                    <constraint firstItem="cId-zC-B3E" firstAttribute="top" secondItem="ZE0-Wi-BXa" secondAttribute="top" id="zRT-z8-0f5"/>
                                 </constraints>
-                            </stackView>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.42352941176470588" green="0.88235294117647056" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="uU9-fa-72s" firstAttribute="centerX" secondItem="Gce-bF-6t4" secondAttribute="centerX" id="Lkw-SB-8YP"/>
-                            <constraint firstItem="uU9-fa-72s" firstAttribute="centerY" secondItem="Gce-bF-6t4" secondAttribute="centerY" id="qnC-p9-nMR"/>
+                            <constraint firstItem="ZE0-Wi-BXa" firstAttribute="centerY" secondItem="Gce-bF-6t4" secondAttribute="centerY" id="I0E-uS-uTN"/>
+                            <constraint firstItem="ZE0-Wi-BXa" firstAttribute="centerX" secondItem="Gce-bF-6t4" secondAttribute="centerX" id="qf0-rE-giG"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5o-ei-j0k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206" y="725"/>
+            <point key="canvasLocation" x="204.375" y="724.64788732394368"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="S38-t7-j00">
@@ -650,40 +642,51 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_buttons_01" translatesAutoresizingMaskIntoConstraints="NO" id="ind-7I-YNX">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="82" id="GKh-WH-J20"/>
+                                    <constraint firstAttribute="width" constant="50" id="GKh-WH-J20"/>
                                     <constraint firstAttribute="height" constant="52" id="Kuc-eD-xV9"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mho-d4-kZ1">
-                                <connections>
-                                    <segue destination="2kD-UE-XYH" kind="showDetail" animates="NO" id="2Gq-yy-DJD"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_circle" translatesAutoresizingMaskIntoConstraints="NO" id="lW9-qy-scC">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="105" id="4zI-bk-8Gr"/>
                                     <constraint firstAttribute="height" constant="105" id="hVI-zY-eHz"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FRANCIS PICABIA" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0Q-hK-cCp">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="bCD-eb-BME"/>
+                                    <constraint firstAttribute="height" constant="22" id="mYZ-gi-YDW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.031372549020000001" green="0.1058823529" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUV-Lg-nYM">
+                                <connections>
+                                    <segue destination="2kD-UE-XYH" kind="show" animates="NO" id="ib5-cp-8E2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1sK-a7-Son" firstAttribute="centerY" secondItem="IWa-lI-zyp" secondAttribute="centerY" id="Eqv-D5-xah"/>
+                            <constraint firstItem="YUV-Lg-nYM" firstAttribute="height" secondItem="IWa-lI-zyp" secondAttribute="height" id="Fdq-kD-qbu"/>
                             <constraint firstItem="lW9-qy-scC" firstAttribute="centerX" secondItem="IWa-lI-zyp" secondAttribute="centerX" id="I4j-Cq-ter"/>
                             <constraint firstItem="mNL-JI-761" firstAttribute="top" secondItem="ind-7I-YNX" secondAttribute="bottom" constant="20" id="Icg-GU-SDW"/>
-                            <constraint firstItem="mho-d4-kZ1" firstAttribute="centerX" secondItem="IWa-lI-zyp" secondAttribute="centerX" id="McB-ae-KZq"/>
-                            <constraint firstItem="mho-d4-kZ1" firstAttribute="width" secondItem="IWa-lI-zyp" secondAttribute="width" id="NCx-sH-Dna"/>
-                            <constraint firstItem="mho-d4-kZ1" firstAttribute="centerY" secondItem="IWa-lI-zyp" secondAttribute="centerY" id="RAF-vU-fgK"/>
+                            <constraint firstItem="YUV-Lg-nYM" firstAttribute="centerX" secondItem="IWa-lI-zyp" secondAttribute="centerX" id="LaI-a6-KDW"/>
                             <constraint firstItem="1sK-a7-Son" firstAttribute="centerX" secondItem="IWa-lI-zyp" secondAttribute="centerX" id="Sp9-cO-Ptm"/>
-                            <constraint firstItem="mho-d4-kZ1" firstAttribute="height" secondItem="IWa-lI-zyp" secondAttribute="height" id="hOn-uo-9Z6"/>
+                            <constraint firstItem="G0Q-hK-cCp" firstAttribute="top" secondItem="1sK-a7-Son" secondAttribute="bottom" id="UvE-gh-ZjB"/>
+                            <constraint firstItem="YUV-Lg-nYM" firstAttribute="centerY" secondItem="IWa-lI-zyp" secondAttribute="centerY" id="WKM-M3-hGV"/>
+                            <constraint firstItem="YUV-Lg-nYM" firstAttribute="width" secondItem="IWa-lI-zyp" secondAttribute="width" id="lUn-vT-bOg"/>
                             <constraint firstItem="1sK-a7-Son" firstAttribute="top" secondItem="lW9-qy-scC" secondAttribute="bottom" constant="8" id="nz7-Xh-yfj"/>
                             <constraint firstItem="ind-7I-YNX" firstAttribute="centerX" secondItem="IWa-lI-zyp" secondAttribute="centerX" id="qcx-Vg-7wj"/>
+                            <constraint firstItem="G0Q-hK-cCp" firstAttribute="centerX" secondItem="IWa-lI-zyp" secondAttribute="centerX" id="vBr-eV-ec0"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bbz-ae-bCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="204.375" y="13.732394366197184"/>
+            <point key="canvasLocation" x="204" y="13.043478260869566"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ejM-Al-esc">
@@ -709,11 +712,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_buttons_02" translatesAutoresizingMaskIntoConstraints="NO" id="Ep4-24-EkX">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="bXq-Yy-Jv2"/>
-                                    <constraint firstAttribute="width" constant="82" id="hvO-5m-kGe"/>
+                                    <constraint firstAttribute="width" constant="50" id="hvO-5m-kGe"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgR-Gq-yNE">
-                                <frame key="frameInset" width="315" height="568"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgR-Gq-yNE">
                                 <connections>
                                     <segue destination="our-HH-kwX" kind="show" animates="NO" id="MCB-P6-CmF"/>
                                 </connections>
@@ -767,7 +769,7 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_buttons_03" translatesAutoresizingMaskIntoConstraints="NO" id="eQE-Nj-0sq">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="82" id="1Ue-qd-iAE"/>
+                                    <constraint firstAttribute="width" constant="50" id="1Ue-qd-iAE"/>
                                     <constraint firstAttribute="height" constant="52" id="Y2x-Bb-xsl"/>
                                 </constraints>
                             </imageView>
@@ -1067,10 +1069,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="home_pushup_flag" width="646" height="93"/>
+        <image name="home_pushup_flag" width="711" height="102"/>
         <image name="home_pushup_pic" width="1125" height="703"/>
         <image name="journey_bottom_element" width="1125" height="493"/>
         <image name="journey_day0" width="210" height="211"/>
+        <image name="loading_meemo" width="483" height="69"/>
         <image name="nav_back_icon" width="22" height="22"/>
         <image name="oval_background_white" width="294" height="72"/>
         <image name="play_icon" width="210" height="211"/>
@@ -1085,7 +1088,6 @@
         <image name="welcome_buttons_03" width="205" height="40"/>
         <image name="welcome_circle" width="312" height="312"/>
         <image name="welcome_letsdoit" width="622" height="139"/>
-        <image name="welcome_oval" width="104" height="104"/>
         <image name="welcome_rocket" width="270" height="295"/>
     </resources>
     <inferredMetricsTieBreakers>
