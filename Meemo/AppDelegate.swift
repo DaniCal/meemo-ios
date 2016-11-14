@@ -55,16 +55,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseSynchornizeDelega
     
     func firebaseDidLoadContent(content:Content){
         self.content = content
-        showNavigationController()
+        
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if(!launchedBefore){
+            showWelcomeScreen()
+        }else{
+            showNavigationController()
+        }
     }
 
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
-        if(!launchedBefore){
-            showWelcomeScreen()
-        }
+       
         
         
         //Initialize Firebase Notification
