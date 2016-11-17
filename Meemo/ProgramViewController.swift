@@ -14,41 +14,27 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
 
     @IBOutlet weak var headerContainer: UIView!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBAction func teaserDidTouch(_ sender: AnyObject) {
-        if(!player.isInitialized()){
-            teaserButton.setImage(#imageLiteral(resourceName: "session_listen_empty"), for: .normal)
-            loaderAnimation.startAnimating()
-            start()
-        }else if(self.player.isPlaying()){
-            pause()
-        }else if(!self.player.isPlaying()){
-            continuePlaying()
-        }else{
-            teaserButton.setImage(#imageLiteral(resourceName: "session_listen_empty"), for: .normal)
-            loaderAnimation.startAnimating()
-        }
-    }
-    
-    var showPlayer = false
-    
     @IBOutlet weak var loaderAnimation: UIActivityIndicatorView!
     @IBOutlet weak var teaserButton: UIButton!
     @IBOutlet weak var overviewPicture: UIImageView!
     @IBOutlet weak var numberSessionsLabel: UILabel!
-//    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     let segueIdentifier = "goToPlayer"
+    var showPlayer = false
     var program:Program!
-    
     var player:Player = Player()
 
+    
+    /*------------------------------------------------------------------------
+     --------------------Delegate Functions-------------------------------
+     ------------------------------------------------------------------------*/
+    
+    
     func playerUpdateTime(timeLeft: String){
     
     }
-    
-
     
     func playerDidFinishPlaying(){
         Mixpanel.sharedInstance().track("teaser_finished", properties: ["name" : program.title])
@@ -62,12 +48,73 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     /*------------------------------------------------------------------------
+     --------------------Lifecycle Functions-------------------------------
+     ------------------------------------------------------------------------*/
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        titleLabel.text = program.title
+        descriptionLabel.text = program.descr
+        descriptionLabel.sizeToFit()
+        var newSize = CGSize()
+        newSize.width = headerContainer.frame.width
+        newSize.height = self.descriptionLabel.frame.origin.y + self.descriptionLabel.frame.height + 8
+        headerContainer.frame.size = newSize
+        numberSessionsLabel.text = String(program.sessions.count) + " Episodes"
+        if(program.PictureOverviewData == nil){
+            loadOverviewPicture()
+        }else{
+            self.overviewPicture.image = UIImage(data: program.PictureOverviewData)
+        }
+        
+        self.player.delegate = self
+        initUI()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+        var newSize = CGSize()
+        newSize.width = headerContainer.frame.width
+        newSize.height = self.descriptionLabel.frame.origin.y + self.descriptionLabel.frame.height + 8
+        headerContainer.frame.size = newSize
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if(showPlayer){
+            showPlayer = false
+        }else{
+            self.navigationController?.setNavigationBarHidden(true, animated: true)
+            self.reset()
+        }
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.reset()
+        
+        if  segue.identifier == segueIdentifier,
+            let destination = segue.destination as? TestScrollViewController,
+            let blogIndex = tableView.indexPathForSelectedRow?.row
+        {
+            self.showPlayer = true
+            destination.session = program.sessions[blogIndex]
+            destination.program = program
+            
+        }
+    }
+
+    /*------------------------------------------------------------------------
      --------------------UI Functions-------------------------------
      ------------------------------------------------------------------------*/
     
     func initUI(){
+        initNavigationBar()
+        //TODO Player does need duration to function properly
         player.setDuration(duration: 100)
-//        self.timeLabel.text = player.getDurationString()
     }
     
     func stateLoad(){
@@ -83,6 +130,21 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     func statePlay(){
         self.teaserButton.setImage(#imageLiteral(resourceName: "program_teaser_button_pause"), for: .normal)
         self.loaderAnimation.stopAnimating()
+    }
+    
+    func initNavigationBar(){
+        //Make the navigation bar appear
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        //replace the back button image item
+        var backBtn = UIImage(named: "nav_back_icon")
+        backBtn = backBtn?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        self.navigationController?.navigationBar.backIndicatorImage =  backBtn
+        self.navigationController!.navigationBar.backIndicatorTransitionMaskImage = backBtn;
+        
+        //replace the back button title
+        self.navigationController?.navigationBar.backItem?.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
     }
     
     
@@ -120,9 +182,6 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
         self.teaserButton.setImage(#imageLiteral(resourceName: "program_teaser_button_pause"), for: .normal)
         self.loaderAnimation.stopAnimating()
         player.play()
-        
-        //        let hourOfTheDay = Calendar.current.component(.hour, from: Date())
-        //        FIRAnalytics.logEvent(withName: String("press_play_" + String(hourOfTheDay)), parameters: nil)
     }
     
     func continuePlaying(){
@@ -140,7 +199,6 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
         self.player.reset()
         self.teaserButton.setImage(#imageLiteral(resourceName: "program_teaser_button"), for: .normal)
         self.player = Player()
-        //        //self.player.setDuration(duration: content.duration)
         self.player.delegate = self
     }
     
@@ -160,79 +218,6 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        titleLabel.text = program.title
-        descriptionLabel.text = program.descr
-        descriptionLabel.sizeToFit()
-        var newSize = CGSize()
-        newSize.width = headerContainer.frame.width
-        newSize.height = self.descriptionLabel.frame.origin.y + self.descriptionLabel.frame.height + 8
-        headerContainer.frame.size = newSize
-        numberSessionsLabel.text = String(program.sessions.count) + " Episodes"
-        if(program.PictureOverviewData == nil){
-            loadOverviewPicture()
-        }else{
-            self.overviewPicture.image = UIImage(data: program.PictureOverviewData)
-        }
-        
-        self.player.delegate = self
-        initUI()
-        
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-//        appDelegate.navigationController?.setNavigationBarHidden(false, animated: true)
-
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-
-        
-        //self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        
-        
-
-        var backBtn = UIImage(named: "nav_back_icon")
-        backBtn = backBtn?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-        
-        self.navigationController?.navigationBar.backIndicatorImage =  backBtn
-        self.navigationController!.navigationBar.backIndicatorTransitionMaskImage = backBtn;
-
-        
-        self.navigationController?.navigationBar.backItem?.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: #selector(self.backDidTouch))
-
-
-
-        //self.navigationController?.navigationBar.barStyle = UIBarStyle.
-    }
-    
-    
-    func backDidTouch(){
-        
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        self.tableView.reloadData()
-        var newSize = CGSize()
-        newSize.width = headerContainer.frame.width
-        newSize.height = self.descriptionLabel.frame.origin.y + self.descriptionLabel.frame.height + 8
-        headerContainer.frame.size = newSize
-        
-//        scrollView.contentSize.height = readMoreButton.frame.origin.y + readMoreButton.frame.height + 20
-
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        if(showPlayer){
-            showPlayer = false
-        }else{
-            self.navigationController?.setNavigationBarHidden(true, animated: true)
-            self.reset()
-        }
-        
-    }
-    
-    
     func loadOverviewPicture(){
         Alamofire.request(program.pictureOverview).response { response in
             debugPrint(response)
@@ -245,27 +230,29 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
  
+    /*------------------------------------------------------------------------
+     --------------------Action Functions-------------------------------
+     ------------------------------------------------------------------------*/
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        self.reset()
-        
-        if  segue.identifier == segueIdentifier,
-            let destination = segue.destination as? TestScrollViewController,
-            let blogIndex = tableView.indexPathForSelectedRow?.row
-        {
-            self.showPlayer = true
-            destination.session = program.sessions[blogIndex]
-            destination.program = program
-            
+    
+    @IBAction func teaserDidTouch(_ sender: AnyObject) {
+        if(!player.isInitialized()){
+            teaserButton.setImage(#imageLiteral(resourceName: "session_listen_empty"), for: .normal)
+            loaderAnimation.startAnimating()
+            start()
+        }else if(self.player.isPlaying()){
+            pause()
+        }else if(!self.player.isPlaying()){
+            continuePlaying()
+        }else{
+            teaserButton.setImage(#imageLiteral(resourceName: "session_listen_empty"), for: .normal)
+            loaderAnimation.startAnimating()
         }
     }
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+    /*------------------------------------------------------------------------
+     --------------------Table Functions-------------------------------
+     ------------------------------------------------------------------------*/
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return program.sessions.count
@@ -290,16 +277,4 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
         self.performSegue(withIdentifier: "goToPlayer" , sender: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
