@@ -21,51 +21,32 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let programSegueIdentifier = "goToProgram"
     let pushupSegueIdentifier = "goToPushUp"
     
-    var titles = ["First", "Second", "Third"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func loadContentInstance(){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.content = appDelegate.content
+    }
+    
+    func loadPushUpPicture(){
         if(content.dailyPushUp.pictureOverviewData == nil){
             loadPushupPicture()
         }else{
             self.pushUpPicture.image = UIImage(data: content.dailyPushUp.pictureOverviewData)
-  
         }
-        
-        
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
-        
-        self.navigationController?.navigationBar.isTranslucent = true
-        
-        //loadPushupPicture()
-
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        
-        
-        
-//        let delegate = UIApplication.shared.delegate as! AppDelegate
-//        
-//        delegate.navigationController?.setNavigationBarHidden(true, animated: true)
-
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-
-        
+    
+    func hideNavigationBar(){
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //Triggers when segues to ProgramView
         if  segue.identifier == programSegueIdentifier,
             let destination = segue.destination as? ProgramViewController,
             let blogIndex = tableView.indexPathForSelectedRow?.row
@@ -74,9 +55,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
         
+        //Trigger when segues to Player (incl Pushup Data)
         if  segue.identifier == pushupSegueIdentifier,
             let destination = segue.destination as? TestScrollViewController
         {
+            
+            //TODO: Refactor! Integrate DailyPush into the Session format  
             let session = Session()
             session.title = content.dailyPushUp.title
             session.author = content.dailyPushUp.author
@@ -86,15 +70,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             session.file = content.dailyPushUp.file
             session.readMore = content.dailyPushUp.readMore
             destination.session = session
-            
-            //TODO: Refactor!
             content.dailyPushUp.program.picturePlayer = content.dailyPushUp.picturePlayer
             destination.program = content.dailyPushUp.program
             destination.dailyPushUp = content.dailyPushUp
             destination.pushUp = true
         }
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return content.programs.count
