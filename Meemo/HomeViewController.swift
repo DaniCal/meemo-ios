@@ -46,6 +46,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         
+        
 //        let delegate = UIApplication.shared.delegate as! AppDelegate
 //        
 //        delegate.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -129,6 +130,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         Alamofire.request(content.dailyPushUp.pictureOverview).response { response in
             debugPrint(response)
             if let data = response.data {
+                self.content.dailyPushUp.pictureOverviewData = data
                 self.pushUpPicture.image = UIImage(data: data)
             }else{
                 //TODO error handling hhtp request

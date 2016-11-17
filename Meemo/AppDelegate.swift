@@ -12,6 +12,7 @@ import FirebaseInstanceID
 import FirebaseMessaging
 import UserNotifications
 import Mixpanel
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseSynchornizeDelegate{
@@ -44,6 +45,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseSynchornizeDelega
 
     }
     
+    func loadPushupPicture(){
+        Alamofire.request(content.dailyPushUp.pictureOverview).response { response in
+            debugPrint(response)
+            if let data = response.data {
+                self.content.dailyPushUp.pictureOverviewData = data
+                self.showNavigationController()
+                //self.pushUpPicture.image = UIImage(data: data)
+            }else{
+                //TODO error handling hhtp request
+            }
+        }
+    }
+    
     func initFIRNotification(){
         
     }
@@ -61,7 +75,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseSynchornizeDelega
         if(!launchedBefore){
             showWelcomeScreen()
         }else{
-            showNavigationController()
+            //showNavigationController()
+            loadPushupPicture()
         }
     }
 

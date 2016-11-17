@@ -53,12 +53,6 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     func playerDidFinishPlaying(){
         Mixpanel.sharedInstance().track("teaser_finished", properties: ["name" : program.title])
         teaserButton.setImage(#imageLiteral(resourceName: "program_teaser_button"), for: .normal)
-        
-        
-        //        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
-        //        FIRAnalytics.logEvent(withName: "finished_play", parameters: nil)
-        //        timerTextView.text = ""
-        //        performSegue(withIdentifier: "showreactionview", sender: self)
     }
     
     func playerErrorDidOccur(){

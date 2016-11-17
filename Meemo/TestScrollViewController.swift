@@ -11,14 +11,11 @@ import Mixpanel
 import Alamofire
 
 class TestScrollViewController: UIViewController, PlayerDelegate{
-    @IBAction func readMoreDidTouch(_ sender: AnyObject) {
-        openURLLink()
-    }
+    
     @IBOutlet weak var loaderAnimation: UIActivityIndicatorView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var listenButton: UIButton!
     
-
     @IBOutlet weak var biographyLabel: UILabel!
     @IBOutlet weak var playerPicture: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -38,17 +35,10 @@ class TestScrollViewController: UIViewController, PlayerDelegate{
     ------------------------------------------------------------------------*/
     
     func playerDidFinishPlaying(){
-        
         UserDefaults.standard.set(true, forKey: program.title + "_" + session.title)
         listenButton.setImage(#imageLiteral(resourceName: "session_play_button"), for: .normal)
         self.timeLabel.text = player.getDurationString()
         Mixpanel.sharedInstance().track("session_finished", properties: ["name" : session.title])
-
-        
-//        self.playButton.setImage(#imageLiteral(resourceName: "player_play_button"), for: .normal)
-//        FIRAnalytics.logEvent(withName: "finished_play", parameters: nil)
-//        timerTextView.text = ""
-//        performSegue(withIdentifier: "showreactionview", sender: self)
     }
     
     func playerErrorDidOccur(){
@@ -63,10 +53,48 @@ class TestScrollViewController: UIViewController, PlayerDelegate{
 
     
     /*------------------------------------------------------------------------
+     --------------------Lifecycle Functions-------------------------------
+     ------------------------------------------------------------------------*/
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.player.delegate = self
+        initUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        scrollView.contentSize.height = readMoreButton.frame.origin.y + readMoreButton.frame.height + 20
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    /*------------------------------------------------------------------------
      --------------------UI Functions-------------------------------
      ------------------------------------------------------------------------*/
     
     func initUI(){
+        if(session != nil){
+            authorLabel.text = session.author
+            titleLabel.text = session.title
+            timeLabel.text = session.time
+            
+            descriptionLabel.text = session.desc
+            descriptionLabel.sizeToFit()
+            
+            biographyLabel.text = session.biography
+            biographyLabel.sizeToFit()
+            
+            if(program.picturePlayerData == nil){
+                loadPlayerPicture()
+            }else{
+                self.playerPicture.image = UIImage(data: program.picturePlayerData)
+            }
+        }
         player.setDuration(duration: Int(self.session.time)!)
         self.timeLabel.text = player.getDurationString()
     }
@@ -141,10 +169,6 @@ class TestScrollViewController: UIViewController, PlayerDelegate{
         self.listenButton.setImage(#imageLiteral(resourceName: "session_pause_button"), for: .normal)
         self.loaderAnimation.stopAnimating()
         player.play()
-
-//        let hourOfTheDay = Calendar.current.component(.hour, from: Date())
-//        FIRAnalytics.logEvent(withName: String("press_play_" + String(hourOfTheDay)), parameters: nil)
-        
     }
     
     func continuePlaying(){
@@ -162,7 +186,6 @@ class TestScrollViewController: UIViewController, PlayerDelegate{
         self.player.reset()
         self.listenButton.setImage(#imageLiteral(resourceName: "session_play_button"), for: .normal)
         self.player = Player()
-//        //self.player.setDuration(duration: content.duration)
         self.player.delegate = self
     }
     
@@ -210,6 +233,11 @@ class TestScrollViewController: UIViewController, PlayerDelegate{
     }
     
     
+    
+    /*------------------------------------------------------------------------
+     --------------------ACTION Functions-------------------------------
+     ------------------------------------------------------------------------*/
+    
     @IBAction func listenDidTouch(_ sender: AnyObject) {
                 if(!player.isInitialized()){
                     listenButton.setImage(#imageLiteral(resourceName: "session_listen_empty"), for: .normal)
@@ -225,66 +253,7 @@ class TestScrollViewController: UIViewController, PlayerDelegate{
                 }
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if(session != nil){
-            authorLabel.text = session.author
-            titleLabel.text = session.title
-            timeLabel.text = session.time
-            
-            descriptionLabel.text = session.desc
-            descriptionLabel.sizeToFit()
-            
-            biographyLabel.text = session.biography
-            biographyLabel.sizeToFit()
-            
-            if(program.picturePlayerData == nil){
-                loadPlayerPicture()
-            }else{
-                self.playerPicture.image = UIImage(data: program.picturePlayerData)
-            }
-            
-        }
-        
-        self.player.delegate = self
-        initUI()
-//        start()
-//        
-//        
-//        
-//        label.text = "The most successful people share one secret. They constantly train their mind. Your mindset is a powerful thing and with regular food for thought you can stimulate it to make you perform better, faster and more efficient. Enjoy this daily mental push-up and get inspired by the world’s thought leaders."
-//        
-//        
-//        authorLabel.text = "The most successful people share one secret. They constantly train their mind. Your mindset is a powerful thing and with regular food for thought you can stimulate it to make you perform better, faster and more efficient. Enjoy this daily mental push-up and get inspired by the world’s thought leaders."
-//        
-//        authorLabel.sizeToFit()
-//        label.sizeToFit()
-//        scrollView.contentSize.height = 1000
-        // Do any additional setup after loading the view.
+    @IBAction func readMoreDidTouch(_ sender: AnyObject) {
+        openURLLink()
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        scrollView.contentSize.height = readMoreButton.frame.origin.y + readMoreButton.frame.height + 20
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
