@@ -97,7 +97,7 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
         self.reset()
         
         if  segue.identifier == segueIdentifier,
-            let destination = segue.destination as? TestScrollViewController,
+            let destination = segue.destination as? PlayerScrollViewController,
             let blogIndex = tableView.indexPathForSelectedRow?.row
         {
             self.showPlayer = true

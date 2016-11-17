@@ -23,6 +23,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadContentInstance()
+        loadPushupPicture()
+        hideNavigationBar()
     }
     
     func loadContentInstance(){
@@ -57,7 +60,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         //Trigger when segues to Player (incl Pushup Data)
         if  segue.identifier == pushupSegueIdentifier,
-            let destination = segue.destination as? TestScrollViewController
+            let destination = segue.destination as? PlayerScrollViewController
         {
             
             //TODO: Refactor! Integrate DailyPush into the Session format  

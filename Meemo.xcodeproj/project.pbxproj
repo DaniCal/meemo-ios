@@ -13,25 +13,17 @@
 		8203522B1DA670A40049C4BE /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8203522A1DA670A40049C4BE /* ContentManager.swift */; };
 		8203522E1DA674AB0049C4BE /* FirebaseSynchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8203522D1DA674AB0049C4BE /* FirebaseSynchronizer.swift */; };
 		820352301DA67A000049C4BE /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8203522F1DA67A000049C4BE /* Content.swift */; };
-		820352321DAE56590049C4BE /* JourneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820352311DAE56590049C4BE /* JourneyViewController.swift */; };
-		820CC7761DC79EE300EC44F3 /* LifeSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820CC7751DC79EE300EC44F3 /* LifeSectionViewController.swift */; };
-		8229844C1DAFC49A00D544B1 /* ReactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8229844B1DAFC49A00D544B1 /* ReactionViewController.swift */; };
 		826948301DC3852300532194 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8269482F1DC3852300532194 /* WelcomeViewController.swift */; };
 		826C92AE1DCCFBC500861FEC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 826C92AD1DCCFBC500861FEC /* GoogleService-Info.plist */; };
 		82B1F79E1DD6043500C0759F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1F79D1DD6043500C0759F /* HomeViewController.swift */; };
 		82B1F7A01DD6156100C0759F /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1F79F1DD6156100C0759F /* ProgramTableViewCell.swift */; };
-		82B1F7A61DD634C400C0759F /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1F7A51DD634C400C0759F /* SessionViewController.swift */; };
 		82C6E8F41D92C45500FA765C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E8F31D92C45500FA765C /* AppDelegate.swift */; };
-		82C6E8F61D92C45500FA765C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E8F51D92C45500FA765C /* ViewController.swift */; };
 		82C6E8F91D92C45500FA765C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C6E8F71D92C45500FA765C /* Main.storyboard */; };
 		82C6E8FB1D92C45500FA765C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82C6E8FA1D92C45500FA765C /* Assets.xcassets */; };
 		82C6E8FE1D92C45500FA765C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C6E8FC1D92C45500FA765C /* LaunchScreen.storyboard */; };
 		82C6E9091D92C45500FA765C /* MeemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E9081D92C45500FA765C /* MeemoTests.swift */; };
 		82C6E9141D92C45500FA765C /* MeemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6E9131D92C45500FA765C /* MeemoUITests.swift */; };
-		82D285D81DBE5E95002F1A7B /* JourneyBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D285D71DBE5E95002F1A7B /* JourneyBoxViewController.swift */; };
-		82D285DA1DBF97D8002F1A7B /* JourneyMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D285D91DBF97D8002F1A7B /* JourneyMainViewController.swift */; };
-		82E0C7381DC2912800695BAD /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0C7371DC2912800695BAD /* MessageViewController.swift */; };
-		82EC82D81DD68B6E00BC71C7 /* TestScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC82D71DD68B6E00BC71C7 /* TestScrollViewController.swift */; };
+		82EC82D81DD68B6E00BC71C7 /* PlayerScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC82D71DD68B6E00BC71C7 /* PlayerScrollViewController.swift */; };
 		82EC82DA1DD7942400BC71C7 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC82D91DD7942400BC71C7 /* ProgramViewController.swift */; };
 		82EC82DC1DD7950800BC71C7 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC82DB1DD7950800BC71C7 /* SessionTableViewCell.swift */; };
 		82EC82DE1DD7C5BE00BC71C7 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EC82DD1DD7C5BE00BC71C7 /* Session.swift */; };
@@ -78,19 +70,14 @@
 		8203522A1DA670A40049C4BE /* ContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
 		8203522D1DA674AB0049C4BE /* FirebaseSynchronizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseSynchronizer.swift; sourceTree = "<group>"; };
 		8203522F1DA67A000049C4BE /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
-		820352311DAE56590049C4BE /* JourneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyViewController.swift; sourceTree = "<group>"; };
-		820CC7751DC79EE300EC44F3 /* LifeSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeSectionViewController.swift; sourceTree = "<group>"; };
-		8229844B1DAFC49A00D544B1 /* ReactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionViewController.swift; sourceTree = "<group>"; };
 		8269482F1DC3852300532194 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		826948311DC3925700532194 /* Meemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Meemo.entitlements; sourceTree = "<group>"; };
 		826C92AD1DCCFBC500861FEC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		826C92AF1DCCFF1700861FEC /* Mixpanel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mixpanel-Bridging-Header.h"; sourceTree = "<group>"; };
 		82B1F79D1DD6043500C0759F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		82B1F79F1DD6156100C0759F /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
-		82B1F7A51DD634C400C0759F /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		82C6E8F01D92C45500FA765C /* Meemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C6E8F31D92C45500FA765C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		82C6E8F51D92C45500FA765C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		82C6E8F81D92C45500FA765C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82C6E8FA1D92C45500FA765C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82C6E8FD1D92C45500FA765C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,10 +88,7 @@
 		82C6E90F1D92C45500FA765C /* MeemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C6E9131D92C45500FA765C /* MeemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeemoUITests.swift; sourceTree = "<group>"; };
 		82C6E9151D92C45500FA765C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		82D285D71DBE5E95002F1A7B /* JourneyBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyBoxViewController.swift; sourceTree = "<group>"; };
-		82D285D91DBF97D8002F1A7B /* JourneyMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyMainViewController.swift; sourceTree = "<group>"; };
-		82E0C7371DC2912800695BAD /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
-		82EC82D71DD68B6E00BC71C7 /* TestScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestScrollViewController.swift; sourceTree = "<group>"; };
+		82EC82D71DD68B6E00BC71C7 /* PlayerScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerScrollViewController.swift; sourceTree = "<group>"; };
 		82EC82D91DD7942400BC71C7 /* ProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
 		82EC82DB1DD7950800BC71C7 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
 		82EC82DD1DD7C5BE00BC71C7 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -207,18 +191,10 @@
 				82C6E8F31D92C45500FA765C /* AppDelegate.swift */,
 				826C92AF1DCCFF1700861FEC /* Mixpanel-Bridging-Header.h */,
 				8269482F1DC3852300532194 /* WelcomeViewController.swift */,
-				820CC7751DC79EE300EC44F3 /* LifeSectionViewController.swift */,
-				82D285D91DBF97D8002F1A7B /* JourneyMainViewController.swift */,
-				820352311DAE56590049C4BE /* JourneyViewController.swift */,
-				82D285D71DBE5E95002F1A7B /* JourneyBoxViewController.swift */,
-				8229844B1DAFC49A00D544B1 /* ReactionViewController.swift */,
-				82E0C7371DC2912800695BAD /* MessageViewController.swift */,
-				82C6E8F51D92C45500FA765C /* ViewController.swift */,
 				82C6E8F71D92C45500FA765C /* Main.storyboard */,
 				82EC82D91DD7942400BC71C7 /* ProgramViewController.swift */,
 				82EC82DB1DD7950800BC71C7 /* SessionTableViewCell.swift */,
-				82EC82D71DD68B6E00BC71C7 /* TestScrollViewController.swift */,
-				82B1F7A51DD634C400C0759F /* SessionViewController.swift */,
+				82EC82D71DD68B6E00BC71C7 /* PlayerScrollViewController.swift */,
 				82C6E8FA1D92C45500FA765C /* Assets.xcassets */,
 				82C6E8FC1D92C45500FA765C /* LaunchScreen.storyboard */,
 				82C6E8FF1D92C45500FA765C /* Info.plist */,
@@ -575,22 +551,14 @@
 			files = (
 				82EC82DE1DD7C5BE00BC71C7 /* Session.swift in Sources */,
 				82EC82E01DD7C5CA00BC71C7 /* DailyPushUp.swift in Sources */,
-				82C6E8F61D92C45500FA765C /* ViewController.swift in Sources */,
-				82D285D81DBE5E95002F1A7B /* JourneyBoxViewController.swift in Sources */,
-				82EC82D81DD68B6E00BC71C7 /* TestScrollViewController.swift in Sources */,
-				820CC7761DC79EE300EC44F3 /* LifeSectionViewController.swift in Sources */,
+				82EC82D81DD68B6E00BC71C7 /* PlayerScrollViewController.swift in Sources */,
 				82EC82E21DD7C6C700BC71C7 /* Program.swift in Sources */,
-				82D285DA1DBF97D8002F1A7B /* JourneyMainViewController.swift in Sources */,
-				820352321DAE56590049C4BE /* JourneyViewController.swift in Sources */,
-				82B1F7A61DD634C400C0759F /* SessionViewController.swift in Sources */,
 				82B1F79E1DD6043500C0759F /* HomeViewController.swift in Sources */,
 				8203522B1DA670A40049C4BE /* ContentManager.swift in Sources */,
 				820352291DA652500049C4BE /* Player.swift in Sources */,
 				82B1F7A01DD6156100C0759F /* ProgramTableViewCell.swift in Sources */,
 				82EC82DC1DD7950800BC71C7 /* SessionTableViewCell.swift in Sources */,
 				82C6E8F41D92C45500FA765C /* AppDelegate.swift in Sources */,
-				82E0C7381DC2912800695BAD /* MessageViewController.swift in Sources */,
-				8229844C1DAFC49A00D544B1 /* ReactionViewController.swift in Sources */,
 				826948301DC3852300532194 /* WelcomeViewController.swift in Sources */,
 				8203522E1DA674AB0049C4BE /* FirebaseSynchronizer.swift in Sources */,
 				820352301DA67A000049C4BE /* Content.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 import Mixpanel
 import Alamofire
 
-class TestScrollViewController: UIViewController, PlayerDelegate{
+class PlayerScrollViewController: UIViewController, PlayerDelegate{
     
     @IBOutlet weak var loaderAnimation: UIActivityIndicatorView!
     @IBOutlet weak var timeLabel: UILabel!
