@@ -143,19 +143,39 @@
 				8203522A1DA670A40049C4BE /* ContentManager.swift */,
 				820352281DA652500049C4BE /* Player.swift */,
 				8203522D1DA674AB0049C4BE /* FirebaseSynchronizer.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		82A845091DDDB09D00F946CE /* CustomUIElements */ = {
+			isa = PBXGroup;
+			children = (
+				82EC82DB1DD7950800BC71C7 /* SessionTableViewCell.swift */,
+				82B1F79F1DD6156100C0759F /* ProgramTableViewCell.swift */,
+			);
+			name = CustomUIElements;
+			sourceTree = "<group>";
+		};
+		82A8450A1DDDB0E500F946CE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8269482F1DC3852300532194 /* WelcomeViewController.swift */,
+				82B1F79D1DD6043500C0759F /* HomeViewController.swift */,
+				82EC82D91DD7942400BC71C7 /* ProgramViewController.swift */,
+				82EC82D71DD68B6E00BC71C7 /* PlayerScrollViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		82A8450B1DDDB11300F946CE /* MeemoObjects */ = {
+			isa = PBXGroup;
+			children = (
 				8203522F1DA67A000049C4BE /* Content.swift */,
 				82EC82E11DD7C6C700BC71C7 /* Program.swift */,
 				82EC82DD1DD7C5BE00BC71C7 /* Session.swift */,
 				82EC82DF1DD7C5CA00BC71C7 /* DailyPushUp.swift */,
 			);
-			name = API;
-			sourceTree = "<group>";
-		};
-		82B256271DAE91F60092A5C7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
+			name = MeemoObjects;
 			sourceTree = "<group>";
 		};
 		82C6E8E71D92C45500FA765C = {
@@ -184,22 +204,18 @@
 		82C6E8F21D92C45500FA765C /* Meemo */ = {
 			isa = PBXGroup;
 			children = (
-				826C92AD1DCCFBC500861FEC /* GoogleService-Info.plist */,
-				826948311DC3925700532194 /* Meemo.entitlements */,
-				82B256271DAE91F60092A5C7 /* Views */,
 				8203522C1DA670AB0049C4BE /* API */,
+				82A845091DDDB09D00F946CE /* CustomUIElements */,
+				82A8450A1DDDB0E500F946CE /* ViewControllers */,
+				82A8450B1DDDB11300F946CE /* MeemoObjects */,
 				82C6E8F31D92C45500FA765C /* AppDelegate.swift */,
 				826C92AF1DCCFF1700861FEC /* Mixpanel-Bridging-Header.h */,
-				8269482F1DC3852300532194 /* WelcomeViewController.swift */,
 				82C6E8F71D92C45500FA765C /* Main.storyboard */,
-				82EC82D91DD7942400BC71C7 /* ProgramViewController.swift */,
-				82EC82DB1DD7950800BC71C7 /* SessionTableViewCell.swift */,
-				82EC82D71DD68B6E00BC71C7 /* PlayerScrollViewController.swift */,
-				82C6E8FA1D92C45500FA765C /* Assets.xcassets */,
 				82C6E8FC1D92C45500FA765C /* LaunchScreen.storyboard */,
+				82C6E8FA1D92C45500FA765C /* Assets.xcassets */,
 				82C6E8FF1D92C45500FA765C /* Info.plist */,
-				82B1F79D1DD6043500C0759F /* HomeViewController.swift */,
-				82B1F79F1DD6156100C0759F /* ProgramTableViewCell.swift */,
+				826C92AD1DCCFBC500861FEC /* GoogleService-Info.plist */,
+				826948311DC3925700532194 /* Meemo.entitlements */,
 			);
 			path = Meemo;
 			sourceTree = "<group>";

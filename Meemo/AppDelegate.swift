@@ -18,10 +18,50 @@ import Alamofire
 class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseSynchornizeDelegate{
 
     var window: UIWindow?
-    var navigationController: UINavigationController?
     var content:Content!
     var mixpanel:Mixpanel!
+    let testToken = "4741221112f36c0d43215a2b51e12e1e"
+    let productionToken = ""
+    var mixpanelToken = ""
 
+    
+    /*------------------------------------------------------------------------
+     --------------------Delegate Functions-------------------------------
+     ------------------------------------------------------------------------*/
+    
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        self.mixpanelToken = self.testToken
+        
+        connectToFBCloudMessages()
+        
+        configureFBCloudMessages(application)
+        
+        FIRApp.configure()
+        
+        loadContentFromFB()
+        
+        initMixpanel()
+        
+        return true
+    }
+    
+    func firebaseDidLoadContent(content:Content){
+        self.content = content
+        
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if(!launchedBefore){
+            showWelcomeScreen()
+        }else{
+            loadPushupPicture()
+        }
+    }
+    
+    /*------------------------------------------------------------------------
+     --------------------Show screens Functions-------------------------------
+     ------------------------------------------------------------------------*/
+    
     func showWelcomeScreen(){
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
@@ -45,51 +85,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseSynchornizeDelega
 
     }
     
-    func loadPushupPicture(){
-        Alamofire.request(content.dailyPushUp.pictureOverview).response { response in
-            debugPrint(response)
-            if let data = response.data {
-                self.content.dailyPushUp.pictureOverviewData = data
-                self.showNavigationController()
-                //self.pushUpPicture.image = UIImage(data: data)
-            }else{
-                //TODO error handling hhtp request
-            }
-        }
-    }
+    /*------------------------------------------------------------------------
+     --------------------Configuration Functions-------------------------------
+     ------------------------------------------------------------------------*/
     
-    func initFIRNotification(){
-        
-    }
-    
-    func attachNavigationController(){
-        //self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.navigationController = window?.rootViewController as? UINavigationController
-    }
-    
-    
-    func firebaseDidLoadContent(content:Content){
-        self.content = content
-        
-        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
-        if(!launchedBefore){
-            showWelcomeScreen()
-        }else{
-            //showNavigationController()
-            loadPushupPicture()
-        }
-    }
-
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-       
-        
-        
-        //Initialize Firebase Notification
-        
-        connectToFCM()
-        
+    func configureFBCloudMessages(_ application: UIApplication){
         if #available(iOS 10.0, *) {
             //options and settings for iOS 10 devices
             let authOptions : UNAuthorizationOptions = [.alert, .badge, .sound]
@@ -108,26 +108,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseSynchornizeDelega
         } else {
             //TODO: Other versions than iOS 10
         }
-        
-        FIRApp.configure()
-        
-        
-        let testToken = "4741221112f36c0d43215a2b51e12e1e"
-        mixpanel = Mixpanel.sharedInstance(withToken: testToken)
-        mixpanel.track("App launched")
-        
-        
-        attachNavigationController()
+
+    }
+    
+    func loadContentFromFB(){
         FirebaseSynchronizer.delegate = self
         if(content == nil){
             FirebaseSynchronizer.subscribeToContent()
         }
-        
-        
-        return true
     }
     
-    func connectToFCM(){
+    func initMixpanel(){
+        mixpanel = Mixpanel.sharedInstance(withToken: mixpanelToken)
+        mixpanel.track("App launched")
+        
+    }
+    
+    func connectToFBCloudMessages(){
         FIRMessaging.messaging().connect{(error) in
             if error != nil{
                 print("Unable to concect \(error)")
@@ -136,6 +133,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseSynchornizeDelega
             }
         }
     }
+    
+    /*------------------------------------------------------------------------
+     --------------------Download Functions-------------------------------
+     ------------------------------------------------------------------------*/
+    
+    
+    func loadPushupPicture(){
+        Alamofire.request(content.dailyPushUp.pictureOverview).response { response in
+            debugPrint(response)
+            if let data = response.data {
+                self.content.dailyPushUp.pictureOverviewData = data
+                self.showNavigationController()
+            }else{
+                //TODO error handling hhtp request
+            }
+        }
+    }
+    
+    
+    /*------------------------------------------------------------------------
+     --------------------Other Functions-------------------------------
+     ------------------------------------------------------------------------*/
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -160,6 +180,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, FirebaseSynchornizeDelega
     }
 }
 
+
+
 @available(iOS 10, *)
 extension AppDelegate : UNUserNotificationCenterDelegate {
     
@@ -167,18 +189,11 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        let userInfo = notification.request.content.userInfo
-        // Print message ID.
-        print("Message ID: \(userInfo["gcm.message_id"]!)")
-        
-        // Print full message.
-        print("%@", userInfo)
     }
 }
 
 extension AppDelegate : FIRMessagingDelegate {
     // Receive data message on iOS 10 devices.
     func applicationReceivedRemoteMessage(_ remoteMessage: FIRMessagingRemoteMessage) {
-        print("%@", remoteMessage.appData)
     }
 }
