@@ -69,6 +69,10 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
             self.overviewPicture.image = UIImage(data: program.PictureOverviewData)
         }
         
+        if(program.teaser == ""){
+            teaserButton.isHidden = true
+        }
+        
         self.player.delegate = self
         initUI()
     }

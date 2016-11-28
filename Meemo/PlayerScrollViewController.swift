@@ -95,6 +95,12 @@ class PlayerScrollViewController: UIViewController, PlayerDelegate{
                 self.playerPicture.image = UIImage(data: program.picturePlayerData)
             }
         }
+        
+        if(session.readMore == ""){
+            readMoreButton.isHidden = true
+            
+        }
+        
         player.setDuration(duration: Int(self.session.time)!)
         self.timeLabel.text = player.getDurationString()
     }
@@ -254,6 +260,7 @@ class PlayerScrollViewController: UIViewController, PlayerDelegate{
     }
     
     @IBAction func readMoreDidTouch(_ sender: AnyObject) {
+        Mixpanel.sharedInstance().track("readMore", properties: ["name" : session.title])
         openURLLink()
     }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Mixpanel
 
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -55,6 +56,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let blogIndex = tableView.indexPathForSelectedRow?.row
         {
             destination.program = content.programs[blogIndex]
+            Mixpanel.sharedInstance().track("program_entered", properties: ["name" : content.programs[blogIndex].title])
+
         }
         
         
@@ -77,6 +80,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             destination.program = content.dailyPushUp.program
             destination.dailyPushUp = content.dailyPushUp
             destination.pushUp = true
+            
+            Mixpanel.sharedInstance().track("pushup_entered", properties: ["name" : session.title])
+
         }
     }
     
